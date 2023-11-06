@@ -11,9 +11,9 @@ const work = () => {
       <Hero2 heading='Prestige Tech Platina' message='' />
       <div className='section1'>
 
-        <div class="flex md:flex-row flex-wrap">
+        <div className="flex md:flex-row flex-wrap">
 
-          <div class="w-full md:w-2/4 p-4 mx-10 text-center ">
+          <div className="w-full sm:p-4 md:w-2/4 p-1 text-center " style={{minHeight: "50vh"}}>
             <Carousel className="rounded-xl">
               <Image
                 src="https://images.unsplash.com/photo-1600585153490-76fb20a32601?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -21,37 +21,39 @@ const work = () => {
                 className="h-full w-full object-cover"
                 layout='fill'
               />
-              <img
-                src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+              <Image
+                src="https://images.unsplash.com/photo-1600585153490-76fb20a32601?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="image 2"
                 className="h-full w-full object-cover"
+                layout='fill'
               />
-              <img
-                src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
+              <Image
+                src="https://images.unsplash.com/photo-1600585153490-76fb20a32601?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="image 3"
                 className="h-full w-full object-cover"
+                layout='fill'
               />
             </Carousel>
           </div>
-          <div class="w-full md:w-1/4  p-4 text-center rounded overflow-hidden shadow-lg card">
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">Prestige Tech Platina<br /> <sub>Outer Ring Rd, Bangalore</sub></div>
+          <div className="w-full md:w-1/4  p-4 text-center rounded overflow-hidden shadow-lg card">
+            <div className="px-6 py-4">
+              <div className="font-bold text-xl mb-2">Prestige Tech Platina<br /> <sub>Outer Ring Rd, Bangalore</sub></div>
               <br />
               <hr />
             </div>
-            <div class="px-6 pt-4 pb-2">
+            <div className="px-6 pt-4 pb-2">
 
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Fully Funded</span>
+              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Fully Funded</span>
             </div>
           </div>
 
         </div>
         <br />
-        <div className='mx-14'>
-          <h1 className='font-sans text-4xl py-10'>Investment Returns</h1>
-          <div class="w-full md:w-3/4  p-4 rounded overflow-hidden shadow-lg card">
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">Monthly Cash Flow</div>
+        <div>
+          <h1 className='font-sans text-4xl mx-10 py-10'>Investment Returns</h1>
+          <div className="w-full md:w-3/4  p-4 rounded overflow-hidden shadow-lg card">
+            <div className="px-6 py-4">
+              <div className="font-bold text-xl mb-2">Monthly Cash Flow</div>
               <br />
               <div className="mb-2 flex items-center justify-between gap-4">
                 <Typography color="blue-gray" variant="h6">
@@ -71,19 +73,19 @@ const work = () => {
 
             </div>
           </div>
-          <div class="w-full md:w-3/4  p-4 rounded overflow-hidden shadow-lg card overflow-x-auto">
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">Financial Model</div>
+          <div className="w-full md:w-3/4  p-4 rounded overflow-hidden shadow-lg card overflow-x-auto">
+            <div className="px-6 py-4">
+              <div className="font-bold text-xl mb-2">Financial Model</div>
               <br />
-              <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+              <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                   <tr>
-                    <th class="px-6 py-3"></th>
-                    <th class="px-6 py-3">Day 0</th>
-                    <th class="px-6 py-3">Year 1</th>
-                    <th class="px-6 py-3">Year 2</th>
-                    <th class="px-6 py-3">Year 3</th>
-                    <th class="px-6 py-3">Year 4</th>
+                    <th className="px-6 py-3"></th>
+                    <th className="px-6 py-3">Day 0</th>
+                    <th className="px-6 py-3">Year 1</th>
+                    <th className="px-6 py-3">Year 2</th>
+                    <th className="px-6 py-3">Year 3</th>
+                    <th className="px-6 py-3">Year 4</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -131,37 +133,37 @@ const work = () => {
               </table>
             </div>
           </div>
-          <div class="w-full md:w-3/4 text-center  p-4 rounded overflow-hidden shadow-lg card">
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">Capital Appreciation</div>
+          <div className="w-full md:w-3/4 text-center  p-4 rounded overflow-hidden shadow-lg card">
+            <div className="px-6 py-4">
+              <div className="font-bold text-xl mb-2">Capital Appreciation</div>
               <br />
               <hr />
             </div>
           </div>
-          <div class="w-full md:w-3/4  p-4 rounded overflow-hidden shadow-lg card">
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">Tenant Details</div>
+          <div className="w-full md:w-3/4  p-4 rounded overflow-hidden shadow-lg card">
+            <div className="px-6 py-4">
+              <div className="font-bold text-xl mb-2">Tenant Details</div>
               <br />
             </div>
-            <div class="row sm:grid grid-cols-3 gap-1">
+            <div className="row sm:grid grid-cols-3 gap-1">
 
-              <div class="...">
+              <div className="...">
                 <div className="flex flex-col">
                   <h4><u>Name</u></h4>
                   <h4><b>US-based Tech Company</b></h4>
                 </div>
               </div>
-              <div class="col-span-2 ...">
+              <div className="col-span-2 ...">
                 <div className="flex flex-col">
                   <h4><u>County</u></h4>
                   <h4><b>USA</b></h4>
                 </div>
               </div>
-              <div class="col-span-4 ...">
+              <div className="col-span-4 ...">
                 <h4>Description</h4>
                 <p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde architecto modi fugiat, aliquid est saepe excepturi minima? Hic magni quos illum rem doloremque? Dignissimos ab quibusdam necessitatibus numquam eligendi itaque.</b></p>
               </div>
-              <h4 class=" col-span-4 ..."><u>Time Period</u></h4>
+              <h4 className=" col-span-4 ..."><u>Time Period</u></h4>
               <div className="flex flex-col ...">
                 <h6>Lease Start Date</h6>
                 <h4><b>01 Apr 2023</b></h4>
@@ -174,7 +176,7 @@ const work = () => {
                 <h6>Lease End Date</h6>
                 <h4><b>01 Apr 2032</b></h4>
               </div>
-              <h4 class="col-span-4 ..."><u>Tenant Highlights</u></h4>
+              <h4 className="col-span-4 ..."><u>Tenant Highlights</u></h4>
               <div className="w-1/4 flex flex-col ...">
                 <h4><b>1,71,402 SF</b></h4>
                 <h6>TOTAL AREA</h6>
@@ -197,11 +199,11 @@ const work = () => {
               </div>
             </div>
           </div>
-          <div class="w-full md:w-3/4  p-4 rounded overflow-hidden shadow-lg card">
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">Location Highlights</div>
+          <div className="w-full md:w-3/4  p-4 rounded overflow-hidden shadow-lg card">
+            <div className="px-6 py-4">
+              <div className="font-bold text-xl mb-2">Location Highlights</div>
               <br />
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13834.255347225278!2d74.79663764409774!3d13.34364319791093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1699276791486!5m2!1sen!2sin" width={900} height={450} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13834.255347225278!2d74.79663764409774!3d13.34364319791093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1699276791486!5m2!1sen!2sin" width={900} height={450} allowFullScreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
         </div>
