@@ -14,11 +14,6 @@
   background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
 }
 
-.redline
-{
-  border: 1px solid red;
-}
-
 .section1
 {
   min-height: 100vh;
@@ -52,7 +47,7 @@
 
 .slider
 {
-  min-height: 50vh;
+  margin: 0 5%;
 }
 
 table, th, td

@@ -27,7 +27,7 @@ export default function Home() {
       </div>
       <div className='section2'>
         <h1 className='font-sans text-center text-4xl py-10'>Our Clients</h1>
-        <div className="flex">
+        <div class="flex">
           <div className="w-1/4 logo">
             logo<br /> PropertyShare
           </div>
@@ -37,9 +37,9 @@ export default function Home() {
         </div>
       </div>
       <div className='section3'>
-        <div className="2xl:container 2xl:mx-auto md:py-12 lg:px-20 md:px-6 py-9 px-4">
+        <div class="2xl:container 2xl:mx-auto md:py-12 lg:px-20 md:px-6 py-9 px-4">
           {/* <!--- more free and premium Tailwind CSS components at https://tailwinduikit.com/ ---> */}
-          <div className="mt-4 flex md:justify-between md:items-start md:flex-row flex-col justify-start items-start">
+          <div class="mt-4 flex md:justify-between md:items-start md:flex-row flex-col justify-start items-start">
 
             <section className="dark:bg-gray-800 dark:text-gray-100">
               <div className="container flex flex-col justify-center px-4 py-8 mx-auto md:p-8">
@@ -73,3 +73,67 @@ export default function Home() {
   );
 }
 
+// {/* <!-- Shipping Section --> */}
+// <div>
+//   <div class="flex justify-between items-center cursor-pointer">
+//     <h3 class="font-semibold text-xl  dark:text-white leading-5 text-gray-800">Shipping</h3>
+//     <button aria-label="too" class="text-gray-800 dark:text-white cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800" onClick="openAnsSection(1)">
+//       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+//         <path id="path1" class="" d="M10 4.1665V15.8332" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+//         <path d="M4.16602 10H15.8327" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+//       </svg>
+//     </button>
+//   </div>
+//   <p id="para1" class="hidden font-normal dark:text-gray-400 text-base leading-6 text-gray-600 mt-4 w-11/12">We are covering every major country worldwide. The shipment leaves from US as it is our headquarter. Some extra information you probably need to add here so that the customer is clear of their wanted expectations.</p>
+// </div>
+
+// <hr class="my-7 bg-gray-200" />
+
+// {/* <!-- Returns Section --> */}
+
+// <div>
+//   <div class="flex justify-between items-center cursor-pointer">
+//     <h3 class="font-semibold text-xl dark:text-white  leading-5 text-gray-800">Returns</h3>
+//     <button aria-label="too" class="text-gray-800 dark:text-white cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800" onClick="openAnsSection(2)">
+//       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+//         <path id="path2" class="" d="M10 4.1665V15.8332" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+//         <path d="M4.16602 10H15.8327" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+//       </svg>
+//     </button>
+//   </div>
+//   <p id="para2" class="hidden font-normal dark:text-gray-400 text-base leading-6 text-gray-600 mt-4 w-11/12">We are covering every major country worldwide. The shipment leaves from US as it is our headquarter. Some extra information you probably need to add here so that the customer is clear of their wanted expectations.</p>
+// </div>
+
+// <hr class="my-7 bg-gray-200" />
+
+// {/* <!-- Exchange Section --> */}
+
+// <div>
+//   <div class="flex justify-between items-center cursor-pointer">
+//     <h3 class="font-semibold text-xl dark:text-white  leading-5 text-gray-800">Exchange</h3>
+//     <button aria-label="too" class="text-gray-800 dark:text-white cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800" onClick="openAnsSection(3)">
+//       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+//         <path id="path3" d="M10 4.1665V15.8332" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+//         <path d="M4.16602 10H15.8327" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+//       </svg>
+//     </button>
+//   </div>
+//   <p id="para3" class="hidden font-normal dark:text-gray-400 text-base leading-6 text-gray-600 mt-4 w-11/12">We are covering every major country worldwide. The shipment leaves from US as it is our headquarter. Some extra information you probably need to add here so that the customer is clear of their wanted expectations.</p>
+// </div>
+
+// <hr class="my-7 bg-gray-200" />
+
+// {/* <!-- Tracking Section --> */}
+
+// <div>
+//   <div class="flex justify-between items-center cursor-pointer">
+//     <h3 class="font-semibold text-xl dark:text-white  leading-5 text-gray-800">Tracking</h3>
+//     <button aria-label="too" class="text-gray-800 dark:text-white cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800" onClick="openAnsSection(4)">
+//       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+//         <path id="path4" d="M10 4.1665V15.8332" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+//         <path d="M4.16602 10H15.8327" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+//       </svg>
+//     </button>
+//   </div>
+//   <p id="para4" class="hidden font-normal dark:text-gray-400 text-base leading-6 text-gray-600 mt-4 w-11/12">We are covering every major country worldwide. The shipment leaves from US as it is our headquarter. Some extra information you probably need to add here so that the customer is clear of their wanted expectations.</p>
+// </div>
