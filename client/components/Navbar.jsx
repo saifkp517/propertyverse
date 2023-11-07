@@ -1,8 +1,18 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
+import LoginButton from './Login';
+import LogoutButton from './Logout';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Navbar = () => {
+
+  const { user, isAuthenticated, getAccessTokenSilently } = useAuth0();
+  const [userMetadata, setUserMetadata] = useState(null);
+  
+
+  console.log(user, isAuthenticated)
+
   const [nav, setNav] = useState(false);
   const [color, setColor] = useState('transparent');
   const [textColor, setTextColor] = useState('white');
@@ -43,10 +53,7 @@ const Navbar = () => {
             <Link href='/propertyshare'>PropertyShare</Link>
           </li>
           <li className='p-4'>
-            <Link href='/work'>Work</Link>
-          </li>
-          <li className='p-4'>
-            <Link href='/contact'>Contact</Link>
+            {(isAuthenticated === false) ? <LoginButton /> : <LogoutButton />}
           </li>
         </ul>
 

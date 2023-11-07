@@ -22,15 +22,13 @@ export default function Home() {
           <Card />
           <Card />
           <Card />
+          <Card />
         </div>
 
       </div>
       <div className='section2'>
         <h1 className='font-sans text-center text-4xl py-10'>Our Clients</h1>
         <div class="flex">
-          <div className="w-1/4 logo">
-            logo<br /> PropertyShare
-          </div>
           <div className="w-1/4 logo">Wisex</div>
           <div className="w-1/4 logo">HBits</div>
           <div className="w-1/4 logo">Assetmonk</div>
