@@ -2,6 +2,7 @@ import React from 'react'
 import { Carousel, Progress, Typography } from "@material-tailwind/react";
 import Hero2 from '../../components/Hero2'
 import Footer from '../../components/Footer'
+import MyChart from '../../components/MyChart';
 import Image from 'next/image';
 
 
@@ -137,6 +138,7 @@ src="https://images.unsplash.com/photo-1600585153490-76fb20a32601?auto=format&fi
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">Capital Appreciation</div>
               <br />
+              <MyChart />
             </div>
           </div>
           <div className="w-full md:w-3/4  p-4 rounded overflow-hidden shadow-lg card">
