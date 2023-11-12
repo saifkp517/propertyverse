@@ -9,9 +9,6 @@ const Navbar = () => {
 
   const { user, isAuthenticated, getAccessTokenSilently } = useAuth0();
   const [userMetadata, setUserMetadata] = useState(null);
-  
-
-  console.log(user, isAuthenticated)
 
   const [nav, setNav] = useState(false);
   const [color, setColor] = useState('transparent');
@@ -53,7 +50,7 @@ const Navbar = () => {
             <Link href='/propertyshare'>PropertyShare</Link>
           </li>
           <li className='p-4'>
-            {(isAuthenticated === false) ? <LoginButton /> : <LogoutButton />}
+            {(isAuthenticated === false) ? <LoginButton /> : user.name }
           </li>
         </ul>
 
@@ -81,10 +78,7 @@ const Navbar = () => {
               <Link href='/#gallery'>Gallery</Link>
             </li>
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
-              <Link href='/work'>Work</Link>
-            </li>
-            <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
-              <Link href='/contact'>Contact</Link>
+            {(isAuthenticated === false) ? <LoginButton /> : user.name }
             </li>
           </ul>
         </div>
