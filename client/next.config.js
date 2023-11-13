@@ -8,7 +8,9 @@ module.exports = {
     domains: [
       'images.unsplash.com',
       'unsplash.com',
-      'media.licdn.com'
+      'media.licdn.com',
+      'tailwindui.com',
+      'plus.unsplash.com'
     ]
   }
 }
