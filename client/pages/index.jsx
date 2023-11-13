@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Hero from '../components/Hero';
+import Clients from '../components/Clients';
 import Footer from '../components/Footer';
 import Slider from '../components/Slider';
 import { SliderData } from '../components/SliderData';
@@ -20,19 +21,33 @@ export default function Home() {
         <h1 className='font-sans text-center text-4xl'>All Properties</h1>
         <br />
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
-          <div className="p-4 text-center md:p-1"><Card redirectUrl={'/properties/work'}/></div>
-          <div className="p-4 text-center md:p-1"><Card redirectUrl={'/properties/work'}/></div>
-          <div className="p-4 text-center md:p-1"><Card redirectUrl={'/properties/work'}/></div>
-          <div className="p-4 text-center md:p-1"><Card redirectUrl={'/properties/work'}/></div>
+          <div className="p-4 text-center md:p-1"><Card redirectUrl={'/properties/work'} /></div>
+          <div className="p-4 text-center md:p-1"><Card redirectUrl={'/properties/work'} /></div>
+          <div className="p-4 text-center md:p-1"><Card redirectUrl={'/properties/work'} /></div>
+          <div className="p-4 text-center md:p-1"><Card redirectUrl={'/properties/work'} /></div>
         </div>
       </div>
-      <div className='section2'>
-        <h1 className='font-sans text-center text-4xl py-10'>Our Clients</h1>
-        <div className="flex">
-          <div className="w-1/4 logo">Wisex</div>
-          <div className="w-1/4 logo">HBits</div>
-          <div className="w-1/4 logo">Assetmonk</div>
+      <div className="section2">
+        <Clients />
+        <div class="py-24 sm:py-12">
+          <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+              <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                <dt class="text-base leading-7 text-gray-600">Transactions every 24 hours</dt>
+                <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">44 million</dd>
+              </div>
+              <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                <dt class="text-base leading-7 text-gray-600">Assets under holding</dt>
+                <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">$119 trillion</dd>
+              </div>
+              <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                <dt class="text-base leading-7 text-gray-600">New users annually</dt>
+                <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">46,000</dd>
+              </div>
+            </dl>
+          </div>
         </div>
+
       </div>
       <div className='section3'>
         <div className="2xl:container 2xl:mx-auto md:py-12 lg:px-20 md:px-6 py-9 px-4">
@@ -62,6 +77,51 @@ export default function Home() {
           </div>
 
         </div>
+      </div>
+
+      <div className="section5">
+        <div class="bg-white">
+          <div class="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
+            <div>
+              <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Technical Specifications</h2>
+              <p class="mt-4 text-gray-500">The walnut wood card tray is precision milled to perfectly fit a stack of Focus cards. The powder coated steel divider separates active cards from new ones, or can be used to archive important task lists.</p>
+
+              <dl class="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
+                <div class="border-t border-gray-200 pt-4">
+                  <dt class="font-medium text-gray-900">Origin</dt>
+                  <dd class="mt-2 text-sm text-gray-500">Designed by Good Goods, Inc.</dd>
+                </div>
+                <div class="border-t border-gray-200 pt-4">
+                  <dt class="font-medium text-gray-900">Material</dt>
+                  <dd class="mt-2 text-sm text-gray-500">Solid walnut base with rare earth magnets and powder coated steel card cover</dd>
+                </div>
+                <div class="border-t border-gray-200 pt-4">
+                  <dt class="font-medium text-gray-900">Dimensions</dt>
+                  <dd class="mt-2 text-sm text-gray-500">6.25&quot; x 3.55&quot; x 1.15&quot;</dd>
+                </div>
+                <div class="border-t border-gray-200 pt-4">
+                  <dt class="font-medium text-gray-900">Finish</dt>
+                  <dd class="mt-2 text-sm text-gray-500">Hand sanded and finished with natural oil</dd>
+                </div>
+                <div class="border-t border-gray-200 pt-4">
+                  <dt class="font-medium text-gray-900">Includes</dt>
+                  <dd class="mt-2 text-sm text-gray-500">Wood card tray and 3 refill packs</dd>
+                </div>
+                <div class="border-t border-gray-200 pt-4">
+                  <dt class="font-medium text-gray-900">Considerations</dt>
+                  <dd class="mt-2 text-sm text-gray-500">Made from natural materials. Grain and color vary with each item.</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
+              <img src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-01.jpg" alt="Walnut card tray with white powder coated steel divider and 3 punchout holes." class="rounded-lg bg-gray-100" />
+              <img src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-02.jpg" alt="Top down view of walnut card tray with embedded magnets and card groove." class="rounded-lg bg-gray-100" />
+              <img src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-03.jpg" alt="Side of walnut card tray with card groove and recessed card area." class="rounded-lg bg-gray-100" />
+              <img src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-04.jpg" alt="Walnut card tray filled with cards and card angled in dedicated groove." class="rounded-lg bg-gray-100" />
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <div className='section4'>

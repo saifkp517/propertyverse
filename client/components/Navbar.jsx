@@ -47,9 +47,6 @@ const Navbar = () => {
             <Link href='/'>Home</Link>
           </li>
           <li className='p-4'>
-            <Link href='/propertyshare'>PropertyShare</Link>
-          </li>
-          <li className='p-4'>
             {(isAuthenticated === false) ? <LoginButton /> : user.name }
           </li>
         </ul>
