@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import LoginButton from './Login';
-import LogoutButton from './Logout';
+import Image from 'next/image';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { useAuth0 } from "@auth0/auth0-react";
 
@@ -9,6 +9,8 @@ const Navbar = () => {
 
   const { user, isAuthenticated, getAccessTokenSilently } = useAuth0();
   const [userMetadata, setUserMetadata] = useState(null);
+
+  console.log(user)
 
   const [nav, setNav] = useState(false);
   const [color, setColor] = useState('transparent');
@@ -21,7 +23,7 @@ const Navbar = () => {
   useEffect(() => {
     const changeColor = () => {
       if (window.scrollY >= 90) {
-        setColor('#5f0f40');
+        setColor('red-500');
         setTextColor('#000000');
       } else {
         setColor('transparent');
@@ -33,8 +35,7 @@ const Navbar = () => {
 
   return (
     <div
-      style={{ backgroundColor: `${color}` }}
-      className='fixed left-0 top-0 w-full z-10 ease-in duration-300'
+      className={`fixed left-0 top-0 w-full z-10 ease-in duration-300 bg-${color}`}
     >
       <div className='max-w-[1240px] m-auto flex justify-between items-center p-4 text-white'>
         <Link href='/'>
@@ -47,7 +48,14 @@ const Navbar = () => {
             <Link href='/'>Home</Link>
           </li>
           <li className='p-4'>
-            {(isAuthenticated === false) ? <LoginButton /> : user.name }
+            {(isAuthenticated === false) ? <LoginButton /> :
+              <div class="flex items-center gap-4">
+                <div class="font-medium dark:text-white">
+                  <div>{user.name}</div>
+                </div>
+              </div>
+
+            }
           </li>
         </ul>
 
@@ -75,7 +83,13 @@ const Navbar = () => {
               <Link href='/#gallery'>Gallery</Link>
             </li>
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
-            {(isAuthenticated === false) ? <LoginButton /> : user.name }
+              {(isAuthenticated === false) ? <LoginButton /> :
+                <div class="flex items-center gap-4">
+                  <div class="font-medium dark:text-white">
+                    <div>{user.name}</div>
+                  </div>
+                </div>
+              }
             </li>
           </ul>
         </div>

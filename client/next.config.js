@@ -10,7 +10,8 @@ module.exports = {
       'unsplash.com',
       'media.licdn.com',
       'tailwindui.com',
-      'plus.unsplash.com'
+      'plus.unsplash.com',
+      'lh3.googleusercontent.com'
     ]
   }
 }

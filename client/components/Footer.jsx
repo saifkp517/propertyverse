@@ -1,7 +1,7 @@
 
 const Footer = () => {
     return (
-        <div className="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-32">
+        <div className="relative isolate overflow-hidden bg-gradient-to-r from-red-500 via-red-700 to-red-900 py-16 sm:py-24 lg:py-32">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
                     <div className="max-w-xl lg:max-wLg">
@@ -34,9 +34,6 @@ const Footer = () => {
                         </div>
                     </dl>
                 </div>
-            </div>
-            <div className="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6" aria-hidden="true">
-                <div className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-r from-red-500 via-red-700 to-red-900 opacity-30" ></div>
             </div>
         </div>
     )
