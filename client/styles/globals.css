@@ -2,14 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-html
-{
+html {
   scroll-behavior: smooth;
 }
 
 
-body
-{
+body {
   background-image: linear-gradient(90deg, #2c2930 0%, #000000 74%);
   color: #FFFFFF;
 }
@@ -22,7 +20,7 @@ body
   font-family: "My Font", serif;
 }
 
-.redline{
+.redline {
   border: 1px solid red;
 }
 
@@ -30,64 +28,59 @@ body
   background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
 }
 
-.section1
-{
+.section1 {
   min-height: 80vh;
-  
+
 }
 
-.section2
-{
+.section2 {
   min-height: 50vh;
-  background: linear-gradient(315deg, #972239 0%, #be002f 74%);
+  background-color: #310e68;
+  background-image: linear-gradient(316deg, #310e68 0%, #5f0f40 74%);
 }
 
 
-.antiquewhite
-{
-  background-color: #C0392B;
+.antiquewhite {
+  background-color: #310e68;
+  background-image: linear-gradient(316deg, #310e68 0%, #5f0f40 74%);
 }
-.section1 h1
-{
+
+.section1 h1 {
   padding: 10px 0;
 }
 
-.card
-{
+.card {
   margin: 19px;
 }
 
-.logo
-{
+.logo {
   text-align: center;
 }
 
-.slider
-{
+.slider {
   margin: 0 5%;
 }
 
-table, th, td
-{
+table,
+th,
+td {
   border: 1px solid;
   border-collapse: collapse;
 }
 
 @media only screen and (max-width: 950px) {
-  .card-section{
+  .card-section {
     display: inline-flexbox;
     flex-direction: row;
   }
 }
 
 @media only screen and (max-width: 700px) {
-  .card
-  {
-    margin:auto 0;
+  .card {
+    margin: auto 0;
   }
 
-  .card h4
-  {
+  .card h4 {
     margin: 10px 0;
   }
 }
