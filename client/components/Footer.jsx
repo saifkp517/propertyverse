@@ -36,7 +36,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6" aria-hidden="true">
-                <div className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-r from-red-300 via-red-300 to-yellow-200 opacity-30" ></div>
+                <div className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-r from-red-500 via-red-700 to-red-900 opacity-30" ></div>
             </div>
         </div>
     )

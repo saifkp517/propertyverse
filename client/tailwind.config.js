@@ -9,6 +9,9 @@ module.exports = withMT({
   ],
   theme: {
     extend: {},
+    boxShadow: {
+      '3xl': '10px 35px 60px -25px rgba(0, 104, 117, 128)',
+    },
     fontFamily: {
       'nunito': ['nunito', 'sans-serif'],
       'MyFont': ['"My Font"', 'serif'] // Ensure fonts with spaces have " " surrounding it.

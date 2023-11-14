@@ -36,7 +36,7 @@ src="https://images.unsplash.com/photo-1600585153490-76fb20a32601?auto=format&fi
               />
             </Carousel>
           </div>
-          <div className="w-full md:w-1/4  p-4 text-center rounded overflow-hidden shadow-lg card">
+          <div className="w-full md:w-1/4  p-4 text-center rounded overflow-hidden shadow-lg shadow-gray-600 card">
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">Prestige Tech Platina<br /> <sub>Outer Ring Rd, Bangalore</sub></div>
               <br />
@@ -52,7 +52,7 @@ src="https://images.unsplash.com/photo-1600585153490-76fb20a32601?auto=format&fi
         <br />
         <div>
           <h1 className='font-sans text-4xl mx-10 py-10'>Investment Returns</h1>
-          <div className="w-full md:w-3/4  p-4 rounded overflow-hidden shadow-lg card">
+          <div className="w-full md:w-3/4  p-4 rounded overflow-hidden shadow-lg shadow-gray-600 card">
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">Monthly Cash Flow</div>
               <br />
@@ -74,7 +74,7 @@ src="https://images.unsplash.com/photo-1600585153490-76fb20a32601?auto=format&fi
 
             </div>
           </div>
-          <div className="w-full md:w-3/4  p-4 rounded overflow-hidden shadow-lg card overflow-x-auto">
+          <div className="w-full md:w-3/4  p-4 rounded overflow-hidden shadow-lg shadow-gray-600 card overflow-x-auto">
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">Financial Model</div>
               <br />
@@ -134,14 +134,14 @@ src="https://images.unsplash.com/photo-1600585153490-76fb20a32601?auto=format&fi
               </table>
             </div>
           </div>
-          <div className="w-full md:w-3/4 text-center  p-4 rounded overflow-hidden shadow-lg card">
+          <div className="w-full md:w-3/4 text-center  p-4 rounded overflow-hidden shadow-lg shadow-gray-600 card">
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">Capital Appreciation</div>
               <br />
               <MyChart />
             </div>
           </div>
-          <div className="w-full md:w-3/4  p-4 rounded overflow-hidden shadow-lg card">
+          <div className="w-full md:w-3/4  p-4 rounded overflow-hidden shadow-lg shadow-gray-600 card">
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">Tenant Details</div>
               <br />
@@ -200,7 +200,7 @@ src="https://images.unsplash.com/photo-1600585153490-76fb20a32601?auto=format&fi
               </div>
             </div>
           </div>
-          <div className="w-full md:w-3/4  p-4 rounded overflow-hidden shadow-lg card">
+          <div className="w-full md:w-3/4  p-4 rounded overflow-hidden shadow-lg shadow-gray-600 card">
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">Location Highlights</div>
               <br />

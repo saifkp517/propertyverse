@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+html
+{
+  scroll-behavior: smooth;
+}
+
+
+body
+{
+  background-image: linear-gradient(90deg, #2c2930 0%, #000000 74%);
+  color: #FFFFFF;
+}
+
 .font-nunito {
   font-family: nunito, sans-serif;
 }
@@ -20,19 +32,20 @@
 
 .section1
 {
-  min-height: 100vh;
+  min-height: 80vh;
   
 }
 
 .section2
 {
   min-height: 50vh;
-  background-color:antiquewhite;
+  background: linear-gradient(315deg, #972239 0%, #be002f 74%);
 }
+
 
 .antiquewhite
 {
-  background-color: antiquewhite;
+  background-color: #C0392B;
 }
 .section1 h1
 {
@@ -41,8 +54,7 @@
 
 .card
 {
-  border: 1px solid;
-  margin: 18px;
+  margin: 19px;
 }
 
 .logo
