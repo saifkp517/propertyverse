@@ -2,7 +2,8 @@ import Head from 'next/head';
 import Hero from '../components/Hero';
 import Clients from '../components/Clients';
 import Footer from '../components/Footer';
-import Section from '../components/Section5';
+import CTA from '../components/CTA';
+import Section from '../components/Info';
 import Card from '../components/Card';
 
 export default function Home() {
@@ -52,7 +53,7 @@ export default function Home() {
 
         </div> */}
       </div>
-      <div className='section5'>
+      <div className='section4'>
         <h1 className='font-sans text-center text-4xl my-10 text-gray-500'>All Properties</h1>
         <br />
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
@@ -62,8 +63,11 @@ export default function Home() {
           <div className="p-4 text-center md:p-1"><Card redirectUrl={'/properties/work'} /></div>
         </div>
       </div>
+      <div className="section5">
+        <CTA />
+      </div>
 
-      <div className='section4'>
+      <div className='section6'>
         <Footer />
       </div>
     </div>

@@ -10,6 +10,8 @@ const Navbar = () => {
   const { user, isAuthenticated, getAccessTokenSilently } = useAuth0();
   const [userMetadata, setUserMetadata] = useState(null);
 
+  console.log(isAuthenticated)
+
   console.log(user)
 
   const [nav, setNav] = useState(false);
@@ -49,8 +51,8 @@ const Navbar = () => {
           </li>
           <li className='p-4'>
             {(isAuthenticated === false) ? <LoginButton /> :
-              <div class="flex items-center gap-4">
-                <div class="font-medium dark:text-white">
+              <div className="flex items-center gap-4">
+                <div className="font-medium dark:text-white">
                   <div>{user.name}</div>
                 </div>
               </div>
@@ -84,8 +86,8 @@ const Navbar = () => {
             </li>
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
               {(isAuthenticated === false) ? <LoginButton /> :
-                <div class="flex items-center gap-4">
-                  <div class="font-medium dark:text-white">
+                <div className="flex items-center gap-4">
+                  <div className="font-medium dark:text-white">
                     <div>{user.name}</div>
                   </div>
                 </div>
