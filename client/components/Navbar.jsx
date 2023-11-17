@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import LoginButton from './Login';
+import LogoutButton from './Logout'
 import Image from 'next/image';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { useAuth0 } from "@auth0/auth0-react";
@@ -11,8 +12,6 @@ const Navbar = () => {
   const [userMetadata, setUserMetadata] = useState(null);
 
   console.log(isAuthenticated)
-
-  console.log(user)
 
   const [nav, setNav] = useState(false);
   const [color, setColor] = useState('transparent');
@@ -49,8 +48,11 @@ const Navbar = () => {
           <li className='p-4'>
             <Link href='/'>Home</Link>
           </li>
+          {(isAuthenticated) ? <li className='p-4'>
+            <Link href='/properties'>Properties</Link>
+          </li> : null}
           <li className='p-4'>
-            {(isAuthenticated === false) ? <LoginButton /> :
+            {(isAuthenticated == false) ? <LoginButton /> :
               <div className="flex items-center gap-4">
                 <div className="font-medium dark:text-white">
                   <div>{user.name}</div>
@@ -78,19 +80,15 @@ const Navbar = () => {
           }
         >
           <ul>
-            <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
+            <li onClick={handleNav} className='p-4 text-2xl hover:text-gray-500'>
               <Link href='/'>Home</Link>
             </li>
-            <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
-              <Link href='/#gallery'>Gallery</Link>
+            <li onClick={handleNav} className='p-4 text-2xl hover:text-gray-500'>
+              <Link href='/properties'>Properties</Link>
             </li>
-            <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
+            <li onClick={handleNav} className='p-4 text-2xl hover:text-gray-500'>
               {(isAuthenticated === false) ? <LoginButton /> :
-                <div className="flex items-center gap-4">
-                  <div className="font-medium dark:text-white">
-                    <div>{user.name}</div>
-                  </div>
-                </div>
+                user.name
               }
             </li>
           </ul>

@@ -28,10 +28,6 @@ body {
   background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
 }
 
-.section5 {
-  min-height: 100vh;
-}
-
 
 .antiquewhite {
   background-color: #310e68;
@@ -43,7 +39,6 @@ body {
 
 .card {
   margin: 19px;
-  border: 2px solid black;
 }
 
 .logo {

@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Hero from '../components/Hero';
+import Hero from '../components/Hero3';
 import Clients from '../components/Clients';
 import Footer from '../components/Footer';
 import CTA from '../components/CTA';
@@ -15,26 +15,19 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Hero message='Welcome to a redefinition of property management. Discover seamless solutions for property owners and tenants alike' />
-      <div className="section1">
-        <Section />
-      </div>
-      <div className="section2" id="section2">
-        <Clients />
-      </div>
 
-      {/* <div className='section4'>
-        <h1 className='font-sans text-center text-4xl my-10 text-gray-500'>All Properties</h1>
+     
+      <div className='section4 my-16'>
+        {/* <h1 className='font-sans text-center text-4xl my-10 text-gray-500'>All Properties</h1> */}
         <br />
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
-          <div className="p-4 text-center md:p-1"><Card redirectUrl={'/properties/work'} /></div>
-          <div className="p-4 text-center md:p-1"><Card redirectUrl={'/properties/work'} /></div>
-          <div className="p-4 text-center md:p-1"><Card redirectUrl={'/properties/work'} /></div>
-          <div className="p-4 text-center md:p-1"><Card redirectUrl={'/properties/work'} /></div>
+          <div className="p-4 text-center md:p-1"><Card redirectUrl={'/info/work'} /></div>
+          <div className="p-4 text-center md:p-1"><Card redirectUrl={'/info/work'} /></div>
+          <div className="p-4 text-center md:p-1"><Card redirectUrl={'/info/work'} /></div>
+          <div className="p-4 text-center md:p-1"><Card redirectUrl={'/info/work'} /></div>
         </div>
-      </div> */}
-      <div className="section5">
-        <CTA />
       </div>
+
 
       <div className='section6'>
         <Footer />

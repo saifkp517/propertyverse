@@ -57,14 +57,14 @@ src="https://images.unsplash.com/photo-1600585153490-76fb20a32601?auto=format&fi
               <div className="font-bold text-xl mb-2">Monthly Cash Flow</div>
               <br />
               <div className="mb-2 flex items-center justify-between gap-4">
-                <Typography color="blue-gray" variant="h6">
+                <Typography  variant="h6">
                   MonthlyRent: ₹ 1,48,09,133
                 </Typography>
               </div>
               <Progress size='lg' value={60} />
 
               <div className="mb-2 flex items-center justify-between gap-4">
-                <Typography color="blue-gray" variant="h6">
+                <Typography  variant="h6">
                   Property Management Fee: ₹ 1,48,09,133
                 </Typography>
               </div>
