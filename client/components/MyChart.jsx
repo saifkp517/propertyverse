@@ -1,51 +1,50 @@
 // components/MyLineChart.tsx
 "use client";
+
 import {
     Chart as ChartJS,
     CategoryScale,
     LinearScale,
-    Tooltip,
     PointElement,
-    ArcElement
+    ArcElement,
+    Legend
 } from "chart.js";
-import { Line, Doughnut } from "react-chartjs-2";
-
-//labels
-import ChartDataLabels from 'chartjs-plugin-datalabels';
+import { Line, Doughnut, } from "react-chartjs-2";
 
 // Register ChartJS components using ChartJS.register
 ChartJS.register(
     CategoryScale,
     LinearScale,
     PointElement,
-    ArcElement
+    ArcElement,
+    Legend
 );
-
-const labelArray = ['ads', 'asdasd', 'asdad']
 
 const MyChart = () => {
     return (
-        <div>
+        <div className="lg:p-6 md:p-0">
             <Doughnut
                 data={{
+                    labels: ['Point 1-$2131', 'Point 2', 'Point 4'],
                     datasets: [{
-                        label: 'My First Dataset',
-                        data: [300, 50, 10, 32, 32],
+                        
+                        data: [50, 10, 32],
                         backgroundColor: [
-                            'rgb(255, 99, 132)',
-                            'rgb(54, 162, 235)',
-                            'rgb(255, 205, 86)'
+                            '#ef4444',
+                            '#6b7280',
+                            '#bae6fd',
                         ],
-                        hoverOffset: 4
-                    }]
+                        hoverOffset: 20,
+                        borderColor: 'transparent',
+                        ArcElement: 10
+                    }],
                 }}
-                width={400}
-                height={400}
-                plugins={[ChartDataLabels]}
-                label={true}
+                width={600}
+                height={600}
                 options={{ maintainAspectRatio: false }}
 
             />
+
         </div>
     );
 };

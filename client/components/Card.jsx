@@ -10,7 +10,7 @@ const Card = ({ redirectUrl, image, name, }) => {
 
         <div className="sm:max-w-36 rounded overflow-hidden shadow-lg shadow-gray-600 card">
           <div className="p-6">
-            <div className="font-bold text-xl mb-2 text-gray-500">Prestige Tech Platina</div>
+            <div className="font-bold text-xl mb-2 text-gray-500">{name}</div>
             <Image src="https://images.unsplash.com/photo-1481253127861-534498168948?auto=format&fit=crop&q=80&w=1973&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Background img" width={100} height={60} layout='responsive' />
             <ul role="list" className="divide-y divide-gray-100">
 

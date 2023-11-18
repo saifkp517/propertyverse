@@ -1,20 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Carousel, Progress, Typography } from "@material-tailwind/react";
 import Hero2 from '../../components/Hero2'
 import Footer from '../../components/Footer'
 import MyChart from '../../components/MyChart';
 import Image from 'next/image';
 
+export default function Work() {
 
-const work = () => {
+  const [value, setValue] = useState(1000000);
+
+  const onUpdate = (e) => {
+    setValue(Number(e.target.value));
+  }
+
   return (
     <div>
       <Hero2 heading='Prestige Tech Platina' message='' />
-      <div className='section1'>
+      <div className='section1 text-gray-400'>
 
         <div className="flex md:flex-row flex-wrap">
 
-          <div className="w-full md:w-2/4 p-4 text-center" style={{minHeight: "50vh"}}>
+          <div className="w-full md:w-2/4 p-4 text-center" style={{ minHeight: "50vh" }}>
             <Carousel className="rounded-xl">
               <Image
                 src="https://images.unsplash.com/photo-1600585153490-76fb20a32601?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -29,7 +35,7 @@ const work = () => {
                 layout='fill'
               />
               <Image
-src="https://images.unsplash.com/photo-1600585153490-76fb20a32601?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="https://images.unsplash.com/photo-1600585153490-76fb20a32601?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="image 3"
                 className="h-full w-full object-cover"
                 layout='fill'
@@ -44,7 +50,8 @@ src="https://images.unsplash.com/photo-1600585153490-76fb20a32601?auto=format&fi
             </div>
             <div className="px-6 pt-4 pb-2">
 
-              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Fully Funded</span>
+              <button className="inline-block bg-red-500 hover:px-6 shadow-lg shadow-red-500/50 rounded-full px-5 py-3 text-sm font-semibold text-gray-700 mr-2 mb-2">Interested?</button>
+
             </div>
           </div>
 
@@ -52,19 +59,19 @@ src="https://images.unsplash.com/photo-1600585153490-76fb20a32601?auto=format&fi
         <br />
         <div>
           <h1 className='font-sans text-4xl mx-10 py-10'>Investment Returns</h1>
-          <div className="w-full md:w-3/4  p-4 rounded overflow-hidden shadow-lg shadow-gray-600 card">
+          <div className="lg:w-3/4 md:w-1/4 my-72 p-4 rounded overflow-hidden shadow-lg shadow-gray-600 card">
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">Monthly Cash Flow</div>
               <br />
               <div className="mb-2 flex items-center justify-between gap-4">
-                <Typography  variant="h6">
+                <Typography variant="h6">
                   MonthlyRent: ₹ 1,48,09,133
                 </Typography>
               </div>
               <Progress size='lg' value={60} />
 
               <div className="mb-2 flex items-center justify-between gap-4">
-                <Typography  variant="h6">
+                <Typography variant="h6">
                   Property Management Fee: ₹ 1,48,09,133
                 </Typography>
               </div>
@@ -74,74 +81,141 @@ src="https://images.unsplash.com/photo-1600585153490-76fb20a32601?auto=format&fi
 
             </div>
           </div>
-          <div className="w-full md:w-3/4  p-4 rounded overflow-hidden shadow-lg shadow-gray-600 card overflow-x-auto">
+          <div className="lg:w-3/4 md:w-1/4  p-4 rounded overflow-hidden shadow-lg shadow-gray-600 card overflow-x-auto">
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">Financial Model</div>
               <br />
-              <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                  <tr>
-                    <th className="px-6 py-3"></th>
-                    <th className="px-6 py-3">Day 0</th>
-                    <th className="px-6 py-3">Year 1</th>
-                    <th className="px-6 py-3">Year 2</th>
-                    <th className="px-6 py-3">Year 3</th>
-                    <th className="px-6 py-3">Year 4</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Investments</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>Rents</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>Enhanced Yeild</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>Sale Value</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>Total</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
+
+
+
+              <div className="relative overflow-x-auto">
+    <table className="w-full text-sm text-left rtl:text-right overflow-x-auto">
+        <thead className="text-xs">
+            <tr>
+                <th scope="col" className="px-6 py-3">
+                </th>
+                <th scope="col" className="px-6 py-3">
+                    Year 1
+                </th>
+                <th scope="col" className="px-6 py-3">
+                    Year 2
+                </th>
+                <th scope="col" className="px-6 py-3">
+                    Year 3
+                </th>
+                <th scope="col" className="px-6 py-3">
+                    Year 4
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr className="">
+                <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
+                    Investments
+                </th>
+                <td className="px-6 py-4">
+                </td>
+                <td className="px-6 py-4">
+                </td>
+                <td className="px-6 py-4">
+                </td>
+                <td className="px-6 py-4">
+                </td>
+            </tr>
+            <tr className="">
+                <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
+                    Rents
+                </th>
+                <td className="px-6 py-4">
+                </td>
+                <td className="px-6 py-4">
+                </td>
+                <td className="px-6 py-4">
+                </td>
+            </tr>
+            <tr className="">
+                <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
+                    Enhanced Yeild
+                </th>
+                <td className="px-6 py-4">
+                </td>
+                <td className="px-6 py-4">
+                </td>
+                <td className="px-6 py-4">
+                </td>
+                <td className="px-6 py-4">
+                </td>
+            </tr>
+            <tr className="">
+                <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
+                    Sale Value
+                </th>
+                <td className="px-6 py-4">
+                </td>
+                <td className="px-6 py-4">
+                </td>
+                <td className="px-6 py-4">
+                </td>
+                <td className="px-6 py-4">
+                </td>
+            </tr>
+            <tr className="">
+                <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
+                    Total
+                </th>
+                <td className="px-6 py-4">
+                </td>
+                <td className="px-6 py-4">
+                </td>
+                <td className="px-6 py-4">
+                </td>
+                <td className="px-6 py-4">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
             </div>
           </div>
-          <div className="w-full md:w-3/4 text-center  p-4 rounded overflow-hidden shadow-lg shadow-gray-600 card">
+          <div className="lg:w-3/4 md:w-1/4 text-center  p-4 rounded overflow-hidden shadow-lg shadow-gray-600 card">
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">Capital Appreciation</div>
               <br />
-              <MyChart />
+              <div className="my-12">
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                  <div className='lg:px-12 md:px-4'>
+                    <h1 className='text-2xl'>Property Pricing</h1>
+                    <MyChart />
+                  </div>
+                  <div>
+                    <h1></h1>
+                    <br />
+                    <input className="accent-red-500 w-10/12" type="range" value={value} onChange={onUpdate} min={1000000} max={10000000} /><span className='text-end'>&nbsp;{Math.round(value/100000)} Lakhs</span>
+                    <div className="grid grid-cols-3 gap-4 w-full my-10">
+                      <div className='...'>
+                        {Math.round(value/100000)} Lakhs
+                        <h1><b>Investment Amount</b></h1>
+                      </div>
+                      <div className='...'>
+                      {(value/100000 * 0.12).toFixed(2)} Lakhs
+                      <h1><b>Est. Returns</b></h1>
+                      </div>
+                      <div className='...'>
+                        {(value/100000 + value/100000 * 0.12).toFixed(2)} Lakhs
+                        <h1><b>Total Value</b></h1>
+                      </div>
+                    </div>
+
+
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
-          <div className="w-full md:w-3/4  p-4 rounded overflow-hidden shadow-lg shadow-gray-600 card">
+          <div className="lg:w-3/4 md:w-1/4  p-4 rounded overflow-hidden shadow-lg shadow-gray-600 card">
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">Tenant Details</div>
               <br />
@@ -200,7 +274,7 @@ src="https://images.unsplash.com/photo-1600585153490-76fb20a32601?auto=format&fi
               </div>
             </div>
           </div>
-          <div className="w-full md:w-3/4  p-4 rounded overflow-hidden shadow-lg shadow-gray-600 card">
+          <div className="lg:w-3/4 md:w-1/4  p-4 rounded overflow-x-auto shadow-lg shadow-gray-600 card">
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">Location Highlights</div>
               <br />
@@ -214,5 +288,3 @@ src="https://images.unsplash.com/photo-1600585153490-76fb20a32601?auto=format&fi
     </div>
   )
 }
-
-export default work
