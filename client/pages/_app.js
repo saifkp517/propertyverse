@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }) {
         clientId="36R6FfoIjqtSl5ZxtclikDYwLny7gvZL"
         cacheLocation='localstorage'
         authorizationParams={{
-          redirect_uri: "http://localhost:3000"
+          redirect_uri: "https://propertyverse.vercel.app/"
         }}
       >
         <Navbar />
