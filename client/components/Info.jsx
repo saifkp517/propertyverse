@@ -5,33 +5,34 @@ export default function Section() {
         <div>
             <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-32 gap-y-4 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8 ">
                 <div>
-                    <h2 className="text-3xl font-bold tracking-tight text-gray-500 sm:text-4xl">Technical Specifications</h2>
-                    <p className="mt-4 text-gray-500">The walnut wood card tray is precision milled to perfectly fit a stack of Focus cards. The powder coated steel divider separates active cards from new ones, or can be used to archive important task lists.</p>
+                    <h2 className="text-3xl font-bold tracking-tight text-gray-500 sm:text-4xl">Diversified Investment Opportunities</h2>
+                    <p className="mt-4 text-gray-500">Explore a diverse range of fractional ownership opportunities in premium real estate.</p>
 
                     <dl className="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
                         <div className="border-t border-gray-200 pt-4">
-                            <dt className="font-medium text-gray-600">Origin</dt>
-                            <dd className="mt-2 text-sm text-gray-500">Designed by Good Goods, Inc.</dd>
+                            <dt className="font-medium text-gray-600">Diversified Investment Opportunities</dt>
+                            <dd className="mt-2 text-sm text-gray-500">Explore a diverse range of fractional ownership opportunities in premium real estate.</dd>
                         </div>
                         <div className="border-t border-gray-200 pt-4">
-                            <dt className="font-medium text-gray-600">Material</dt>
-                            <dd className="mt-2 text-sm text-gray-500">Solid walnut base with rare earth magnets and powder coated steel card cover</dd>
+                            <dt className="font-medium text-gray-600">Risk Mitigation and Affordability</dt>
+                            <dd className="mt-2 text-sm text-gray-500">Experience the benefits of real estate investment without the burden of full ownership.</dd>
                         </div>
                         <div className="border-t border-gray-200 pt-4">
-                            <dt className="font-medium text-gray-600">Dimensions</dt>
-                            <dd className="mt-2 text-sm text-gray-500">6.25&quot; x 3.55&quot; x 1.15&quot;</dd>
+                            <dt className="font-medium text-gray-600">Expertly Vetted Properties</dt>
+                            <dd className="mt-2 text-sm text-gray-500">Invest with confidence in meticulously vetted and high-potential properties.</dd>
                         </div>
                         <div className="border-t border-gray-200 pt-4">
-                            <dt className="font-medium text-gray-600">Finish</dt>
-                            <dd className="mt-2 text-sm text-gray-500">Hand sanded and finished with natural oil</dd>
+                            <dt className="font-medium text-gray-600">User-Friendly Platform</dt>
+                            <dd className="mt-2 text-sm text-gray-500">Navigate seamlessly through our intuitive platform designed for your convenience.</dd>
                         </div>
                         <div className="border-t border-gray-200 pt-4">
-                            <dt className="font-medium text-gray-600">Includes</dt>
-                            <dd className="mt-2 text-sm text-gray-500">Wood card tray and 3 refill packs</dd>
+                            <dt className="font-medium text-gray-600">Responsive Customer Support</dt>
+                            <dd className="mt-2 text-sm text-gray-500">Enjoy responsive customer support for a hassle-free investing experience.</dd>
                         </div>
+
                         <div className="border-t border-gray-200 pt-4">
-                            <dt className="font-medium text-gray-600">Considerations</dt>
-                            <dd className="mt-2 text-sm text-gray-500">Made from natural materials. Grain and color vary with each item.</dd>
+                            <dt className="font-medium text-gray-600">Expertly Vetted Properties</dt>
+                            <dd className="mt-2 text-sm text-gray-500">Invest with confidence in meticulously vetted and high-potential properties.</dd>
                         </div>
                     </dl>
                 </div>
