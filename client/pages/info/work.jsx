@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import MyModal from '../../components/Dialog';
 import { Carousel, Progress, Typography } from "@material-tailwind/react";
 import Hero2 from '../../components/Hero2'
 import Footer from '../../components/Footer'
@@ -45,12 +46,41 @@ export default function Work() {
           <div className="w-full md:w-1/4  p-4 text-center rounded overflow-hidden shadow-lg shadow-gray-600 card">
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">Prestige Tech Platina<br /> <sub>Outer Ring Rd, Bangalore</sub></div>
-              <br />
               <hr />
             </div>
             <div className="px-6 pt-4 pb-2">
+              <div className="grid grid-cols-2 gap-10">
+                <div>
+                  <svg className="w-12 mx-auto h-12 text-gray-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16">
+                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1v14h16m0-9-3-2-3 5-3-2-3 4" />
+                  </svg>
+                  <h1><b>10.00%</b> <br /> HIGH RENTAL YEILD </h1>
+                </div>
+                <div className=''>
+                  <svg className="w-12 mx-auto h-12 text-gray-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 19 20">
+                    <path d="M18.972.863a.913.913 0 0 0-.041-.207.956.956 0 0 0-.107-.19 1.01 1.01 0 0 0-.065-.116c-.008-.01-.02-.013-.028-.022a1.008 1.008 0 0 0-.174-.137 1.085 1.085 0 0 0-.141-.095 1.051 1.051 0 0 0-.171-.047.985.985 0 0 0-.207-.041C18.025.007 18.014 0 18 0h-3.207a1 1 0 1 0 0 2h.5l-4.552 3.9-3.5-.874a1 1 0 0 0-.867.189l-5 4a1 1 0 0 0 1.25 1.562L7.238 7.09l3.52.88a1 1 0 0 0 .892-.211L17 3.173v1.034a1 1 0 0 0 2 0V1a.9.9 0 0 0-.028-.137ZM13.5 9a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11Zm.24 4.591a3.112 3.112 0 0 1 1.935 1.374 2.036 2.036 0 0 1 .234 1.584 2.255 2.255 0 0 1-1.374 1.469.982.982 0 0 1-1.953.09 2.943 2.943 0 0 1-1.475-.92 1 1 0 0 1 1.536-1.283.953.953 0 0 0 .507.29.778.778 0 0 0 .831-.18 1.108 1.108 0 0 0-.714-.481 3.105 3.105 0 0 1-1.934-1.374 2.042 2.042 0 0 1-.233-1.584 2.264 2.264 0 0 1 1.45-1.493v-.03a1 1 0 0 1 2 0c.517.159.98.457 1.337.862a1.002 1.002 0 1 1-1.524 1.3.962.962 0 0 0-.507-.286.775.775 0 0 0-.829.18 1.113 1.113 0 0 0 .713.482ZM6 20a1 1 0 0 1-1-1v-6a1 1 0 1 1 2 0v6a1 1 0 0 1-1 1Zm-4 0a1 1 0 0 1-1-1v-4a1 1 0 1 1 2 0v4a1 1 0 0 1-1 1Z" />
+                  </svg>
+                  <h1><b>17.5%</b> <br /> HIGH RETURNS </h1>
+                </div>
+                <div className=''>
+                  <svg className=" w-12 mx-auto h-12 text-gray-200" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
+                  </svg>
+                  <h1><b>₹10,600 psf</b> <br /> ATTRACTIVE PRICE </h1>
+                </div>
+                <div className=''>
+                  <svg className=" w-12 mx-auto h-12 text-gray-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 21">
+                    <g stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
+                      <path d="M8 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                      <path d="M13.8 12.938h-.01a7 7 0 1 0-11.465.144h-.016l.141.17c.1.128.2.252.3.372L8 20l5.13-6.248c.193-.209.373-.429.54-.66l.13-.154Z" />
+                    </g>
+                  </svg>
+                  <h1><b>Outer Ring Road</b> <br />LOCATION</h1>
+                </div>
 
-              <button className="inline-block bg-red-500 hover:px-6 shadow-lg shadow-red-500/50 rounded-full px-5 py-3 text-sm font-semibold text-gray-700 mr-2 mb-2">Interested?</button>
+              </div>
+              <br />
+              <MyModal />
 
             </div>
           </div>
@@ -89,92 +119,92 @@ export default function Work() {
 
 
               <div className="relative overflow-x-auto">
-    <table className="w-full text-sm text-left rtl:text-right overflow-x-auto">
-        <thead className="text-xs">
-            <tr>
-                <th scope="col" className="px-6 py-3">
-                </th>
-                <th scope="col" className="px-6 py-3">
-                    Year 1
-                </th>
-                <th scope="col" className="px-6 py-3">
-                    Year 2
-                </th>
-                <th scope="col" className="px-6 py-3">
-                    Year 3
-                </th>
-                <th scope="col" className="px-6 py-3">
-                    Year 4
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr className="">
-                <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
-                    Investments
-                </th>
-                <td className="px-6 py-4">
-                </td>
-                <td className="px-6 py-4">
-                </td>
-                <td className="px-6 py-4">
-                </td>
-                <td className="px-6 py-4">
-                </td>
-            </tr>
-            <tr className="">
-                <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
-                    Rents
-                </th>
-                <td className="px-6 py-4">
-                </td>
-                <td className="px-6 py-4">
-                </td>
-                <td className="px-6 py-4">
-                </td>
-            </tr>
-            <tr className="">
-                <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
-                    Enhanced Yeild
-                </th>
-                <td className="px-6 py-4">
-                </td>
-                <td className="px-6 py-4">
-                </td>
-                <td className="px-6 py-4">
-                </td>
-                <td className="px-6 py-4">
-                </td>
-            </tr>
-            <tr className="">
-                <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
-                    Sale Value
-                </th>
-                <td className="px-6 py-4">
-                </td>
-                <td className="px-6 py-4">
-                </td>
-                <td className="px-6 py-4">
-                </td>
-                <td className="px-6 py-4">
-                </td>
-            </tr>
-            <tr className="">
-                <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
-                    Total
-                </th>
-                <td className="px-6 py-4">
-                </td>
-                <td className="px-6 py-4">
-                </td>
-                <td className="px-6 py-4">
-                </td>
-                <td className="px-6 py-4">
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+                <table className="w-full text-sm text-left rtl:text-right overflow-x-auto">
+                  <thead className="text-xs">
+                    <tr>
+                      <th scope="col" className="px-6 py-3">
+                      </th>
+                      <th scope="col" className="px-6 py-3">
+                        Year 1
+                      </th>
+                      <th scope="col" className="px-6 py-3">
+                        Year 2
+                      </th>
+                      <th scope="col" className="px-6 py-3">
+                        Year 3
+                      </th>
+                      <th scope="col" className="px-6 py-3">
+                        Year 4
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="">
+                      <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
+                        Investments
+                      </th>
+                      <td className="px-6 py-4">
+                      </td>
+                      <td className="px-6 py-4">
+                      </td>
+                      <td className="px-6 py-4">
+                      </td>
+                      <td className="px-6 py-4">
+                      </td>
+                    </tr>
+                    <tr className="">
+                      <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
+                        Rents
+                      </th>
+                      <td className="px-6 py-4">
+                      </td>
+                      <td className="px-6 py-4">
+                      </td>
+                      <td className="px-6 py-4">
+                      </td>
+                    </tr>
+                    <tr className="">
+                      <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
+                        Enhanced Yeild
+                      </th>
+                      <td className="px-6 py-4">
+                      </td>
+                      <td className="px-6 py-4">
+                      </td>
+                      <td className="px-6 py-4">
+                      </td>
+                      <td className="px-6 py-4">
+                      </td>
+                    </tr>
+                    <tr className="">
+                      <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
+                        Sale Value
+                      </th>
+                      <td className="px-6 py-4">
+                      </td>
+                      <td className="px-6 py-4">
+                      </td>
+                      <td className="px-6 py-4">
+                      </td>
+                      <td className="px-6 py-4">
+                      </td>
+                    </tr>
+                    <tr className="">
+                      <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
+                        Total
+                      </th>
+                      <td className="px-6 py-4">
+                      </td>
+                      <td className="px-6 py-4">
+                      </td>
+                      <td className="px-6 py-4">
+                      </td>
+                      <td className="px-6 py-4">
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
 
 
             </div>
@@ -190,22 +220,32 @@ export default function Work() {
                     <MyChart />
                   </div>
                   <div>
-                    <h1></h1>
                     <br />
-                    <input className="accent-red-500 w-10/12" type="range" value={value} onChange={onUpdate} min={1000000} max={10000000} /><span className='text-end'>&nbsp;{Math.round(value/100000)} Lakhs</span>
+                    <input className="accent-red-500 w-10/12" type="range" value={value} onChange={onUpdate} min={1000000} max={10000000} /><span className='text-end'>&nbsp;{Math.round(value / 100000)} Lakhs</span>
+                    
+                    <div className="grid grid-cols-2">
+                    <h1 className="... w-9/12 text-left ">10Lakhs</h1>
+                    <h1 className="... w-9/12 text-right ">1 CR</h1>
+                    </div>
                     <div className="grid grid-cols-3 gap-4 w-full my-10">
-                      <div className='...'>
-                        {Math.round(value/100000)} Lakhs
+                      <div className="col-span-3 text-start mx-6 my-2">
+                        <Typography variant='h4'><b>Assured Return Rate (P.A): </b><span className=' text-red-400'> 12 %</span></Typography>
+                      </div>
+                      <div className="col-span-3 text-start mx-6 mb-12">
+                        <Typography variant='h4'><b>Time Period (P.A): </b><span className=' text-red-400'> 48 Months</span></Typography>
+                      </div>
+                      <Typography variant='h5' className='...'>
+                        <span className=' text-gray-200'>{Math.round(value / 100000)} Lakhs</span>
                         <h1><b>Investment Amount</b></h1>
-                      </div>
-                      <div className='...'>
-                      {(value/100000 * 0.12).toFixed(2)} Lakhs
-                      <h1><b>Est. Returns</b></h1>
-                      </div>
-                      <div className='...'>
-                        {(value/100000 + value/100000 * 0.12).toFixed(2)} Lakhs
+                      </Typography>
+                      <Typography variant='h5' className='...'>
+                        <span className='text-gray-200'>{(value / 100000 * 0.12).toFixed(2)} Lakhs</span>
+                        <h1><b>Est. Returns</b></h1>
+                      </Typography>
+                      <Typography variant='h6' className='...'>
+                        <span className='text-gray-200'>{((value / 100000 + value / 100000 * 0.12) * 4).toFixed(2)} Lakhs</span>
                         <h1><b>Total Value</b></h1>
-                      </div>
+                      </Typography>
                     </div>
 
 
