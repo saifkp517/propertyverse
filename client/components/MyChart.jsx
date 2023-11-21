@@ -3,21 +3,19 @@
 
 import {
     Chart as ChartJS,
-    CategoryScale,
-    LinearScale,
     PointElement,
     ArcElement,
-    Legend
+    Legend,
+    Tooltip
 } from "chart.js";
-import { Line, Doughnut, } from "react-chartjs-2";
+import { Doughnut } from "react-chartjs-2";
 
 // Register ChartJS components using ChartJS.register
 ChartJS.register(
-    CategoryScale,
-    LinearScale,
     PointElement,
     ArcElement,
-    Legend
+    Legend,
+    Tooltip
 );
 
 const MyChart = () => {
@@ -25,7 +23,7 @@ const MyChart = () => {
         <div className="lg:p-6 md:p-0">
             <Doughnut
                 data={{
-                    labels: ['Point 1-$2131', 'Point 2', 'Point 4'],
+                    labels: ['Monthly Rent', 'TDS   ', 'Property Management Fee',],
                     datasets: [{
                         
                         data: [50, 10, 32],
@@ -34,7 +32,6 @@ const MyChart = () => {
                             '#6b7280',
                             '#bae6fd',
                         ],
-                        hoverOffset: 20,
                         borderColor: 'transparent',
                         ArcElement: 10
                     }],

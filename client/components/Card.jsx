@@ -11,7 +11,7 @@ const Card = ({ redirectUrl, image, name, }) => {
         <div className="sm:max-w-36 rounded overflow-hidden shadow-lg shadow-gray-600 card">
           <div className="p-6">
             <div className="font-bold text-xl mb-2 text-gray-500">{name}</div>
-            <Image src="https://images.unsplash.com/photo-1481253127861-534498168948?auto=format&fit=crop&q=80&w=1973&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Background img" width={100} height={60} layout='responsive' />
+            <Image className="w-full" src="https://images.unsplash.com/photo-1481253127861-534498168948?auto=format&fit=crop&q=80&w=1973&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Background img" width={100} height={60} layout='responsive' />
             <ul role="list" className="divide-y divide-gray-100">
 
               <li className="flex justify-between gap-x-6 py-5">
@@ -33,7 +33,7 @@ const Card = ({ redirectUrl, image, name, }) => {
               </li>
             </ul>
             <Link href={`${redirectUrl}`} >
-              <button type="button" className="text-gray-900  bg-gradient-to-r from-red-500 via-red-700 to-red-900 shadow-lg shadow-gray-600/40 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-transparent dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-0">View Opportunity</button>
+              <button type="button" className="text-gray-900 tracking-widest font-extrabold bg-gradient-to-r from-red-500 via-red-700 to-red-900 shadow-lg shadow-gray-600/40 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-transparent dark:focus:ring-red-400 rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-0">View Opportunity</button>
             </Link>
 
           </div>
