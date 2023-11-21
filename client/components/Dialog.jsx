@@ -67,7 +67,7 @@ export default function MyModal() {
             <button
                 type="button"
                 onClick={openModal}
-                className="inline-block  bg-red-500 hover:px-6 tracking-widest shadow-lg shadow-red-500/50 rounded-full px-5 py-3 text-sm font-semibold text-gray-900 mr-2 mb-2"
+                className="transition ease-in-out delay-150  inline-block text-gray-900 tracking-widest font-extrabold bg-gradient-to-r from-red-500 via-red-700 to-red-900 shadow-lg shadow-gray-600/40 hover:-translate-y-1 hover:scale-110 hover:bg-gradient-to-bl  focus:ring-4 focus:outline-none focus:ring-transparent dark:focus:ring-red-400 rounded-lg text-xl px-5 py-2.5 text-center mr-2 mb-0"
             >
                 Interested?
             </button>
@@ -113,7 +113,7 @@ export default function MyModal() {
                                     </div>
                                     <div className="mt-2">
                                         <button
-                                            className="mt-4 inline-flex justify-center rounded-md border border-transparent bg-red-100 px-4 py-2 text-sm font-medium text-red-900 hover:bg-red-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2"
+                                            className="mt-4 inline-flex justify-center rounded-md border border-transparent bg-red-100 px-4 py-2 text-sm font-medium text-red-900 hover:bg-red-200  focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2"
                                             onClick={closeModal2}
                                         >
                                             Got it. Thanks!
