@@ -11,11 +11,11 @@ export default function Home() {
 
 
   const properties = [
-    { name: "Prestige Tech Platina", url: '/info/work' },
-    { name: "2", url: '/info/work' },
-    { name: "3", url: '/info/work' },
-    { name: "4", url: '/info/work' },
-    { name: "5", url: '/info/work' }
+    { name: "Prestige Tech Platina", url: '/info/' },
+    { name: "2", url: '/qed23fsdfkjad/' },
+    { name: "3", url: '/293p8sjf;o2u3r/' },
+    { name: "4", url: '/242liurwo87f/' },
+    { name: "5", url: '/1239p87ualhjad/' }
   ]
 
   const [searchItem, setSearchItem] = useState('');

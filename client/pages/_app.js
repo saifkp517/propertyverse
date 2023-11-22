@@ -1,11 +1,12 @@
 import Navbar from '../components/Navbar';
+import NextNProgress from 'nextjs-progressbar';
 import '../styles/globals.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import { Auth0Provider } from '@auth0/auth0-react';
 
-function MyApp({ Component, pageProps }) {  
+function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     AOS.init();
@@ -22,6 +23,7 @@ function MyApp({ Component, pageProps }) {
         }}
       >
         <Navbar />
+        <NextNProgress color='#424242' height={7} showOnShallow={true} />
         <Component {...pageProps} />
       </Auth0Provider>
 
