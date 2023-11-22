@@ -26,17 +26,19 @@ const MyChart = () => {
         <div className="lg:p-6 md:p-0">
             <Doughnut
                 data={{
-                    labels: ['Monthly Rent', 'TDS   ', 'Property Management Fee',],
+                    labels: ['Purchase Price', 'Stamp Duty', 'Brokerage', 'Legal Fee', 'Reserves'],
                     datasets: [{
                         
-                        data: [50, 10, 32],
+                        data: [358020000, 21481200, 10740600, 1500000, 4258200],
                         backgroundColor: [
-                            '#ef4444',
-                            '#6b7280',
-                            '#bae6fd',
+                            '#f87171',
+                            '#1f2937',
+                            '#60a5fa',
+                            '#8b5cf6',
+                            '#ec4899'
                         ],
                         borderColor: 'transparent',
-                        ArcElement: 10
+                        ArcElement: 10,
                     }],
                 }}
                 width={600}
