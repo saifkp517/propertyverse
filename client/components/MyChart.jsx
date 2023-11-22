@@ -26,7 +26,7 @@ const MyChart = () => {
         <div className="lg:p-6 md:p-0">
             <Doughnut
                 data={{
-                    labels: ['Purchase Price', 'Stamp Duty', 'Brokerage', 'Legal Fee', 'Reserves'],
+                    labels: ['Purchase Price: ₹', 'Stamp Duty: ₹', 'Brokerage: ₹', 'Legal Fee: ₹', 'Reserves: ₹'],
                     datasets: [{
                         
                         data: [358020000, 21481200, 10740600, 1500000, 4258200],
