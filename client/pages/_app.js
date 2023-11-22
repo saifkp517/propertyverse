@@ -4,7 +4,6 @@ import '../styles/globals.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
 import { Auth0Provider } from '@auth0/auth0-react';
 
 // function Loading() {
