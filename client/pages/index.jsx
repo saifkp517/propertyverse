@@ -15,24 +15,13 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Hero message='Welcome to a redefinition of property management. Discover seamless solutions for property owners and tenants alike' />
-      <div className="section1">
+      <div data-aos-duration="1000" data-aos="fade-down"  className="section1">
         <Section />
       </div>
       <div className="section2" id="section2">
         <Clients />
       </div>
-
-      {/* <div className='section4'>
-        <h1 className='font-sans text-center text-4xl my-10 text-gray-500'>All Properties</h1>
-        <br />
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
-          <div className="p-4 text-center md:p-1"><Card redirectUrl={'/properties/work'} /></div>
-          <div className="p-4 text-center md:p-1"><Card redirectUrl={'/properties/work'} /></div>
-          <div className="p-4 text-center md:p-1"><Card redirectUrl={'/properties/work'} /></div>
-          <div className="p-4 text-center md:p-1"><Card redirectUrl={'/properties/work'} /></div>
-        </div>
-      </div> */}
-      <div className="section5">
+       <div className="section5">
         <CTA />
       </div>
 

@@ -1,8 +1,16 @@
 import Navbar from '../components/Navbar';
 import '../styles/globals.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 import { Auth0Provider } from '@auth0/auth0-react';
 
 function MyApp({ Component, pageProps }) {  
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
   return (
     <>
       <Auth0Provider

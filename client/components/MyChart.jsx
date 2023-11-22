@@ -6,7 +6,9 @@ import {
     PointElement,
     ArcElement,
     Legend,
-    Tooltip
+    Tooltip,
+    plugins,
+    scales,
 } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 
@@ -15,7 +17,8 @@ ChartJS.register(
     PointElement,
     ArcElement,
     Legend,
-    Tooltip
+    Tooltip,
+    scales
 );
 
 const MyChart = () => {
