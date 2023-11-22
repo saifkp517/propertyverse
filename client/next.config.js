@@ -11,7 +11,8 @@ module.exports = {
       'media.licdn.com',
       'tailwindui.com',
       'plus.unsplash.com',
-      'lh3.googleusercontent.com'
+      'propmedia1.propertyshare.in',
+      'propmedia2.propertyshare.in'
     ]
   }
 }

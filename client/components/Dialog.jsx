@@ -67,7 +67,7 @@ export default function MyModal() {
             <button
                 type="button"
                 onClick={openModal}
-                className="transition ease-in text-gray-900 tracking-widest font-extrabold bg-gradient-to-r from-red-500 via-red-700 to-red-900 shadow-lg shadow-gray-600/40 hover: -translate-y-0.5 hover:scale-110 hover:bg-gradient-to-bl  focus:ring-4 focus:outline-none focus:ring-transparent dark:focus:ring-red-400 rounded-lg text-xl px-5 py-2.5 text-center mr-2 mb-0"
+                className="transition ease-in text-gray-200 tracking-widest font-extrabold bg-gradient-to-r from-red-500 via-red-700 to-red-900 shadow-lg shadow-gray-600/40 hover: -translate-y-0.5 hover:scale-110 hover:bg-gradient-to-bl  focus:ring-4 focus:outline-none focus:ring-transparent dark:focus:ring-red-400 rounded-lg text-xl px-5 py-2.5 text-center mr-2 mb-0"
             >
                 Interested?
             </button>
