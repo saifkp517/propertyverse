@@ -33,40 +33,38 @@ export default function Work() {
       <div className='section1 text-gray-400'>
         <div className="flex md:flex-row  flex-wrap">
 
-          <div className="w-full md:3/4 lg:w-2/4 p-4 text-center" style={{minHeight: "50vh"}}>
-            <SimpleImageSlider
-              width={896}
-              height={504}
-              loop={true}
-              useGPURender={true}
-              images={images}
-              showBullets={true}
-              showNavs={true}
-            />
-            {/* <Carousel className="rounded-xl">
+          <div className="w-full md:3/4 lg:w-2/4 p-4 text-center" style={{minHeight: "5"}}>
+
+            <Carousel className="rounded-xl">
               <Image
                 src="https://propmedia1.propertyshare.in/website/property/d3Joby9VTnlncndkZit1ZlAxQ2ZMdz09/media-v2/images/main/665x400/1638176092-embassy-tech-square-bangalore-1.jpg"
                 alt="image 1"
                 className="h-full w-full object-cover"
-                layout='fill'
+                height={70}
+                width={100}
+                layout='responsive'
               />
               <Image
                 src="https://propmedia1.propertyshare.in/website/property/d3Joby9VTnlncndkZit1ZlAxQ2ZMdz09/media-v2/images/main/665x400/1638176095-embassy-tech-square-bangalore-2.jpg"
                 alt="image 2"
                 className="h-full w-full object-cover"
-                layout='fill'
+                height={70}
+                width={100}
+                layout='responsive'
               />
               <Image
                 src="https://propmedia1.propertyshare.in/website/property/d3Joby9VTnlncndkZit1ZlAxQ2ZMdz09/media-v2/images/main/665x400/1638176113-embassy-tech-square-bangalore-8.jpg"
                 alt="image 3"
                 className="h-full w-full object-cover"
-                layout='fill'
+                height={70}
+                width={100}
+                layout='responsive'
               />
-            </Carousel> */}
+            </Carousel>
           </div>
           <div className="w-full lg:w-1/4 md:w-2/4  p-4 text-center rounded overflow-hidden shadow-lg shadow-gray-600 card">
             <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2">Prestige Tech Platina<br /> <sub>Outer Ring Rd, Bangalore</sub></div>
+              <div className="font-bold text-xl mb-2">Embassy Tech Square<br /> <sub>Outer Ring Rd, Bangalore</sub></div>
               <hr />
             </div>
             <div className="px-6 pt-4 pb-2 gap-2">
