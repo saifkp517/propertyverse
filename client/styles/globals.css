@@ -58,13 +58,6 @@ body {
   margin: 0 5%;
 }
 
-table,
-th,
-td {
-  border: 1px solid;
-  border-collapse: collapse;
-}
-
 @media only screen and (max-width: 950px) {
   .card-section {
     display: inline-flexbox;

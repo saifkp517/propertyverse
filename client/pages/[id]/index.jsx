@@ -6,74 +6,96 @@ import { Carousel, Typography } from "@material-tailwind/react";
 import Hero2 from '../../components/Hero2'
 import Footer from '../../components/Footer'
 import MyChart from '../../components/MyChart';
+import SimpleImageSlider from "react-simple-image-slider";
 import Image from 'next/image';
 
 export default function Work() {
 
-
   const [value, setValue] = useState(1000000);
-
 
   const onUpdate = (e) => {
     setValue(Number(e.target.value));
   }
 
+  const images = [
+    { url: "https://propmedia1.propertyshare.in/website/property/d3Joby9VTnlncndkZit1ZlAxQ2ZMdz09/media-v2/images/main/665x400/1638176092-embassy-tech-square-bangalore-1.jpg" },
+    { url: "https://propmedia1.propertyshare.in/website/property/d3Joby9VTnlncndkZit1ZlAxQ2ZMdz09/media-v2/images/main/665x400/1638176092-embassy-tech-square-bangalore-1.jpg" },
+    { url: "https://propmedia1.propertyshare.in/website/property/d3Joby9VTnlncndkZit1ZlAxQ2ZMdz09/media-v2/images/main/665x400/1638176092-embassy-tech-square-bangalore-1.jpg" },
+    { url: "https://propmedia1.propertyshare.in/website/property/d3Joby9VTnlncndkZit1ZlAxQ2ZMdz09/media-v2/images/main/665x400/1638176113-embassy-tech-square-bangalore-8.jpg" },
+    { url: "https://propmedia1.propertyshare.in/website/property/d3Joby9VTnlncndkZit1ZlAxQ2ZMdz09/media-v2/images/main/665x400/1638176113-embassy-tech-square-bangalore-8.jpg" },
+    { url: "https://propmedia1.propertyshare.in/website/property/d3Joby9VTnlncndkZit1ZlAxQ2ZMdz09/media-v2/images/main/665x400/1638176113-embassy-tech-square-bangalore-8.jpg" },
+    { url: "https://propmedia1.propertyshare.in/website/property/d3Joby9VTnlncndkZit1ZlAxQ2ZMdz09/media-v2/images/main/665x400/1638176113-embassy-tech-square-bangalore-8.jpg" },
+  ];
+
   return (
     <div>
       <Hero2 heading='Embassy Tech Square' message='' />
       <div className='section1 text-gray-400'>
-
         <div className="flex md:flex-row  flex-wrap">
 
-          <div className="w-full md:w-3/5 p-4 text-center" style={{ minHeight: "65vh" }}>
-            <Carousel className="rounded-xl">
+          <div className="w-full md:3/4 lg:w-2/4 p-4 text-center">
+            <SimpleImageSlider
+              width={896}
+              height={504}
+              loop={true}
+              useGPURender={true}
+              images={images}
+              showBullets={true}
+              showNavs={true}
+            />
+            {/* <Carousel className="rounded-xl">
               <Image
-                src="https://images.unsplash.com/photo-1600585153490-76fb20a32601?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="https://propmedia1.propertyshare.in/website/property/d3Joby9VTnlncndkZit1ZlAxQ2ZMdz09/media-v2/images/main/665x400/1638176092-embassy-tech-square-bangalore-1.jpg"
                 alt="image 1"
                 className="h-full w-full object-cover"
                 layout='fill'
               />
               <Image
-                src="https://images.unsplash.com/photo-1600585153490-76fb20a32601?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="https://propmedia1.propertyshare.in/website/property/d3Joby9VTnlncndkZit1ZlAxQ2ZMdz09/media-v2/images/main/665x400/1638176095-embassy-tech-square-bangalore-2.jpg"
                 alt="image 2"
                 className="h-full w-full object-cover"
                 layout='fill'
               />
               <Image
-                src="https://images.unsplash.com/photo-1600585153490-76fb20a32601?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="https://propmedia1.propertyshare.in/website/property/d3Joby9VTnlncndkZit1ZlAxQ2ZMdz09/media-v2/images/main/665x400/1638176113-embassy-tech-square-bangalore-8.jpg"
                 alt="image 3"
                 className="h-full w-full object-cover"
                 layout='fill'
               />
-            </Carousel>
+            </Carousel> */}
           </div>
-          <div className="w-full md:w-1/4  p-4 text-center rounded overflow-hidden shadow-lg shadow-gray-600 card">
+          <div className="w-full lg:w-1/4 md:w-2/4  p-4 text-center rounded overflow-hidden shadow-lg shadow-gray-600 card">
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">Prestige Tech Platina<br /> <sub>Outer Ring Rd, Bangalore</sub></div>
               <hr />
             </div>
-            <div className="px-6 pt-4 pb-2">
-              <div className="grid grid-cols-2 gap-10">
+            <div className="px-6 pt-4 pb-2 gap-2">
+              <div className="grid grid-cols-2 gap-0">
                 <div>
-                  <svg className="w-12 mx-auto h-12 text-gray-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16">
-                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1v14h16m0-9-3-2-3 5-3-2-3 4" />
-                  </svg>
+                  <div className="w-24 mx-auto h-24 rounded bg-gray-900 p-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" className="bi bi-bar-chart" viewBox="0 0 16 16">
+                      <path d="M4 11H2v3h2zm5-4H7v7h2zm5-5v12h-2V2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1z" />
+                    </svg>
+                  </div>
                   <h1><b className="text-gray-300" >10.00%</b> <br /> HIGH RENTAL YEILD </h1>
                 </div>
-                <div className=''>
-                  <svg className="w-12 mx-auto h-12 text-gray-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 19 20">
-                    <path d="M18.972.863a.913.913 0 0 0-.041-.207.956.956 0 0 0-.107-.19 1.01 1.01 0 0 0-.065-.116c-.008-.01-.02-.013-.028-.022a1.008 1.008 0 0 0-.174-.137 1.085 1.085 0 0 0-.141-.095 1.051 1.051 0 0 0-.171-.047.985.985 0 0 0-.207-.041C18.025.007 18.014 0 18 0h-3.207a1 1 0 1 0 0 2h.5l-4.552 3.9-3.5-.874a1 1 0 0 0-.867.189l-5 4a1 1 0 0 0 1.25 1.562L7.238 7.09l3.52.88a1 1 0 0 0 .892-.211L17 3.173v1.034a1 1 0 0 0 2 0V1a.9.9 0 0 0-.028-.137ZM13.5 9a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11Zm.24 4.591a3.112 3.112 0 0 1 1.935 1.374 2.036 2.036 0 0 1 .234 1.584 2.255 2.255 0 0 1-1.374 1.469.982.982 0 0 1-1.953.09 2.943 2.943 0 0 1-1.475-.92 1 1 0 0 1 1.536-1.283.953.953 0 0 0 .507.29.778.778 0 0 0 .831-.18 1.108 1.108 0 0 0-.714-.481 3.105 3.105 0 0 1-1.934-1.374 2.042 2.042 0 0 1-.233-1.584 2.264 2.264 0 0 1 1.45-1.493v-.03a1 1 0 0 1 2 0c.517.159.98.457 1.337.862a1.002 1.002 0 1 1-1.524 1.3.962.962 0 0 0-.507-.286.775.775 0 0 0-.829.18 1.113 1.113 0 0 0 .713.482ZM6 20a1 1 0 0 1-1-1v-6a1 1 0 1 1 2 0v6a1 1 0 0 1-1 1Zm-4 0a1 1 0 0 1-1-1v-4a1 1 0 1 1 2 0v4a1 1 0 0 1-1 1Z" />
-                  </svg>
+                <div>
+                  <div className="w-24 mx-auto h-24 rounded-xl bg-gray-900 p-4" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" className="bi bi-graph-up" viewBox="0 0 16 16">
+                      <path fillRule="evenodd" d="M0 0h1v15h15v1H0zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07Z" />
+                    </svg>
+                  </div>
+
                   <h1><b className="text-gray-300" >17.5%</b> <br /> HIGH RETURNS </h1>
                 </div>
                 <div className=''>
-                  <svg className=" w-12 mx-auto h-12 text-gray-200" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                  <svg className="w-24 mx-auto h-24 rounded bg-gray-900 p-3" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" viewBox="0 0 16 16">
                     <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
                   </svg>
                   <h1><b className="text-gray-300" >₹10,600 psf</b> <br /> ATTRACTIVE PRICE </h1>
                 </div>
                 <div className=''>
-                  <svg className=" w-12 mx-auto h-12 text-gray-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 21">
+                  <svg className="w-24 mx-auto h-24 rounded bg-gray-900 p-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 21">
                     <g stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
                       <path d="M8 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
                       <path d="M13.8 12.938h-.01a7 7 0 1 0-11.465.144h-.016l.141.17c.1.128.2.252.3.372L8 20l5.13-6.248c.193-.209.373-.429.54-.66l.13-.154Z" />
@@ -121,7 +143,7 @@ export default function Work() {
 
             </div>
           </div>
-          <div className="lg:w-3/4  p-4 rounded overflow-hidden shadow-lg shadow-gray-600 card overflow-x-auto">
+          <div className="lg:w-3/4 lg:p-4 p-0 rounded overflow-hidden shadow-lg shadow-gray-600 card overflow-x-auto">
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">Financial Model</div>
               <br />
@@ -130,7 +152,7 @@ export default function Work() {
 
               <div className="relative overflow-x-auto">
                 <table className="w-full text-sm text-left rtl:text-right overflow-x-auto">
-                  <thead className="text-xs">
+                  <thead className="text-xs bg-gray-700">
                     <tr>
                       <th scope="col" className="px-6 py-3">
                       </th>
@@ -148,12 +170,13 @@ export default function Work() {
                       </th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody className=' bg-gray-900'>
                     <tr className="">
                       <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
                         Investments
                       </th>
                       <td className="px-6 py-4">
+                        234234
                       </td>
                       <td className="px-6 py-4">
                       </td>
@@ -167,10 +190,14 @@ export default function Work() {
                         Rents
                       </th>
                       <td className="px-6 py-4">
+                        234234231231
                       </td>
                       <td className="px-6 py-4">
                       </td>
                       <td className="px-6 py-4">
+                      </td>
+                      <td className="px-6 py-4">
+                        32423124234
                       </td>
                     </tr>
                     <tr className="">
@@ -180,6 +207,7 @@ export default function Work() {
                       <td className="px-6 py-4">
                       </td>
                       <td className="px-6 py-4">
+                        324234234
                       </td>
                       <td className="px-6 py-4">
                       </td>
@@ -231,7 +259,7 @@ export default function Work() {
                   </div>
                   <div>
                     <br />
-                    <input className="accent-red-500 w-10/12" type="range" value={value} onChange={onUpdate} min={1000000} max={10000000} />
+                    <input className="accent-red-500 w-10/12" type="range" value={value} onChange={onUpdate} min={1000000.00} max={10000000.00} />
                     <p className='text-center'>&nbsp;₹ {Math.round(value / 100000)} Lakhs</p>
 
                     <div className="grid grid-cols-2">
@@ -243,7 +271,7 @@ export default function Work() {
                         <h1><b>Assured Return Rate (P.A): </b><span className=' text-red-400'> 12 %</span></h1>
                         <h1><b>Time Period (P.A): </b><span className=' text-red-400'> 48 Months</span></h1>
                         <h1>
-                          <Typography variant='h4' className=' text-gray-200'>₹ {Math.round(value / 100000)}.00 Lakhs</Typography>
+                          <Typography variant='h4' className=' text-gray-200'>₹  {(value / 100000).toFixed(2)} Lakhs</Typography>
                           <h1><b>Investment Amount</b></h1>
                         </h1>
                         <h1>
@@ -284,8 +312,8 @@ export default function Work() {
                 <p><b className="text-gray-300" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde architecto modi fugiat, aliquid est saepe excepturi minima? Hic magni quos illum rem doloremque? Dignissimos ab quibusdam necessitatibus numquam eligendi itaque.</b></p>
               </div>
               <Typography variant='h4' className="col-span-4 text-xl text-red-400 ">Time Period</Typography>
-              <div className="flex">
-                <div className="m-4 border rounded-full p-5">
+              <div className="flex lg:col-span-1 sm:col-span-2">
+                <div className="m-4 border rounded-full  border-gray-600  p-5">
                   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi bi-calendar" viewBox="0 0 16 16">
                     <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
                   </svg>
@@ -295,8 +323,8 @@ export default function Work() {
                   <h4><b className="text-gray-300" >01 Apr 2023</b></h4>
                 </div>
               </div>
-              <div className="flex">
-                <div className="m-4 border rounded-full p-5">
+              <div className="flex lg:col-span-1 sm:col-span-2">
+                <div className="m-4 border rounded-full  border-gray-600  p-5">
                   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi bi-briefcase" viewBox="0 0 16 16">
                     <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5m1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0M1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5" />
                   </svg>
@@ -306,8 +334,8 @@ export default function Work() {
                   <h4><b className="text-gray-300" >7 YEARS</b></h4>
                 </div>
               </div>
-              <div className="flex">
-                <div className="m-4 border rounded-full p-5">
+              <div className="flex lg:col-span-1 sm:col-span-2">
+                <div className="m-4 border border-gray-600 rounded-full  p-5">
                   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi bi-calendar" viewBox="0 0 16 16">
                     <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
                   </svg>

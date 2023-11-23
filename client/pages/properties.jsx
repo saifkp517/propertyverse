@@ -10,7 +10,7 @@ export default function Home() {
 
 
   const properties = [
-    { name: "Embassy Tech Square", url: '/info/' , image: 'https://propmedia1.propertyshare.in/website/property/d3Joby9VTnlncndkZit1ZlAxQ2ZMdz09/media-v2/images/listingbanner/540x420/1638176089-embassy-tech-square-bangalore-1.jpg'},
+    { name: "Embassy Tech Square", url: '/info/' , image: 'https://propmedia1.propertyshare.in/website/property/d3Joby9VTnlncndkZit1ZlAxQ2ZMdz09/media-v2/images/listingbanner/540x420/1638176089-embassy-tech-square-bangalore-1.jpg', },
     { name: "Lodha iThink", url: '/info', image: 'https://propmedia1.propertyshare.in/website/property/Mm1rMWthZHN1V0x3ejlWQlN5TmJCUT09/media-v2/images/listingbanner/540x420/1631124574-lodha-ithink-mumbai-1.jpg'},
     { name: "Whitefield Tech Park", url: '/info', image: 'https://propmedia1.propertyshare.in/website/property/YnlWOFlqaU1EbmRNayswTkR3SWY4dz09/media-v2/images/listingbanner/540x420/1622016030-whitefield-tech-park-bangalore-1.jpg'},
     { name: "The Pavilion III", url: '/info', image: 'https://propmedia2.propertyshare.in/website/property/YXgrbVI5NXJabk9IbFNHbkIzRmlqQT09/media-v2/images/listingbanner/540x420/1601270012-the-pavilion-iii-bangalore-1.jpg'}
@@ -52,8 +52,8 @@ export default function Home() {
           <input className="shadow appearance-none bg-transparent rounded w-full py-2 px-3 text-gray-200 leading-tight outline-none focus-ring-dark  " id="search" type="text" value={searchItem} onChange={handleInputChange} placeholder="Type to Search" />
         </div>
         <br />
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
-          {filteredProperties.map(property => <div key={property.name} className="p-4 text-center md:p-1"><Card name={property.name} image={property.image} redirectUrl={property.url} /></div>)}
+        <div className="grid grid-cols-1  gap-4 sm:gap-0 md:grid-cols-2 lg:grid-cols-4">
+          {filteredProperties.map(property => <div key={property.name} className="p-4 text-center sm:p-0"><Card name={property.name} image={property.image} redirectUrl={property.url} /></div>)}
         </div>
       </div>
 

@@ -66,31 +66,38 @@ const Navbar = () => {
         {/* Mobile Button */}
         <div onClick={handleNav} className='block sm:hidden z-10'>
           {nav ? (
-            <AiOutlineClose size={20} style={{ color: `${textColor}` }} />
+            <AiOutlineClose size={20} style={{ color: `bg-gray-50` }} />
           ) : (
-            <AiOutlineMenu size={20} style={{ color: `${textColor}` }} />
+            <AiOutlineMenu size={20} style={{ color: `bg-gray-50` }} />
           )}
         </div>
         {/* Mobile Menu */}
         <div
           className={
             nav
-              ? 'sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300'
-              : 'sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300'
+              ? 'sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-gray-800 text-center ease-in duration-300'
+              : 'sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-gray-800 text-center ease-in duration-300'
           }
         >
           <ul>
             <li onClick={handleNav} className='p-4 text-2xl hover:text-gray-500'>
               <Link href='/'>Home</Link>
+              <hr />
             </li>
-            <li onClick={handleNav} className='p-4 text-2xl hover:text-gray-500'>
+            {(isAuthenticated) ? <li onClick={handleNav} className='p-4 text-2xl'>
               <Link href='/properties'>Properties</Link>
-            </li>
+              <hr className='hover:w-full' />
+            </li> : null}
             <li onClick={handleNav} className='p-4 text-2xl hover:text-gray-500'>
               {(isAuthenticated === false) ? <LoginButton /> :
                 user.name
               }
+              <hr />
             </li>
+            <li className='p-4 text-2xl hover:text-gray-500'>
+              <LogoutButton />
+            </li>
+
           </ul>
         </div>
       </div>
