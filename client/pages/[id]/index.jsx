@@ -33,7 +33,7 @@ export default function Work() {
       <div className='section1 text-gray-400'>
         <div className="flex md:flex-row  flex-wrap">
 
-          <div className="w-full md:3/4 lg:w-2/4 p-4 text-center">
+          <div className="w-full md:3/4 lg:w-2/4 p-4 text-center" style={{minHeight: "50vh"}}>
             <SimpleImageSlider
               width={896}
               height={504}
