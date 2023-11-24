@@ -1,3 +1,7 @@
+import { NextResponse } from "next/server";
+
+
+
 export const sendContactForm = async (data) => fetch('/api/contact', {
     method: "POST",
     body: JSON.stringify(data),
@@ -6,3 +10,7 @@ export const sendContactForm = async (data) => fetch('/api/contact', {
         "Accept": "application/json",
     },
 });
+
+export const getDataFromWebsite = () => fetch('/api/scrape', {method: "GET"});
+
+
