@@ -61,6 +61,9 @@ const Navbar = () => {
 
             }
           </li>
+          <li className='p-4 text-2xl hover:text-gray-500'>
+              <LogoutButton />
+            </li>
         </ul>
 
         {/* Mobile Button */}
