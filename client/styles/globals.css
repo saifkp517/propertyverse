@@ -8,6 +8,11 @@ html {
   scroll-behavior: smooth;
 }
 
+th, td
+{
+  border-bottom: 1px solid white
+}
+
 
 body {
   background-image: linear-gradient(90deg, #2c2930 0%, #000000 74%);

@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps }) {
         }}
       >
         <Navbar />
-        <NextNProgress color='#424242' height={7} showOnShallow={true} />
+        <NextNProgress color='#000000' height={7} showOnShallow={true} />
         
         <Component {...pageProps} />
       </Auth0Provider>
