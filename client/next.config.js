@@ -18,7 +18,11 @@ module.exports = {
       'tailwindui.com',
       'plus.unsplash.com',
       'propmedia1.propertyshare.in',
-      'propmedia2.propertyshare.in'
+      'propmedia2.propertyshare.in',
+      'assetmonk.com',
+      'aurumwisex.com',
+      'media1.propertyshare.in',
+      'media.licdn.com'
     ]
   }
 }
