@@ -8,15 +8,18 @@ import Image from 'next/image';
 export default function Details({ data }) {
 
     const [value, setValue] = useState(1000000);
-    let salevalue;
+    const [loaded, setLoaded] = useState("animate-pulse");
 
-    if (data.fm !== undefined) {
-        salevalue = Number(data.fm.sv.replace(/\,/g, ''));
-
+    if(data === undefined) {
+        return <p>404 not found</p>
     }
 
+    let salevalue;
 
-    const [loaded, setLoaded] = useState("animate-pulse");
+    salevalue = Number(data.fm.sv.replace(/\,/g, ''));
+
+
+
 
     const onUpdate = (e) => {
         setValue(Number(e.target.value));
