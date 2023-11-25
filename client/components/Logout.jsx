@@ -5,7 +5,7 @@ const LogoutButton = () => {
   const { logout } = useAuth0();
 
   return (
-    <button className="" onClick={() => logout({ logoutParams: { returnTo: "https://propertyverse.vercel.app/" } })}>
+    <button className="" onClick={() => logout({ logoutParams: { returnTo: "https://www.propertyverse.co.in/" } })}>
       Log Out
     </button>
   );
