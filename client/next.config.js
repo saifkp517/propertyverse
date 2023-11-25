@@ -22,7 +22,9 @@ module.exports = {
       'assetmonk.com',
       'aurumwisex.com',
       'media1.propertyshare.in',
-      'media.licdn.com'
+      'media.licdn.com',
+      'flowbite.com',
+      'flowbite.s3.amazonaws.com'
     ]
   }
 }

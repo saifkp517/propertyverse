@@ -5,11 +5,11 @@ import React, { useState, useEffect } from 'react';
 import Footer from '../components/Footer';
 import CTA from '../components/CTA';
 import Card from '../components/Card';
-// import { getDataFromWebsite } from '../lib/api';
+import { getDataFromWebsite } from '../lib/api';
 
-export default function Home() {
+export default function Properties() {
 
-  // const [apiProperties, setApiProperties] = useState([]); // for api implementation https://dev.to/alais29/building-a-real-time-search-filter-in-react-a-step-by-step-guide-3lmm
+  const [apiProperties, setApiProperties] = useState([]); // for api implementation https://dev.to/alais29/building-a-real-time-search-filter-in-react-a-step-by-step-guide-3lmm
 
   let properties = [
     {name: "Embassy Tech Square", location: "Outer Ring Road, Bangalore", area: "84,512", pricesqf: "13,253", yeild: "8.62", returntarget: "15.9", img: "https://propmedia1.propertyshare.in/website/property/d3Joby9VTnlncndkZit1ZlAxQ2ZMdz09/media-v2/images/listingbanner/540x420/1638176089-embassy-tech-square-bangalore-1.jpg"},
@@ -17,17 +17,19 @@ export default function Home() {
   ]
 
   const [searchItem, setSearchItem] = useState('');
-  const [filteredProperties, setFilteredProperties] = useState(properties);
+  const [filteredProperties, setFilteredProperties] = useState([]);
 
   useEffect(() => {
 
-    // getDataFromWebsite().then(res => res.json())
-    //   .then(data => {
-    //     setApiProperties(data)
-    //     setFilteredProperties(data)
-    //   })
+    getDataFromWebsite().then(res => res.json())
+      .then(data => {
+        setApiProperties(data)
+        setFilteredProperties(data)
+      })
 
   }, [])
+
+  console.log(apiProperties)
 
 
 
@@ -35,8 +37,8 @@ export default function Home() {
     const searchTerm = e.target.value;
     setSearchItem(searchTerm)
 
-    const filteredItems = properties.filter((property) =>
-      property.name.toLowerCase().includes(searchTerm.toLowerCase())
+    const filteredItems = apiProperties.filter((property) =>
+      property.text.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setFilteredProperties(filteredItems);
   }
@@ -72,7 +74,7 @@ export default function Home() {
               <p className=" text-gray-300 sr-only">Loading...</p>
             </div>
             : <></>}
-          {filteredProperties.map(property => <div key={property.name} className="p-4 text-center sm:p-0"><Card name={property.name} location={property.location} area={property.area} pricesqf={property.pricesqf} yeild={ property.yeild } returntarget={ property.returntarget } img={property.img} /></div>)}
+          {filteredProperties.map(property => <div key={property.text} className="p-4 text-center sm:p-0"><Card name={property.text} location={property.location}  img={property.imageSrc} /></div>)}
         </div>
       </div>
 
