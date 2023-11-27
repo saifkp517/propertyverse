@@ -7,7 +7,7 @@ export default function BlogContext({heading, date, subheading, description}) {
     return (
         <div className=" lg:mx-48 md:mx-16 sm:mx-8  px-5">
             <div className="grid grid-cols-3">
-                <div className="col-span-2">
+                <div className="lg:col-span-2 col-span-3 lg:text-lg text-xs">
                     <Typography className='' variant='h2'>{heading}</Typography>
                     <sub>{date}</sub>
                     <Typography className='text-red-400 py-3' >{subheading}</Typography>
