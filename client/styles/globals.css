@@ -63,6 +63,10 @@ body {
   margin: 0 5%;
 }
 
+.line {
+  border-top: 1px solid rgba(128, 128, 128, 0.601);
+}
+
 @media only screen and (max-width: 950px) {
   .card-section {
     display: inline-flexbox;

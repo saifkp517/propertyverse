@@ -48,6 +48,9 @@ const Navbar = () => {
           <li className='p-4'>
             <Link href='/'>Home</Link>
           </li>
+          <li className='p-4'>
+            <Link href='/blog'>Knowledge Base</Link>
+          </li>
           {(isAuthenticated) ? <li className='p-4'>
             <Link href='/properties'>Properties</Link>
           </li> : null}
@@ -85,6 +88,10 @@ const Navbar = () => {
           <ul>
             <li onClick={handleNav} className='p-4 text-2xl hover:text-gray-500'>
               <Link href='/'>Home</Link>
+              <hr />
+            </li>
+            <li onClick={handleNav} className='p-4 text-2xl hover:text-gray-500'>
+              <Link href='/blog'>Knowledge Base</Link>
               <hr />
             </li>
             {(isAuthenticated) ? <li onClick={handleNav} className='p-4 text-2xl'>

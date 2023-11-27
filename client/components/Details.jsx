@@ -11,7 +11,11 @@ export default function Details({ data }) {
     const [loaded, setLoaded] = useState("animate-pulse");
 
     if(data === undefined) {
-        return <p>404 not found</p>
+        return (
+            <div>
+                <p style={{minHeight: "100vh", textAlign: "center", padding: "40vh 0"}}>property not found</p>
+            </div>
+        );
     }
 
     let salevalue;
