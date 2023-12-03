@@ -16,8 +16,8 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Auth0Provider
-        domain="dev-znk3kc4x.us.auth0.com"
-        clientId="36R6FfoIjqtSl5ZxtclikDYwLny7gvZL"
+        domain=DOMAIN_NAME
+        clientId=CLIENT_ID
         cacheLocation='localstorage'
         authorizationParams={{
           redirect_uri: "https://www.propertyverse.co.in/"
