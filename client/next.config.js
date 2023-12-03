@@ -4,11 +4,10 @@ const nextConfig = {
 }
 
 module.exports = {
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      config.resolve.fallback.fs = false;
-    }
-    return config;
+  reactStrictMode: true,
+  env: {
+    DOMAIN_NAME: process.env.DOMAIN_NAME,
+    CLIENT_ID: process.env.CLIENT_ID
   },
   images: {
     domains: [

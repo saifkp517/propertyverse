@@ -45,13 +45,13 @@ const Navbar = () => {
           </h1>
         </Link>
         <ul style={{ color: `${textColor}` }} className='hidden sm:flex'>
-          <li className='p-4'>
+          <li className='p-4 hover:underline underline-offset-8 decoration-red-500 '>
             <Link href='/'>Home</Link>
           </li>
-          <li className='p-4'>
+          <li className='p-4 hover:underline underline-offset-8 decoration-red-500'>
             <Link href='/blog'>Knowledge Base</Link>
           </li>
-          {(isAuthenticated) ? <li className='p-4'>
+          {(isAuthenticated) ? <li className='p-4 hover:underline underline-offset-8 decoration-red-500'>
             <Link href='/properties'>Properties</Link>
           </li> : null}
           <li className='p-4'>
@@ -64,8 +64,8 @@ const Navbar = () => {
 
             }
           </li>
-          <li className='p-4'>
-              <LogoutButton />
+          <li className='p-4 hover:border-2 '>
+              <LogoutButton  />
             </li>
         </ul>
 
@@ -104,7 +104,7 @@ const Navbar = () => {
               }
               <hr />
             </li>
-            <li className='p-4 text-2xl hover:text-gray-500'>
+            <li className='p-4 text-2xl bg-black hover:text-gray-500'>
               <LogoutButton />
             </li>
 

@@ -16,8 +16,8 @@ const Hero = ({message}) => {
       <h1 className="mb-4 text-3xl font-extrabold  text-gray-700 dark:text-white md:text-5xl lg:text-6xl">Property<span className="bg-gradient-to-r from-red-500 via-red-700 to-red-900 text-transparent bg-clip-text">Verse</span></h1>
         <p className='py-2 text-xl text-gray-400'>{message}</p>
         {(isAuthenticated) ? <>
-        <button className='px-8 py-3 border text-gray-400'><Link href="/properties">Explore Properties</Link></button>
-          </> : <LoginButton/>}
+          <Link href="/properties"><button className='px-8 py-3 border active:border-red-600 active:rounded-lg text-gray-400 hover:text-red-600'>Explore Properties</button></Link>
+          </> : <LoginButton/> }
       </div>
     </div>
   );
