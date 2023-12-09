@@ -18,13 +18,6 @@ export default function Details({ data }) {
         );
     }
 
-    let salevalue;
-
-    salevalue = Number(data.fm.sv.replace(/\,/g, ''));
-
-
-
-
     const onUpdate = (e) => {
         setValue(Number(e.target.value));
     }
@@ -216,7 +209,13 @@ export default function Details({ data }) {
                                             <td className="px-6 py-4">
                                             </td>
                                             {
-                                                data.fm.yr.map((year, index) => <td key={index} scope="col" className="px-6 py-4">₹{Number(salevalue) + Number(year.replace(/\,/g, ''))}</td>)
+                                                data.fm.yr.map((year, index) => <td key={index} scope="col" className="px-6 py-4">₹{
+                                                    index === data.fm.yr.length - 1
+                                                    ?
+                                                    Number(data.fm.sv.replace(/\,/g, '')) + Number(year.replace(/\,/g, '')) + Number(data.fm.iod.replace(/\,/g, '')) 
+                                                    :
+                                                    Number(year.replace(/\,/g, '')) + Number(data.fm.iod.replace(/\,/g, '')) 
+                                                }</td>)
                                             }
                                         </tr>
                                     </tbody>
