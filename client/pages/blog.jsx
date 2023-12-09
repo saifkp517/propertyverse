@@ -4,8 +4,26 @@ import { Typography } from '@material-tailwind/react';
 import Footer from '../components/Footer';
 import Image from 'next/image';
 import BlogContext from '../components/BlogContext';
+import { createClient } from 'contentful';
 
-export default function Blog() {
+export async function getStaticProps() {
+  const client = createClient({
+    space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
+    accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
+  });
+
+  const res = await client.getEntries({content_type: 'PropertyVerse'});
+
+  return {
+    props: {
+        blogs: res.items
+    }
+  }
+}
+
+export default function Blog({ blogs }) {
+
+    console.log(blogs)
 
     return (
         <div>
@@ -19,11 +37,11 @@ export default function Blog() {
                 <Typography className='p-10' variant='h1'>Blogs</Typography>
                 <hr className='my-6 line' />
                 <div className="grid">
-
-                    <BlogContext heading={"Heading"} date={"Aug 6th, 2023"} subheading={"this is a subheading"} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed labore dignissimos ipsam, accusantium ea amet provident aperiam ipsa non illum, nobis ut cumque tenetur suscipit hic repudiandae quisquam blanditiis neque?s"} />
-                    <BlogContext heading={"Heading"} date={"Aug 6th, 2023"} subheading={"this is a subheading"} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed labore dignissimos ipsam, accusantium ea amet provident aperiam ipsa non illum, nobis ut cumque tenetur suscipit hic repudiandae quisquam blanditiis neque?s"} />
-                    <BlogContext heading={"Heading"} date={"Aug 6th, 2023"} subheading={"this is a subheading"} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed labore dignissimos ipsam, accusantium ea amet provident aperiam ipsa non illum, nobis ut cumque tenetur suscipit hic repudiandae quisquam blanditiis neque?s"} />
-
+                    {
+                        blogs.map(blog => (
+                            <div key={blog.sys.id}><BlogContext heading={blog.fields.title} date={"Aug 6th, 2023"} subheading={"this is a subheading"} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed labore dignissimos ipsam, accusantium ea amet provident aperiam ipsa non illum, nobis ut cumque tenetur suscipit hic repudiandae quisquam blanditiis neque?s"} /></div>
+                        ))
+                    }
 
                 </div>
             </section>

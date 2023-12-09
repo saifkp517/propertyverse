@@ -6,6 +6,7 @@ import CTA from '../components/CTA';
 import Section from '../components/Info';
 import Card from '../components/Card';
 
+
 export default function Home() {
   return (
     <div className=''>
