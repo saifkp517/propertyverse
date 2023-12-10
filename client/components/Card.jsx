@@ -8,7 +8,7 @@ const Card = ({ name, location, area, pricesqf, yeild, returntarget, img }) => {
 
   const { loginWithRedirect, isAuthenticated } = useAuth0();
 
-  const redirectUrl = name.split(' ').join('_')
+  const redirectUrl = "/PropertyDetails/" + name.split(' ').join('_')
 
   return (
     <div>

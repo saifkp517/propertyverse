@@ -23,7 +23,7 @@ export default function Home() {
     {name: "The Pavilion II", location: "Outer Ring Road, Bangalore", area: "24,392", pricesqf: "12,500", yeild: "8.86", returntarget: "17.8", img: "https://propmedia2.propertyshare.in/website/property/RXdLZ002SnEzOXhjWnpnZE9lNDdhZz09/media-v2/images/listingbanner/540x420/1578542236-the-pavilion-i-bangalore-1.jpg"},
     {name: "IBC Knowledge Park II", location: "Bannerghatta Road , Bangalore", area: "22,392", pricesqf: "11,350", yeild: "9", returntarget: "18.2", img: "https://propmedia2.propertyshare.in/website/property/dnpZMjJJNlVaZGsvNEI3RkZiMTRYUT09/media-v2/images/listingbanner/540x420/1578665089-ibc-knowledge-park-ii-bangalore-1.jpg"},
     {name: "The Capital", location: "Bandra Kurla Complex , Mumbai", area: "7,721", pricesqf: "34,646", yeild: "7.69", returntarget: "16.7", img: "https://propmedia1.propertyshare.in/website/property/YzVrKzZZRkkzamh1MUU1dVFnQUxWZz09/media-v2/images/listingbanner/540x420/1578665092-the-capital-mumbai-1.jpg"},
-
+    
   ]
 
   const [searchItem, setSearchItem] = useState('');

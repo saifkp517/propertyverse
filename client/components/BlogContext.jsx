@@ -14,7 +14,7 @@ export default function BlogContext({heading, date, subheading, description}) {
                     <p className=' font-serif '>{description}</p>
                 </div>
             </div>
-            <Link href="/blogs/blog1"><p className=' text-sm text-gray-500 my-4 hover:text-blue-500'>Read More...</p></Link>
+            <Link href="/blog"><p className=' text-sm text-gray-500 my-4 hover:text-blue-500'>Read More...</p></Link>
             <hr className='my-6 line' />
         </div>
     );

@@ -49,7 +49,7 @@ const Navbar = () => {
             <Link href='/'>Home</Link>
           </li>
           <li className='p-4 hover:underline underline-offset-8 decoration-red-500'>
-            <Link href='/blog'>Knowledge Base</Link>
+            <Link href='/blogs'>Knowledge Base</Link>
           </li>
           {(isAuthenticated) ? <li className='p-4 hover:underline underline-offset-8 decoration-red-500'>
             <Link href='/properties'>Properties</Link>
@@ -91,7 +91,7 @@ const Navbar = () => {
               <hr />
             </li>
             <li onClick={handleNav} className='p-4 text-2xl hover:text-gray-500'>
-              <Link href='/blog'>Knowledge Base</Link>
+              <Link href='/blogs'>Knowledge Base</Link>
               <hr />
             </li>
             {(isAuthenticated) ? <li onClick={handleNav} className='p-4 text-2xl'>
