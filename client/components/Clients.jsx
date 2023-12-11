@@ -7,10 +7,10 @@ export default function Clients() {
             <div data-aos="fade-up">
                 <div className="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
                     <h2 className="mb-8 lg:mb-16 text-3xl font-extrabold tracking-tight leading-tight text-center text-gray-900 dark:text-white md:text-4xl">Clients who place their trust in us.</h2>
-                    <div className="grid grid-cols-2 gap-8 text-gray-100 sm:gap-12 md:grid-cols-3 lg:grid-cols-3 dark:text-gray-400">
+                    <div className="grid grid-cols-2  gap-8 text-gray-100 sm:gap-12 md:grid-cols-3 lg:grid-cols-3 dark:text-gray-400">
                         {/* <Image className="flex justify-center items-center" height={100} width={350} src="https://assetmonk.com/wp-content/uploads/Assetmonk-White-Logo.png" /> */}
-                        <Image className="flex justify-center items-center" height={100} width={100} src="https://aurumwisex.com/images/WiseX/WiseX-Log.png" />
-                        <Image className="flex justify-center items-center" height={100} width={100} src="https://media1.propertyshare.in/images/logos/property-share-white-logo.svg" />
+                        <Image className="flex justify-center items-center" height={200} width={200} src="https://aurumwisex.com/images/WiseX/WiseX-Log.png" />
+                        <Image className="flex justify-center items-center" height={200} width={200} src="https://media1.propertyshare.in/images/logos/property-share-white-logo.svg" />
                         <Image className="flex justify-center items-center" height={100} width={100} src="https://media.licdn.com/dms/image/C4E0BAQE6aHtSWnhajw/company-logo_200_200/0/1630498985220/hbits_official_logo?e=2147483647&v=beta&t=mXc7TRGf5H1ihrKMxbfPwFDcPGrFSXvHjDzJlBaKoNQ" />
                         {/* <Link href="#" className="flex justify-center items-center">
                             <svg className="h-8 hover:text-gray-900 dark:hover:text-white" viewBox="0 0 151 34" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

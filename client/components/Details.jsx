@@ -44,7 +44,7 @@ export default function Details({ data }) {
                                         onLoad={() => setLoaded("")}
                                         alt="Loading"
                                         className={`${loaded} bg-gray-700 h-full w-full object-cover`}
-                                        height={70}
+                                        height={100}
                                         width={100}
                                         layout='responsive'
                                     />
