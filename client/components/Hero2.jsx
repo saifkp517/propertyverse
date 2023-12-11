@@ -10,7 +10,7 @@ const Hero = ({ heading, message, imageurl }) => {
 
   useEffect(() => {
     if(!isAuthenticated) {
-      router.push('/')
+      loginWithRedirect();
     }
   }, [])
 

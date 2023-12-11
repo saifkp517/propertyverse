@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Footer from '../../components/Footer'
 import MyModal from '../../components/Dialog';
 import { Carousel, Typography } from "@material-tailwind/react";
 import Hero2 from '../../components/Hero2';
@@ -376,6 +377,7 @@ export default function Details() {
                 </div>
 
             </div>
+            <Footer />
         </div>
     )
 }

@@ -5,6 +5,7 @@ import Hero2 from '../../components/Hero2';
 import MyChart from '../../components/MyChart';
 import Head from 'next/head';
 import Image from 'next/image';
+import Footer from '../../components/Footer'
 
 export default function Details() {
 
@@ -376,6 +377,7 @@ export default function Details() {
                 </div>
 
             </div>
+            <Footer />
         </div>
     )
 }

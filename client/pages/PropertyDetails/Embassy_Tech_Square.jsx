@@ -4,6 +4,7 @@ import { Carousel, Typography } from "@material-tailwind/react";
 import Hero2 from '../../components/Hero2';
 import MyChart from '../../components/MyChart';
 import Head from 'next/head';
+import Footer from '../../components/Footer'
 import Image from 'next/image';
 
 export default function Details() {
@@ -368,6 +369,7 @@ export default function Details() {
                 </div>
 
             </div>
+            <Footer />
         </div>
     )
 }
