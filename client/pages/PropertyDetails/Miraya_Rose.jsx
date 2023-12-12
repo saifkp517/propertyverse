@@ -153,7 +153,7 @@ export default function Details() {
                             </div>
                             <div className="mb-2 flex items-center justify-between gap-4 overflow-auto">
                                 <Typography>
-                                    Monthltatacromaent:<br /> <span className='text-gray-300 font-extrabold'>₹ {mr}</span>
+                                    Monthly rent:<br /> <span className='text-gray-300 font-extrabold'>₹ {mr}</span>
                                 </Typography>
                                 <Typography>
                                     Property Management Fee: <br /> <span className='text-gray-300 font-extrabold'>₹ {pmf}</span>

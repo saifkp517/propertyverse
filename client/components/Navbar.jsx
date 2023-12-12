@@ -64,9 +64,14 @@ const Navbar = () => {
 
             }
           </li>
-          <li className='p-4 hover:border-2 '>
-              <LogoutButton  />
+          {(isAuthenticated)
+            ?
+            <li className='p-4 hover:border-2 '>
+              <LogoutButton />
             </li>
+            :
+            undefined
+          }
         </ul>
 
         {/* Mobile Button */}
@@ -104,9 +109,14 @@ const Navbar = () => {
               }
               <hr />
             </li>
-            <li className='p-4 text-2xl bg-black hover:text-gray-500'>
-              <LogoutButton />
-            </li>
+            {(isAuthenticated)
+              ?
+              <li className='p-4 text-2xl bg-black hover:text-gray-500'>
+                <LogoutButton />
+              </li>
+              :
+              undefined
+            }
 
           </ul>
         </div>

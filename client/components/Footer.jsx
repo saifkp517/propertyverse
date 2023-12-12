@@ -13,10 +13,10 @@ const Footer = () => {
                         <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Social Media</h2>
                         <ul className="text-gray-300 dark:text-gray-400">
                             <li className="mb-4">
-                                <Link href="https://flowbite.com" className="hover:underline">Instagram</Link>
+                                <Link href="https://www.instagram.com/propertyverse_/" className="hover:underline">Instagram</Link>
                             </li>
                             <li>
-                                <Link href="https://tailwindcss.com/" className="hover:underline">Facebook</Link>
+                                <Link href="https://www.linkedin.com/in/shiv-kumar-singh-b67b24264/" className="hover:underline">Linkedin</Link>
                             </li>
                         </ul>
                     </div>
@@ -24,10 +24,10 @@ const Footer = () => {
                         <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
                         <ul className="text-gray-300 dark:text-gray-400">
                             <li className="mb-4">
-                                <Link href="https://github.com/themesberg/flowbite" className="hover:underline ">Github</Link>
+                                <Link href="https://github.com/saifkp517" className="hover:underline ">Github</Link>
                             </li>
                             <li>
-                                <Link href="https://discord.gg/4eeurUVvTy" className="hover:underline">Discord</Link>
+                                <Link href="https://discord.gg/unverifiedchaos#8090" className="hover:underline">Discord</Link>
                             </li>
                         </ul>
                     </div>
@@ -46,7 +46,7 @@ const Footer = () => {
             </div>
             <br />
             <div className="sm:flex sm:items-center sm:justify-between">
-                <span className="text-sm text-gray-300 sm:text-center">© 2023 <Link href="https://flowbite.com" className="hover:underline">PropertyVerse™</Link>. All Rights Reserved.
+                <span className="text-sm text-gray-300 sm:text-center">© 2023 <Link href="#" className="hover:underline">PropertyVerse™</Link>. All Rights Reserved.
                 </span>
                 <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
                     <Link href="#" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">

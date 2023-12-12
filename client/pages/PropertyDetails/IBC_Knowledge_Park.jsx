@@ -14,48 +14,43 @@ export default function Details() {
 
 
     const images = [
-        'https://propmedia2.propertyshare.in/website/property/Tk0xN01tTytJWmYxYUp5NWhYa1VnUT09/media-v2/images/main/665x400/1598784610-mindspace-business-park-hyderabad-1.jpg',
-        'https://propmedia2.propertyshare.in/website/property/Tk0xN01tTytJWmYxYUp5NWhYa1VnUT09/media-v2/images/main/1330x800/1598784614-mindspace-business-park-hyderabad-2.jpg',
-        'https://propmedia1.propertyshare.in/website/property/Tk0xN01tTytJWmYxYUp5NWhYa1VnUT09/media-v2/images/main/1330x800/1598784617-mindspace-business-park-hyderabad-3.jpg',
-        'https://propmedia2.propertyshare.in/website/property/Tk0xN01tTytJWmYxYUp5NWhYa1VnUT09/media-v2/images/main/1330x800/1598784620-mindspace-business-park-hyderabad-4.jpg',
-        'https://propmedia2.propertyshare.in/website/property/Tk0xN01tTytJWmYxYUp5NWhYa1VnUT09/media-v2/images/main/1330x800/1598784623-mindspace-business-park-hyderabad-5.jpg',
-        'https://propmedia2.propertyshare.in/website/property/Tk0xN01tTytJWmYxYUp5NWhYa1VnUT09/media-v2/images/main/1330x800/1598784626-mindspace-business-park-hyderabad-6.jpg',
-        'https://propmedia1.propertyshare.in/website/property/Tk0xN01tTytJWmYxYUp5NWhYa1VnUT09/media-v2/images/main/1330x800/1598784629-mindspace-business-park-hyderabad-7.jpg',
-        'https://propmedia2.propertyshare.in/website/property/Tk0xN01tTytJWmYxYUp5NWhYa1VnUT09/media-v2/images/main/1330x800/1598784632-mindspace-business-park-hyderabad-8.jpg',
-        'https://propmedia2.propertyshare.in/website/property/Tk0xN01tTytJWmYxYUp5NWhYa1VnUT09/media-v2/images/main/1330x800/1598784635-mindspace-business-park-hyderabad-9.jpg',
-        'https://propmedia2.propertyshare.in/website/property/Tk0xN01tTytJWmYxYUp5NWhYa1VnUT09/media-v2/images/main/1330x800/1598784638-mindspace-business-park-hyderabad-10.jpg',
-        'https://propmedia1.propertyshare.in/website/property/Tk0xN01tTytJWmYxYUp5NWhYa1VnUT09/media-v2/images/main/1330x800/1598784641-mindspace-business-park-hyderabad-11.jpg',
-        'https://propmedia1.propertyshare.in/website/property/Tk0xN01tTytJWmYxYUp5NWhYa1VnUT09/media-v2/images/main/1330x800/1598784644-mindspace-business-park-hyderabad-12.jpg',
-        'https://propmedia2.propertyshare.in/website/property/Tk0xN01tTytJWmYxYUp5NWhYa1VnUT09/media-v2/images/main/1330x800/1598784647-mindspace-business-park-hyderabad-13.jpg',
-        'https://propmedia1.propertyshare.in/website/property/Tk0xN01tTytJWmYxYUp5NWhYa1VnUT09/media-v2/images/main/1330x800/1598784650-mindspace-business-park-hyderabad-14.jpg',
-        'https://propmedia1.propertyshare.in/website/property/Tk0xN01tTytJWmYxYUp5NWhYa1VnUT09/media-v2/images/main/1330x800/1598784653-mindspace-business-park-hyderabad-15.jpg',
-        'https://propmedia2.propertyshare.in/website/property/Tk0xN01tTytJWmYxYUp5NWhYa1VnUT09/media-v2/images/main/1330x800/1598784656-mindspace-business-park-hyderabad-16.jpg'
+        'https://propmedia1.propertyshare.in/website/property/NlNSVjFwQUdNR3pzQkF1ZGJ3Q0krdz09/media-v2/images/main/665x400/1578665089-ibc-knowledge-park-bangalore-1.jpg',
+        'https://propmedia1.propertyshare.in/website/property/NlNSVjFwQUdNR3pzQkF1ZGJ3Q0krdz09/media-v2/images/main/665x400/1578665092-ibc-knowledge-park-bangalore-2.jpg',
+        'https://propmedia1.propertyshare.in/website/property/NlNSVjFwQUdNR3pzQkF1ZGJ3Q0krdz09/media-v2/images/main/1330x800/1578665096-ibc-knowledge-park-bangalore-3.jpg',
+        'https://propmedia1.propertyshare.in/website/property/NlNSVjFwQUdNR3pzQkF1ZGJ3Q0krdz09/media-v2/images/main/1330x800/1578665099-ibc-knowledge-park-bangalore-4.jpg',
+        'https://propmedia1.propertyshare.in/website/property/NlNSVjFwQUdNR3pzQkF1ZGJ3Q0krdz09/media-v2/images/main/1330x800/1578665102-ibc-knowledge-park-bangalore-5.jpg',
+        'https://propmedia1.propertyshare.in/website/property/NlNSVjFwQUdNR3pzQkF1ZGJ3Q0krdz09/media-v2/images/main/1330x800/1578665105-ibc-knowledge-park-bangalore-6.jpg',
+        'https://propmedia1.propertyshare.in/website/property/NlNSVjFwQUdNR3pzQkF1ZGJ3Q0krdz09/media-v2/images/main/1330x800/1578665108-ibc-knowledge-park-bangalore-7.jpg',
+        'https://propmedia2.propertyshare.in/website/property/NlNSVjFwQUdNR3pzQkF1ZGJ3Q0krdz09/media-v2/images/main/1330x800/1578665111-ibc-knowledge-park-bangalore-8.jpg',
+        'https://propmedia2.propertyshare.in/website/property/NlNSVjFwQUdNR3pzQkF1ZGJ3Q0krdz09/media-v2/images/main/1330x800/1578665114-ibc-knowledge-park-bangalore-9.jpg',
+        'https://propmedia1.propertyshare.in/website/property/NlNSVjFwQUdNR3pzQkF1ZGJ3Q0krdz09/media-v2/images/main/665x400/1578665119-ibc-knowledge-park-bangalore-11.jpg',
+        'https://propmedia1.propertyshare.in/website/property/NlNSVjFwQUdNR3pzQkF1ZGJ3Q0krdz09/media-v2/images/main/665x400/1578665122-ibc-knowledge-park-bangalore-12.jpg',
     ]
 
     const capitalappreciation = 10;
 
 
-    const yr = ["9,22,55,784", "8,56,16,352", "8,98,97,250", "9,43,92,414", "9,91,11,894"]
-    const iod = ["32,54,994", "34,58,808", "36,72,672", "38,97,390", "41,33,364"];
+    const yr = ["3,03,51,680", "3,37,15,040", "3,43,82,080", "3,49,04,480", "3,87,72,320"]
+    const iod = "15,70,080";
 
-    const salevalue = "1,67,97,82,326"
+    const salevalue = "64,42,04,000"
 
-    const prprtyname = "Mindspace Business Park", invamt = "1,00,50,00,000", mr = "64,09,559", pmf = "8,37,500", tds = "7,12,173"
+    const prprtyname = "IBC Knowledge Park", invamt = "40,00,00,000", mr = "23,94,132", pmf = "3,33,333", tds = "2,66,015"
     const details = {
-        rentalyeild: 9.5,
-        returns: 19.26,
-        price: "9,554",
-        location: "HITEC City",
-        name: "Qualcomm",
-        country: "USA",
-        description: "US-based Qualcomm is a Fortune 150 technology major engaged in business of semiconductors, software, and services related to wireless technology",
-        start: "01 Mar 2018",
-        lockinperiod: 4,
-        enddate: "31 May 2023",
-        totalarea: "96,950",
-        rentpersf: 66,
-        leaseperiod: 5,
-        escalation: 5
+        rentalyeild: 9,
+        returns: 18.2,
+        price: "11,350",
+        location: "Grade A+",
+        name: "LG",
+        country: "Seoul (South Korea)",
+        description: "South Korean multinational electronics company (Fortune 200) Distributor of products for electronics system maintenance and repair",
+        start: "01 Jan 2017",
+        lockinperiod: 3,
+        enddate: "01 Jan 2026",
+        totalarea: "12,310",
+        rentpersf: 82,
+        leaseperiod: 9,
+        escalation: 15
     }
 
 
@@ -131,7 +126,7 @@ export default function Details() {
                                             <path d="M13.8 12.938h-.01a7 7 0 1 0-11.465.144h-.016l.141.17c.1.128.2.252.3.372L8 20l5.13-6.248c.193-.209.373-.429.54-.66l.13-.154Z" />
                                         </g>
                                     </svg>
-                                    <h1><b className="text-gray-300" >{details.location}</b> <br />LOCATION</h1>
+                                    <h1><b className="text-gray-300" >{details.location}</b> <br />QUALITY</h1>
                                 </div>
 
                             </div>
@@ -197,7 +192,7 @@ export default function Details() {
                                             <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
                                                 Investments
                                             </th>
-                                            <th scope="col" className="px-6 py-4">₹ {"1,23,30,00,000"}</th>
+                                            <th scope="col" className="px-6 py-4">₹ {invamt}</th>
                                             {
                                                 yr.map((year, index) => <td key={index} scope="col" className="px-6 py-4"></td>)
                                             }
@@ -220,7 +215,7 @@ export default function Details() {
                                             <td className="px-6 py-4">
                                             </td>
                                             {
-                                                iod.map((amt, index) => <td key={index} scope="col" className="px-6 py-4">₹ {amt}</td>)
+                                                yr.map((amt, index) => <td key={index} scope="col" className="px-6 py-4">₹ {iod}</td>)
                                             }
                                         </tr>
                                         <tr className="">
@@ -255,9 +250,9 @@ export default function Details() {
                                                 yr.map((year, index) => <td key={index} scope="col" className="px-6 py-4">₹{
                                                     index === yr.length - 1
                                                         ?
-                                                        Number(salevalue.replace(/\,/g, '')) + Number(year.replace(/\,/g, '')) + Number(iod[index].replace(/\,/g, ''))
+                                                        Number(salevalue.replace(/\,/g, '')) + Number(year.replace(/\,/g, '')) + Number(iod.replace(/\,/g, ''))
                                                         :
-                                                        Number(year.replace(/\,/g, '')) + Number(iod[index].replace(/\,/g, ''))
+                                                        Number(year.replace(/\,/g, '')) + Number(iod.replace(/\,/g, ''))
                                                 }</td>)
                                             }
                                         </tr>
