@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
+import TenantDetails from '../../components/TenantDetails';
+import CapitalAppreciation from '../../components/CapitalAppreciation';
 import MyModal from '../../components/Dialog';
-import { Carousel, Typography } from "@material-tailwind/react";
+import { Typography } from "@material-tailwind/react";
+import Carousel from '../../components/Carousel';
 import Hero2 from '../../components/Hero2';
 import MyChart from '../../components/MyChart';
 import Head from 'next/head';
@@ -65,22 +68,7 @@ export default function Details() {
 
                     <div className="w-full md:3/4 lg:w-2/4 p-4 text-center" style={{ minHeight: "5" }}>
 
-                        <Carousel className="rounded-xl">
-                            {
-                                images.map(img =>
-                                    <Image
-                                        key={img}
-                                        src={img}
-                                        onLoad={() => setLoaded("")}
-                                        alt="Loading"
-                                        className={`${loaded} bg-gray-700 h-full w-full object-cover`}
-                                        height={70}
-                                        width={100}
-                                        layout='responsive'
-                                    />
-                                )
-                            }
-                        </Carousel>
+                    <Carousel images={images} />
                     </div>
                     <div className="w-full lg:w-1/4 md:w-2/4  p-4 text-center rounded overflow-hidden shadow-lg shadow-gray-600 card">
                         <div className="px-6 py-4">
@@ -246,127 +234,9 @@ export default function Details() {
 
                         </div>
                     </div>
-                    <div className="lg:w-3/4 text-center  p-4 rounded overflow-hidden shadow-lg shadow-gray-600 card">
-                        <div className="lg:px-6 py-4 sm:p-0">
-                            <div className="font-bold text-xl mb-2">Capital Appreciation</div>
-                            <br />
-                            <div className="my-12">
-                                <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-                                    <div className='lg:px-12 md:px-4 sm:px-0'>
-                                        <h1 className='lg:text-2xl sm:text-lg'>Property Pricing</h1>
-                                        <MyChart />
-                                    </div>
-                                    <div>
-                                        <br />
-                                        <input className="accent-red-500 w-10/12" type="range" value={value} onChange={onUpdate} min={1000000.00} max={10000000.00} />
-                                        <p className='text-center'>&nbsp;₹ {Math.round(value / 100000)} Lakhs</p>
+                    <CapitalAppreciation yr={yr}/>
+                    <TenantDetails details={details} />
 
-                                        <div className="grid grid-cols-2">
-                                            <h1 className=" w-9/12 text-left ">10Lakhs</h1>
-                                            <h1 className=" w-9/12 text-right ">1 CR</h1>
-                                        </div>
-                                        <div className="grid grid-cols-3 gap-4 w-full my-10">
-                                            <div className="col-span-3 text-start mx-6 my-2">
-                                                <h1><b>Assured Return Rate (P.A): </b><span className=' text-red-400'> {capitalappreciation} %</span></h1>
-                                                <h1><b>Time Period (P.A): </b><span className=' text-red-400'> {yr.length * 12} Months</span></h1>
-                                                <h1>
-                                                    <Typography variant='h4' className=' text-gray-200'>₹  {(value / 100000).toFixed(2)} Lakhs</Typography>
-                                                    <h1><b>Investment Amount</b></h1>
-                                                </h1>
-                                                <h1>
-                                                    <Typography variant='h4' className='text-gray-200'>₹ {(value / 100000 * (capitalappreciation / 100)).toFixed(2)} Lakhs</Typography>
-                                                    <h1><b>Est. Returns</b></h1>
-                                                </h1>
-                                                <h1>
-                                                    <Typography variant='h4' className='text-gray-200'>₹ {((value / 100000 + value / 100000 * (capitalappreciation / 100)) * (yr.length)).toFixed(2)} Lakhs</Typography>
-                                                    <h1><b>Total Value </b></h1>
-                                                </h1>
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div className="lg:w-3/4  p-4 rounded overflow-hidden shadow-lg shadow-gray-600 card">
-                        <div className="px-6 py-4">
-                            <div className="font-bold text-xl mb-2">Tenant Details</div>
-                            <br />
-                        </div>
-                        <div className="row sm:grid grid-cols-4 gap-4">
-
-                            <div className="flex col-span-2 flex-col">
-                                <Typography variant='h4' className='my-2 text-xl text-red-400'>Name</Typography>
-                                <h1><b className="text-gray-300 text-2xl " >{details.name}</b></h1>
-                            </div>
-                            <div className="flex col-span-2 flex-col">
-                                <Typography variant='h4' className='my-2 text-xl text-red-400'>Country</Typography>
-                                <h1><b className="text-gray-300 text-2xl" >{details.country}</b></h1>
-                            </div>
-                            <div className="col-span-4 ">
-                                <Typography variant='h4' className='my-2 text-xl text-red-400'>Description</Typography>
-                                <p className="text-gray-300">{details.description}</p>
-                            </div>
-                            <Typography variant='h4' className="col-span-4 text-xl text-red-400 ">Time Period</Typography>
-                            <div className="flex lg:col-span-1 sm:col-span-2">
-                                <div className="m-4 border rounded-full  border-gray-600  p-5">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi bi-calendar" viewBox="0 0 16 16">
-                                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
-                                    </svg>
-                                </div>
-                                <div className='mt-4'>
-                                    <h6>Lease Start Date</h6>
-                                    <h4><b className="text-gray-300">{details.start}</b></h4>
-                                </div>
-                            </div>
-                            <div className="flex lg:col-span-1 sm:col-span-2">
-                                <div className="m-4 border rounded-full  border-gray-600  p-5">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi bi-briefcase" viewBox="0 0 16 16">
-                                        <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5m1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0M1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5" />
-                                    </svg>
-                                </div>
-                                <div className='mt-4'>
-                                    <h6>Lock-in Period</h6>
-                                    <h4><b className="text-gray-300" >{details.lockinperiod} YEARS</b></h4>
-                                </div>
-                            </div>
-                            <div className="flex lg:col-span-1 sm:col-span-2">
-                                <div className="m-4 border border-gray-600 rounded-full  p-5">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi bi-calendar" viewBox="0 0 16 16">
-                                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
-                                    </svg>
-                                </div>
-                                <div className='mt-4'>
-                                    <h6>Lease End Date</h6>
-                                    <h4><b className="text-gray-300" >{details.enddate}</b></h4>
-                                </div>
-                            </div>
-                            <Typography variant='h4' className="col-span-4 text-xl text-red-400">Tenant Highlights</Typography>
-                            <div className="">
-                                <h4><b className="text-gray-300" >{details.totalarea} SF</b></h4>
-                                <h6>TOTAL AREA</h6>
-
-                            </div>
-                            <div className="">
-                                <h4><b className="text-gray-300" >{details.rentpersf}</b></h4>
-                                <h6>RENT PER SF</h6>
-
-                            </div>
-                            <div className="  ">
-                                <h4><b className="text-gray-300" >{details.leaseperiod} YEARS</b></h4>
-                                <h6>LEASE PERIOD</h6>
-
-                            </div>
-                            <div className="  ">
-                                <h4><b className="text-gray-300" >{details.escalation} %</b></h4>
-                                <h6>ESCALATION</h6>
-
-                            </div>
-                        </div>
-                    </div>
                     <div className="lg:w-3/4 rounded overflow-x-auto shadow-lg shadow-gray-600 card">
                         <div className="px-6 py-4">
                             <div className="font-bold text-xl">Location Highlights</div>

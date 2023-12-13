@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react'
-import MyModal from '../../components/Dialog';
-import CapitalAppreciation from '../../components/CapitalAppreciation';
 import TenantDetails from '../../components/TenantDetails';
+import CapitalAppreciation from '../../components/CapitalAppreciation';
+import MyModal from '../../components/Dialog';
 import { Typography } from "@material-tailwind/react";
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
 import Carousel from '../../components/Carousel';
 import Hero2 from '../../components/Hero2';
 import MyChart from '../../components/MyChart';
 import Head from 'next/head';
-import Footer from '../../components/Footer'
 import Image from 'next/image';
+import Footer from '../../components/Footer'
 
 export default function Details() {
 
@@ -16,37 +18,43 @@ export default function Details() {
     const [loaded, setLoaded] = useState("animate-pulse");
 
     const images = [
-        'https://propmedia1.propertyshare.in/website/property/d3Joby9VTnlncndkZit1ZlAxQ2ZMdz09/media-v2/images/main/1330x800/1638176093-embassy-tech-square-bangalore-1.jpg',
-        'https://propmedia2.propertyshare.in/website/property/d3Joby9VTnlncndkZit1ZlAxQ2ZMdz09/media-v2/images/main/1330x800/1638176096-embassy-tech-square-bangalore-2.jpg',
-        'https://propmedia2.propertyshare.in/website/property/d3Joby9VTnlncndkZit1ZlAxQ2ZMdz09/media-v2/images/main/1330x800/1638176099-embassy-tech-square-bangalore-3.jpg',
-        'https://propmedia2.propertyshare.in/website/property/d3Joby9VTnlncndkZit1ZlAxQ2ZMdz09/media-v2/images/main/1330x800/1638176102-embassy-tech-square-bangalore-4.jpg',
-        'https://propmedia2.propertyshare.in/website/property/d3Joby9VTnlncndkZit1ZlAxQ2ZMdz09/media-v2/images/main/1330x800/1638176105-embassy-tech-square-bangalore-5.jpg',
-        'https://propmedia1.propertyshare.in/website/property/d3Joby9VTnlncndkZit1ZlAxQ2ZMdz09/media-v2/images/main/1330x800/1638176111-embassy-tech-square-bangalore-7.jpg',
-        'https://propmedia2.propertyshare.in/website/property/d3Joby9VTnlncndkZit1ZlAxQ2ZMdz09/media-v2/images/main/1330x800/1638176114-embassy-tech-square-bangalore-8.jpg',
-        'https://propmedia2.propertyshare.in/website/property/d3Joby9VTnlncndkZit1ZlAxQ2ZMdz09/media-v2/images/main/1330x800/1638176117-embassy-tech-square-bangalore-9.jpg',
-        'https://propmedia1.propertyshare.in/website/property/d3Joby9VTnlncndkZit1ZlAxQ2ZMdz09/media-v2/images/main/1330x800/1638176120-embassy-tech-square-bangalore-10.jpg',
-        'https://propmedia1.propertyshare.in/website/property/d3Joby9VTnlncndkZit1ZlAxQ2ZMdz09/media-v2/images/main/1330x800/1638176123-embassy-tech-square-bangalore-11.jpg',
-        'https://propmedia1.propertyshare.in/website/property/d3Joby9VTnlncndkZit1ZlAxQ2ZMdz09/media-v2/images/main/1330x800/1638176129-embassy-tech-square-bangalore-13.jpg'
+        'https://propmedia2.propertyshare.in/website/property/dnpZMjJJNlVaZGsvNEI3RkZiMTRYUT09/media-v2/images/main/1330x800/1578665093-ibc-knowledge-park-ii-bangalore-1.jpg',
+        'https://propmedia1.propertyshare.in/website/property/dnpZMjJJNlVaZGsvNEI3RkZiMTRYUT09/media-v2/images/main/1330x800/1578665096-ibc-knowledge-park-ii-bangalore-2.jpg',
+        'https://propmedia2.propertyshare.in/website/property/dnpZMjJJNlVaZGsvNEI3RkZiMTRYUT09/media-v2/images/main/1330x800/1578665099-ibc-knowledge-park-ii-bangalore-3.jpg',
+        'https://propmedia1.propertyshare.in/website/property/dnpZMjJJNlVaZGsvNEI3RkZiMTRYUT09/media-v2/images/main/1330x800/1578665102-ibc-knowledge-park-ii-bangalore-4.jpg',
+        'https://propmedia2.propertyshare.in/website/property/dnpZMjJJNlVaZGsvNEI3RkZiMTRYUT09/media-v2/images/main/1330x800/1578665105-ibc-knowledge-park-ii-bangalore-5.jpg',
+        'https://propmedia2.propertyshare.in/website/property/dnpZMjJJNlVaZGsvNEI3RkZiMTRYUT09/media-v2/images/main/1330x800/1578665108-ibc-knowledge-park-ii-bangalore-6.jpg',
+        'https://propmedia1.propertyshare.in/website/property/dnpZMjJJNlVaZGsvNEI3RkZiMTRYUT09/media-v2/images/main/1330x800/1578665111-ibc-knowledge-park-ii-bangalore-7.jpg',
+        'https://propmedia1.propertyshare.in/website/property/dnpZMjJJNlVaZGsvNEI3RkZiMTRYUT09/media-v2/images/main/1330x800/1578665114-ibc-knowledge-park-ii-bangalore-8.jpg',
+        'https://propmedia2.propertyshare.in/website/property/dnpZMjJJNlVaZGsvNEI3RkZiMTRYUT09/media-v2/images/main/1330x800/1578665117-ibc-knowledge-park-ii-bangalore-9.jpg',
+        'https://propmedia2.propertyshare.in/website/property/dnpZMjJJNlVaZGsvNEI3RkZiMTRYUT09/media-v2/images/main/1330x800/1578665120-ibc-knowledge-park-ii-bangalore-10.jpg',
+        'https://propmedia1.propertyshare.in/website/property/dnpZMjJJNlVaZGsvNEI3RkZiMTRYUT09/media-v2/images/main/1330x800/1578665123-ibc-knowledge-park-ii-bangalore-11.jpg'
     ]
 
-    const yr = ["10,35,32,808", "", "8,87,36,808", "9,31,73,648", "10,20,47,329"]
-    const prprtyname = "Embassy Tech Square", invamt = "68,60,00,000", mr = "38,62,500", pmf = "5,71,667", tds = "4,29,167"
+
+
+    const capitalappreciation = 10;
+
+
+    const yr = ["2,10,56,478", "2,33,89,809", "2,38,52,568", "2,42,14,983", "2,68,98,297"]
+    const prprtyname = "IBC Knowledge Park II", invamt = "27,75,00,000", mr = "16,60,929", pmf = "2,31,250", tds = "1,84,548", iod = "22,34,284"
     const details = {
-        rentalyeild: 8.62,
-        returns: 15.9,
-        price: "13,253",
-        location: "ORR",
-        name: "LG Soft India",
-        country: "South Korea",
-        description: "Leading globals manufacturer",
-        start: "01 Oct 2021",
-        lockinperiod: 3,
-        enddate: "01 Oct 2026",
-        totalarea: "84,512",
-        rentpersf: 88,
-        leaseperiod: 5,
-        escalation: 15
+        rentalyeild: 9,
+        returns: 18.2,
+        price: "11,350",
+        location: "Grade A+",
+        name: "Aurbis Business Park",
+        country: "Singapore",
+        description: "Singapore-based Aurbis is a managed offices provider backed by Avila Capital which was founded by the Chairman of Assetz Property Group Singapore",
+        start: "01 Oct 2019",
+        lockinperiod: 5,
+        enddate: "30 Sep 2029",
+        totalarea: "52,277",
+        rentpersf: 89,
+        leaseperiod: 10,
+        escalation: 4.5
     }
+
 
     const onUpdate = (e) => {
         setValue(Number(e.target.value));
@@ -56,17 +64,16 @@ export default function Details() {
 
         <div>
             <Head>
-                <title>Embassy_Tech_Square</title>
+                <title>{prprtyname}</title>
                 <meta name='description' content='Generated by create next app' />
                 <link rel='icon' href='/favicon.ico' />
             </Head>
-            <Hero2 heading={prprtyname} message='' imageurl={'https://propmedia1.propertyshare.in/website/property/d3Joby9VTnlncndkZit1ZlAxQ2ZMdz09/media-v2/images/banner/1440x300/1638176086-embassy-tech-square-bangalore-1.jpg'}/>
+            <Hero2 heading={prprtyname} message='' imageurl={'https://propmedia1.propertyshare.in/website/property/YXgrbVI5NXJabk9IbFNHbkIzRmlqQT09/media-v2/images/banner/1440x300/1601270009-the-pavilion-iii-bangalore-1.jpg'} />
             <div className='section1 text-gray-400'>
                 <div className="flex md:flex-row  flex-wrap">
 
                     <div className="w-full md:3/4 lg:w-2/4 p-4 text-center" style={{ minHeight: "5" }}>
-
-                    <Carousel images={images} />
+                        <Carousel images={images} />
                     </div>
                     <div className="w-full lg:w-1/4 md:w-2/4  p-4 text-center rounded overflow-hidden shadow-lg shadow-gray-600 card">
                         <div className="px-6 py-4">
@@ -81,7 +88,7 @@ export default function Details() {
                                             <path d="M4 11H2v3h2zm5-4H7v7h2zm5-5v12h-2V2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1z" />
                                         </svg>
                                     </div>
-                                    <h1><b className="text-gray-300" >{8.62} %</b> <br /> HIGH RENTAL YEILD </h1>
+                                    <h1><b className="text-gray-300" >{details.rentalyeild} %</b> <br /> HIGH RENTAL YEILD </h1>
                                 </div>
                                 <div>
                                     <div className="w-24 mx-auto h-24 rounded-xl bg-gray-900 p-4" >
@@ -90,13 +97,13 @@ export default function Details() {
                                         </svg>
                                     </div>
 
-                                    <h1><b className="text-gray-300" >{15.9} %</b> <br /> HIGH RETURNS </h1>
+                                    <h1><b className="text-gray-300" >{details.returns} %</b> <br /> HIGH RETURNS </h1>
                                 </div>
                                 <div className=''>
                                     <svg className="w-24 mx-auto h-24 rounded bg-gray-900 p-3" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" viewBox="0 0 16 16">
                                         <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
                                     </svg>
-                                    <h1><b className="text-gray-300" >₹ {"13,253"} psf</b> <br /> ATTRACTIVE PRICE </h1>
+                                    <h1><b className="text-gray-300" >₹ {details.price} psf</b> <br /> ATTRACTIVE PRICE </h1>
                                 </div>
                                 <div className=''>
                                     <svg className="w-24 mx-auto h-24 rounded bg-gray-900 p-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 21">
@@ -105,7 +112,7 @@ export default function Details() {
                                             <path d="M13.8 12.938h-.01a7 7 0 1 0-11.465.144h-.016l.141.17c.1.128.2.252.3.372L8 20l5.13-6.248c.193-.209.373-.429.54-.66l.13-.154Z" />
                                         </g>
                                     </svg>
-                                    <h1><b className="text-gray-300" >{"ORR"}</b> <br />LOCATION</h1>
+                                    <h1><b className="text-gray-300" >{details.location}</b> <br />QUALITY</h1>
                                 </div>
 
                             </div>
@@ -119,7 +126,7 @@ export default function Details() {
                 <br />
                 <div>
                     <h1 className='font-sans text-4xl mx-10 py-10'>Investment Returns</h1>
-                    <h1 className='text-2xl mx-10' >Investment Amount:  <span className='bg-gray-500 p-2 ml-2 text-gray-900'>₹ 1,23,30,00,000</span></h1>
+                    <h1 className='text-2xl mx-10' >Investment Amount:  <span className='bg-gray-500 p-2 ml-2 text-gray-900'>₹ {invamt}</span></h1>
                     <div className="lg:w-3/4 my-72 p-4 rounded overflow-hidden shadow-lg shadow-gray-600 card">
                         <div className="px-0 md:px-6 py-4">
                             <div className="font-bold text-xl mb-2">Monthly Cash Flow</div>
@@ -131,13 +138,13 @@ export default function Details() {
                             </div>
                             <div className="mb-2 flex items-center justify-between gap-4 overflow-auto">
                                 <Typography>
-                                    MonthlyRent:<br /> <span className='text-gray-300 font-extrabold'>₹ {"70,48,111"}</span>
+                                    MonthlyRent:<br /> <span className='text-gray-300 font-extrabold'>₹ {mr}</span>
                                 </Typography>
                                 <Typography>
-                                    Property Management Fee: <br /> <span className='text-gray-300 font-extrabold'>₹ {"10,27,500"}</span>
+                                    Property Management Fee: <br /> <span className='text-gray-300 font-extrabold'>₹ {pmf}</span>
                                 </Typography>
                                 <Typography>
-                                    10% TDS: <br /> <span className='text-gray-300 font-extrabold'>₹ {"7,83,123"}</span>
+                                    10% TDS: <br /> <span className='text-gray-300 font-extrabold'>₹ {tds}</span>
                                 </Typography>
                             </div>
 
@@ -171,7 +178,7 @@ export default function Details() {
                                             <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
                                                 Investments
                                             </th>
-                                            <th scope="col" className="px-6 py-4">₹ {"1,23,30,00,000"}</th>
+                                            <th scope="col" className="px-6 py-4">₹ {invamt}</th>
                                             {
                                                 yr.map((year, index) => <td key={index} scope="col" className="px-6 py-4"></td>)
                                             }
@@ -189,25 +196,15 @@ export default function Details() {
                                         </tr>
                                         <tr className="">
                                             <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
-                                                Interest on Depost
+                                                Interest on Deposit
                                             </th>
                                             <td className="px-6 py-4">
                                             </td>
                                             {
-                                                yr.map((year, index) => <td key={index} scope="col" className="px-6 py-4">₹ {"27,71,994"}</td>)
+                                                yr.map((year, index) => <td key={index} scope="col" className="px-6 py-4">₹ {iod}</td>)
                                             }
                                         </tr>
-                                        <tr className="">
-                                            <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
-                                                Developer Fees
-                                            </th>
-                                            <td className="px-6 py-4">
-                                            </td>
-                                            {
-                                                yr.map((year, index) => <td key={index} scope="col" className="px-6 py-4">{(index == yr.length - 1) ? <>{"30,61,420"}</> : undefined}</td>)
-                                            }
 
-                                        </tr>
                                         <tr className="">
                                             <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
                                                 Sale Value
@@ -215,7 +212,7 @@ export default function Details() {
                                             <td className="px-6 py-4">
                                             </td>
                                             {
-                                                yr.map((year, index) => <td key={index} scope="col" className="px-6 py-4">{(index == yr.length - 1) ? <>{"1,69,30,69,151"}</> : undefined}</td>)
+                                                yr.map((year, index) => <td key={index} scope="col" className="px-6 py-4">{(index == yr.length - 1) ? <> ₹ {"1,12,57,46,490"}</> : undefined}</td>)
                                             }
                                         </tr>
 
@@ -229,9 +226,9 @@ export default function Details() {
                                                 yr.map((year, index) => <td key={index} scope="col" className="px-6 py-4">₹{
                                                     index === yr.length - 1
                                                         ?
-                                                        Number("1,69,30,69,151".replace(/\,/g, '')) + Number(year.replace(/\,/g, '')) + Number("27,71,994".replace(/\,/g, ''))
+                                                        Number("1,12,57,46,490".replace(/\,/g, '')) + Number(year.replace(/\,/g, '')) + Number("22,34,284".replace(/\,/g, ''))
                                                         :
-                                                        Number(year.replace(/\,/g, '')) + Number("27,71,994".replace(/\,/g, ''))
+                                                        Number(year.replace(/\,/g, '')) + Number("22,34,284".replace(/\,/g, ''))
                                                 }</td>)
                                             }
                                         </tr>
@@ -242,8 +239,9 @@ export default function Details() {
 
                         </div>
                     </div>
-                    <CapitalAppreciation yr={yr}/>
+                    <CapitalAppreciation yr={yr} />
                     <TenantDetails details={details} />
+
                     <div className="lg:w-3/4 rounded overflow-x-auto shadow-lg shadow-gray-600 card">
                         <div className="px-6 py-4">
                             <div className="font-bold text-xl">Location Highlights</div>

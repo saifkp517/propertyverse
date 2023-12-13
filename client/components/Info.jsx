@@ -37,7 +37,7 @@ export default function Section() {
                     </dl>
                 </div>
                 <div className="gap-4 sm:gap-72 lg:gap-8">
-                    <Image src="https://plus.unsplash.com/premium_photo-1678963247830-fc7a3ac060d5?q=80&w=1904&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" height={100} width={400} className="rounded-lg bg-gray-100" />
+                    <Image src="https://plus.unsplash.com/premium_photo-1678963247830-fc7a3ac060d5?q=80&w=1904&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" height={100} width={100} layout="responsive" className="rounded-lg bg-gray-100" />
                 </div>
             </div>
         </div>
