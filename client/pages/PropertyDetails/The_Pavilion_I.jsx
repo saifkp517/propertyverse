@@ -68,22 +68,7 @@ export default function Details() {
 
                     <div className="w-full md:3/4 lg:w-2/4 p-4 text-center">
 
-                        <Carousel className="rounded-xl">
-                            {
-                                images.map(img =>
-                                    <Image
-                                        key={img}
-                                        src={img}
-                                        onLoad={() => setLoaded("")}
-                                        alt="Loading"
-                                        className={`${loaded} bg-gray-700 h-full w-full object-cover`}
-                                        height={70}
-                                        width={100}
-                                        layout='responsive'
-                                    />
-                                )
-                            }
-                        </Carousel>
+                    <Carousel images={images} />
                     </div>
                     <div className="w-full lg:w-1/4 md:w-2/4  p-4 text-center rounded overflow-hidden shadow-lg shadow-gray-600 card">
                         <div className="px-6 py-4">

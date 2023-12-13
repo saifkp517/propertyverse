@@ -8,7 +8,7 @@ export default function Carousel({images}) {
 
     const [loaded, setLoaded] = useState("animate-pulse");
 
-    const imageTag = images.map(img =>
+    const imageTag = images?.map(img =>
         <Image
             key={img}
             src={img}
