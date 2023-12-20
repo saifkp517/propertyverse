@@ -20,8 +20,7 @@ function MyApp({ Component, pageProps }) {
         clientId={process.env.NEXT_PUBLIC_CLIENT_ID}
         cacheLocation='localstorage'
         authorizationParams={{
-          // redirect_uri: "https://www.propertyverse.co.in/"
-          redirect_uri: "https://propertyverse.co.in/"
+          redirect_uri: "https://www.propertyverse.co.in/"
         }}
       >
         <Navbar />
