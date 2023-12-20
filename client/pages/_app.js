@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }) {
         cacheLocation='localstorage'
         authorizationParams={{
           // redirect_uri: "https://www.propertyverse.co.in/"
-          redirect_uri: "http://localhost:3000"
+          redirect_uri: "https://propertyverse.co.in/"
         }}
       >
         <Navbar />
