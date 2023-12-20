@@ -12,7 +12,7 @@ export default function Carousel({images}) {
         <Image
             key={img}
             src={img}
-            onLoad={() => setLoaded("")}
+            onLoad={e => setLoaded("")}
             onDragStart={e => e.preventDefault()}
             alt="Loading"
             className={`${loaded} bg-gray-700 h-full w-full object-cover`}

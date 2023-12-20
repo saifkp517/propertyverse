@@ -66,7 +66,7 @@ const Navbar = () => {
           </li>
           {(isAuthenticated)
             ?
-            <li className='p-4 hover:border-2 '>
+            <li className='p-4'>
               <LogoutButton />
             </li>
             :
