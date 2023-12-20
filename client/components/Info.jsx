@@ -50,7 +50,7 @@ export default function Section() {
                             </h4>
                             <p className="mb-4 block font-sans text-base font-semibold leading-relaxed text-red-500 antialiased">Yeild - <span className="text-gray-500">{properties[count].yeild}%</span></p>
                             <p className="mb-4 block font-sans text-base font-semibold leading-relaxed text-red-500 antialiased">Return Target - <span className="text-gray-500">{properties[count].returntarget}%</span></p>
-                            <a className="inline-block" href={`PropertyDetails/${properties[count].name.split(" ").join("_")}`}>
+                            <a className="inline-block" href={`/PropertyDetails/${properties[count].name.split(" ").join("_")}`}>
                                 <button
                                     className="flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-red-500 transition-all hover:bg-red-500/10 active:bg-red-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                                     type="button"
