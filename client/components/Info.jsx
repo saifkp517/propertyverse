@@ -31,10 +31,10 @@ export default function Section() {
 
     return (
         <div>
-            <div className="mx-auto grid max-w-xl grid-cols-1 items-center gap-x-0 gap-y-4 px-4 py-16 sm:px-6 sm:py-32 lg:max-w-full lg:grid-cols-2 lg:px-8 ">
+            <div className="mx-auto grid max-w-xl grid-cols-1 items-center gap-x-10 gap-y-4 px-4 py-16 sm:px-6 sm:py-32 lg:max-w-full lg:grid-cols-2 lg:px-8 ">
                 <div className="top-0 left-0 gap-4 sm:gap-72 lg:gap-8 mb-14 ">
-                    <div className="transition  flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-gray-200 box-shadow-lg">
-                        <div className="relative m-0 w-2/5 shrink-0 overflow-hidden rounded-xl rounded-r-none bg-white bg-clip-border text-gray-700">
+                    <div className="shadow-xl flex w-full max-w-[48rem] flex-row rounded-xl bg-gray-200 bg-clip-border text-gray-700 shadow-gray-500 box-shadow-lg">
+                        <div className="relative  m-0 w-3/6 shrink-0 overflow-hidden rounded-xl rounded-r-none bg-gray-200 bg-clip-border text-gray-700">
                             <Image
                                 src={properties[count].img}
                                 alt="image"
@@ -44,7 +44,10 @@ export default function Section() {
                         </div>
                         <div className="p-6">
                             <h6 className="mb-4 block font-sans text-base font-semibold uppercase leading-relaxed tracking-normal text-red-500 antialiased">
-                                {properties[count].location}
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-geo-alt" viewBox="0 0 16 16">
+                                    <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
+                                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                                </svg>{properties[count].location}
                             </h6>
                             <h4 className="mb-2 block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
                                 {properties[count].name}
@@ -83,29 +86,29 @@ export default function Section() {
 
                     <dl className="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
                         <div className="border-t border-gray-200 pt-4">
-                            <dt className="font-medium text-gray-600">Diversified Investment Opportunities</dt>
-                            <dd className="mt-2 text-sm text-gray-500">Explore a diverse range of fractional ownership opportunities in premium real estate.</dd>
+                            <dt className="font-medium text-red-600">Diversified Investment Opportunities</dt>
+                            <dd className="mt-2 text-sm text-gray-400">Explore a diverse range of fractional ownership opportunities in premium real estate.</dd>
                         </div>
                         <div className="border-t border-gray-200 pt-4">
-                            <dt className="font-medium text-gray-600">Risk Mitigation and Affordability</dt>
-                            <dd className="mt-2 text-sm text-gray-500">Experience the benefits of real estate investment without the burden of full ownership.</dd>
+                            <dt className="font-medium text-red-600">Risk Mitigation and Affordability</dt>
+                            <dd className="mt-2 text-sm text-gray-400">Experience the benefits of real estate investment without the burden of full ownership.</dd>
                         </div>
                         <div className="border-t border-gray-200 pt-4">
-                            <dt className="font-medium text-gray-600">Expertly Vetted Properties</dt>
-                            <dd className="mt-2 text-sm text-gray-500">Invest with confidence in meticulously vetted and high-potential properties.</dd>
+                            <dt className="font-medium text-red-600">Expertly Vetted Properties</dt>
+                            <dd className="mt-2 text-sm text-gray-400">Invest with confidence in meticulously vetted and high-potential properties.</dd>
                         </div>
                         <div className="border-t border-gray-200 pt-4">
-                            <dt className="font-medium text-gray-600">User-Friendly Platform</dt>
-                            <dd className="mt-2 text-sm text-gray-500">Navigate seamlessly through our intuitive platform designed for your convenience.</dd>
+                            <dt className="font-medium text-red-600">User-Friendly Platform</dt>
+                            <dd className="mt-2 text-sm text-gray-400">Navigate seamlessly through our intuitive platform designed for your convenience.</dd>
                         </div>
                         <div className="border-t border-gray-200 pt-4">
-                            <dt className="font-medium text-gray-600">Responsive Customer Support</dt>
-                            <dd className="mt-2 text-sm text-gray-500">Enjoy responsive customer support for a hassle-free investing experience.</dd>
+                            <dt className="font-medium text-red-600">Responsive Customer Support</dt>
+                            <dd className="mt-2 text-sm text-gray-400">Enjoy responsive customer support for a hassle-free investing experience.</dd>
                         </div>
 
                         <div className="border-t border-gray-200 pt-4">
-                            <dt className="font-medium text-gray-600">Expertly Vetted Properties</dt>
-                            <dd className="mt-2 text-sm text-gray-500">Invest with confidence in meticulously vetted and high-potential properties.</dd>
+                            <dt className="font-medium text-red-600">Expertly Vetted Properties</dt>
+                            <dd className="mt-2 text-sm text-gray-400">Invest with confidence in meticulously vetted and high-potential properties.</dd>
                         </div>
                     </dl>
                 </div>

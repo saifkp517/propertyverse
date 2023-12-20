@@ -13,7 +13,6 @@ const Card = ({ name, location, area, pricesqf, yeild, returntarget, img }) => {
   return (
     <div>
       <div className="flex-wrap">
-
         <div className="sm:max-w-36 rounded-2xl overflow-hidden shadow-lg shadow-gray-700 card">
           <div className="p-6">
             <Image className="w-full rounded-xl" src={`${img}`} alt="Background img" width={100} height={60} layout='responsive' />
