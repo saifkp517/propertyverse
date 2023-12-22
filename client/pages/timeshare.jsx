@@ -3,7 +3,7 @@ import Hero from '../components/Hero3';
 import React, { useState, useEffect } from 'react';
 import Footer from '../components/Footer';
 import Link from 'next/link';
-import Card from '../components/Card';
+import Card from '../components/VillaCard';
 // import { getDataFromWebsite } from '../lib/api';
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
 
 
   const properties = [
-    { name: "Lodha iThink", location: "Thane , Mumbai", area: "35,802", pricesqf: "10,000", yeild: "8.44", returntarget: "15", img: "https://propmedia1.propertyshare.in/website/property/Mm1rMWthZHN1V0x3ejlWQlN5TmJCUT09/media-v2/images/listingbanner/540x420/1631124574-lodha-ithink-mumbai-1.jpg" },
+    { name: "Villa Ananyata", location: "Thane , Mumbai", area: "35,802", BUA: "4000", img: "https://storage.googleapis.com/sharenest/properties/Villa%20ANANYATA/01%20(1)-min.jpg" },
   ]
 
   const [searchItem, setSearchItem] = useState('');
@@ -66,13 +66,13 @@ export default function Home() {
                     <path d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022ZM6 8.694 1 10.36V15h5zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5z" />
                     <path d="M2 11h1v1H2zm2 0h1v1H4zm-2 2h1v1H2zm2 0h1v1H4zm4-4h1v1H8zm2 0h1v1h-1zm-2 2h1v1H8zm2 0h1v1h-1zm2-2h1v1h-1zm0 2h1v1h-1zM8 7h1v1H8zm2 0h1v1h-1zm2 0h1v1h-1zM8 5h1v1H8zm2 0h1v1h-1zm2 0h1v1h-1zm0-2h1v1h-1z" />
                   </svg>
-                  <Link href="/properties"><p style={{ cursor: "pointer" }} className='text-gray-400 hover:bg-gray-50 border-b lg:text-xl border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 ml-2 pr-4 py-2 border md:hover:text-red-700 md:p-0'>Retail Properties</p></Link>
+                  <Link href="/properties"><p style={{ cursor: "pointer" }} className='text-gray-600 hover:bg-gray-50  lg:text-xl border-gray-100 md:hover:bg-transparent block pl-3 ml-2 pr-4 py-2  md:hover:text-red-700 md:p-0'>Retail Properties</p></Link>
                 </li>
                 <li style={{ display: "flex" }}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="red" className="bi bi-house-door" viewBox="0 0 16 16">
                     <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z" />
                   </svg>
-                  <Link href="/timeshare" ><p style={{ cursor: "pointer" }} className='text-gray-400 hover:bg-gray-50 border-b lg:text-xl border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 ml-2 pr-4 py-2 md:hover:text-red-700 md:p-0'>Timeshare</p></Link>
+                  <Link href="/timeshare" ><p style={{ cursor: "pointer" }} className='text-gray-600 hover:bg-gray-50 lg:text-xl  md:hover:bg-transparent block pl-3 ml-2 pr-4 py-2 border-b  border-red-500 md:hover:text-red-700 md:p-0'>Timeshare</p></Link>
                 </li>
               </ul>
             </div>
@@ -87,7 +87,7 @@ export default function Home() {
         </div>
         <br />
         <div className="grid grid-cols-1  gap-1 md:grid-cols-2 lg:grid-cols-4">
-          {filteredProperties.map(property => <div key={property.name} className="text-center"><Card name={property.name} location={property.location} area={property.area} pricesqf={property.pricesqf} yeild={property.yeild} returntarget={property.returntarget} img={property.img} /></div>)}
+          {filteredProperties.map(property => <div key={property.name} className="text-center"><Card name={property.name} location={property.location} area={property.area} bua={property.BUA} img={property.img} /></div>)}
         </div>
       </div>
 

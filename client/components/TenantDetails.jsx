@@ -11,15 +11,15 @@ export default function TenantDetails({details}) {
 
                 <div className="flex col-span-2 flex-col">
                     <Typography variant='h4' className='my-2 text-xl text-red-400'>Name</Typography>
-                    <h1><b className="text-gray-300 text-2xl " >{details.name}</b></h1>
+                    <h1><b className="text-gray-400 text-2xl " >{details.name}</b></h1>
                 </div>
                 <div className="flex col-span-2 flex-col">
                     <Typography variant='h4' className='my-2 text-xl text-red-400'>Country</Typography>
-                    <h1><b className="text-gray-300 text-2xl" >{details.country}</b></h1>
+                    <h1><b className="text-gray-400 text-2xl" >{details.country}</b></h1>
                 </div>
                 <div className="col-span-4 ">
                     <Typography variant='h4' className='my-2 text-xl text-red-400'>Description</Typography>
-                    <p className="text-gray-300">{details.description}</p>
+                    <p className="text-gray-400">{details.description}</p>
                 </div>
                 <Typography variant='h4' className="col-span-4 text-xl text-red-400 ">Time Period</Typography>
                 <div className="flex lg:col-span-1 sm:col-span-2">
@@ -30,7 +30,7 @@ export default function TenantDetails({details}) {
                     </div>
                     <div className='mt-4'>
                         <h6>Lease Start Date</h6>
-                        <h4><b className="text-gray-300">{details.start}</b></h4>
+                        <h4><b className="text-gray-400">{details.start}</b></h4>
                     </div>
                 </div>
                 <div className="flex lg:col-span-1 sm:col-span-2">
@@ -41,7 +41,7 @@ export default function TenantDetails({details}) {
                     </div>
                     <div className='mt-4'>
                         <h6>Lock-in Period</h6>
-                        <h4><b className="text-gray-300" >{details.lockinperiod} YEARS</b></h4>
+                        <h4><b className="text-gray-400" >{details.lockinperiod} YEARS</b></h4>
                     </div>
                 </div>
                 <div className="flex lg:col-span-1 sm:col-span-2">
@@ -52,27 +52,27 @@ export default function TenantDetails({details}) {
                     </div>
                     <div className='mt-4'>
                         <h6>Lease End Date</h6>
-                        <h4><b className="text-gray-300" >{details.enddate}</b></h4>
+                        <h4><b className="text-gray-400" >{details.enddate}</b></h4>
                     </div>
                 </div>
                 <Typography variant='h4' className="col-span-4 text-xl text-red-400">Tenant Highlights</Typography>
                 <div className="">
-                    <h4><b className="text-gray-300" >{details.totalarea} SF</b></h4>
+                    <h4><b className="text-gray-400" >{details.totalarea} SF</b></h4>
                     <h6>TOTAL AREA</h6>
 
                 </div>
                 <div className="">
-                    <h4><b className="text-gray-300" >{details.rentpersf}</b></h4>
+                    <h4><b className="text-gray-400" >{details.rentpersf}</b></h4>
                     <h6>RENT PER SF</h6>
 
                 </div>
                 <div className="  ">
-                    <h4><b className="text-gray-300" >{details.leaseperiod} YEARS</b></h4>
+                    <h4><b className="text-gray-400" >{details.leaseperiod} YEARS</b></h4>
                     <h6>LEASE PERIOD</h6>
 
                 </div>
                 <div className="  ">
-                    <h4><b className="text-gray-300" >{details.escalation} %</b></h4>
+                    <h4><b className="text-gray-400" >{details.escalation} %</b></h4>
                     <h6>ESCALATION</h6>
 
                 </div>

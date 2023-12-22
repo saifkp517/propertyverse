@@ -85,35 +85,35 @@ export default function Details() {
                             <div className="grid grid-cols-2 gap-0">
                                 <div>
                                     <div className="w-24 mx-auto h-24 rounded bg-gray-900 p-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" className="bi bi-bar-chart" viewBox="0 0 16 16">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="white" className="bi bi-bar-chart" viewBox="0 0 16 16">
                                             <path d="M4 11H2v3h2zm5-4H7v7h2zm5-5v12h-2V2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1z" />
                                         </svg>
                                     </div>
-                                    <h1><b className="text-gray-300" >{details.rentalyeild} %</b> <br /> HIGH RENTAL YEILD </h1>
+                                    <h1><b className="text-gray-800" >{details.rentalyeild} %</b> <br /> HIGH RENTAL YEILD </h1>
                                 </div>
                                 <div>
                                     <div className="w-24 mx-auto h-24 rounded-xl bg-gray-900 p-4" >
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" className="bi bi-graph-up" viewBox="0 0 16 16">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="white" className="bi bi-graph-up" viewBox="0 0 16 16">
                                             <path fillRule="evenodd" d="M0 0h1v15h15v1H0zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07Z" />
                                         </svg>
                                     </div>
 
-                                    <h1><b className="text-gray-300" >{details.returns} %</b> <br /> HIGH RETURNS </h1>
+                                    <h1><b className="text-gray-800" >{details.returns} %</b> <br /> HIGH RETURNS </h1>
                                 </div>
                                 <div className=''>
-                                    <svg className="w-24 mx-auto h-24 rounded bg-gray-900 p-3" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" viewBox="0 0 16 16">
+                                    <svg className="w-24 mx-auto h-24 rounded bg-gray-900 p-3" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="white" viewBox="0 0 16 16">
                                         <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
                                     </svg>
-                                    <h1><b className="text-gray-300" >₹ {details.price} psf</b> <br /> ATTRACTIVE PRICE </h1>
+                                    <h1><b className="text-gray-800" >₹ {details.price} psf</b> <br /> ATTRACTIVE PRICE </h1>
                                 </div>
                                 <div className=''>
                                     <svg className="w-24 mx-auto h-24 rounded bg-gray-900 p-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 21">
-                                        <g stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
+                                        <g stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
                                             <path d="M8 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
                                             <path d="M13.8 12.938h-.01a7 7 0 1 0-11.465.144h-.016l.141.17c.1.128.2.252.3.372L8 20l5.13-6.248c.193-.209.373-.429.54-.66l.13-.154Z" />
                                         </g>
                                     </svg>
-                                    <h1><b className="text-gray-300" >{details.location}</b> <br />QUALITY</h1>
+                                    <h1><b className="text-gray-800" >{details.location}</b> <br />QUALITY</h1>
                                 </div>
 
                             </div>
@@ -139,13 +139,13 @@ export default function Details() {
                             </div>
                             <div className="mb-2 flex items-center justify-between gap-4 overflow-auto">
                                 <Typography>
-                                    Monthly rent:<br /> <span className='text-gray-300 font-extrabold'>₹ {mr}</span>
+                                    Monthly rent:<br /> <span className='text-gray-800 font-extrabold'>₹ {mr}</span>
                                 </Typography>
                                 <Typography>
-                                    Property Management Fee: <br /> <span className='text-gray-300 font-extrabold'>₹ {pmf}</span>
+                                    Property Management Fee: <br /> <span className='text-gray-800 font-extrabold'>₹ {pmf}</span>
                                 </Typography>
                                 <Typography>
-                                    10% TDS: <br /> <span className='text-gray-300 font-extrabold'>₹ {tds}</span>
+                                    10% TDS: <br /> <span className='text-gray-800 font-extrabold'>₹ {tds}</span>
                                 </Typography>
                             </div>
 
@@ -165,7 +165,7 @@ export default function Details() {
 
                             <div className="relative overflow-x-auto">
                                 <table className="w-full text-sm text-left rtl:text-right overflow-x-auto">
-                                    <thead className="text-xs bg-gray-700">
+                                    <thead className="text-xs text-white bg-gray-700">
                                         <tr>
                                             <th scope="col" className="px-6 py-3"></th>
                                             <th scope="col" className="px-6 py-3">DAY 0</th>

@@ -23,7 +23,8 @@ module.exports = {
       'media1.propertyshare.in',
       'media.licdn.com',
       'flowbite.com',
-      'flowbite.s3.amazonaws.com'
+      'flowbite.s3.amazonaws.com',
+      'storage.googleapis.com'
     ]
   }
 }

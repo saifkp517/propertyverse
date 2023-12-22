@@ -18,6 +18,7 @@ export default function Section() {
         { name: "The Capital", location: "Bandra Kurla Complex , Mumbai", area: "7,721", pricesqf: "34,646", yeild: "7.69", returntarget: "16.7", img: "https://propmedia1.propertyshare.in/website/property/YzVrKzZZRkkzamh1MUU1dVFnQUxWZz09/media-v2/images/listingbanner/540x420/1578665092-the-capital-mumbai-1.jpg" },
         { name: "Sky Vista", location: "Viman Nagar, Pune", area: "8,944 ", pricesqf: "13,417", yeild: "8.5", returntarget: "16.9", img: "https://propmedia1.propertyshare.in/website/property/T0o0SnBBdG5SNVlzNnJtUjNyMFRUZz09/media-v2/images/listingbanner/540x420/1578542226-sky-vista-pune-1.jpg" },
     ]
+    
 
     let [count, setCount] = useState(0);
 
