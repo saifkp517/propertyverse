@@ -1,17 +1,17 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import LoginButton from './Login';
-import LogoutButton from './Logout'
+import LogoutButton from './Logout';
 import Image from 'next/image';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-import { useAuth0 } from "@auth0/auth0-react";
+import { useAuth0 } from '@auth0/auth0-react';
+import { Avatar } from '@material-tailwind/react';
 
 const Navbar = () => {
-
   const { user, isAuthenticated, getAccessTokenSilently } = useAuth0();
   const [userMetadata, setUserMetadata] = useState(null);
 
-  console.log(isAuthenticated)
+  console.log(isAuthenticated, 'Navbar?');
 
   const [nav, setNav] = useState(false);
   const [color, setColor] = useState('transparent');
@@ -38,40 +38,51 @@ const Navbar = () => {
     <div
       className={`fixed left-0 top-0 w-full z-10 ease-in duration-300 bg-${color}`}
     >
-      <div className='max-w-[1240px] m-auto flex justify-between items-center p-4 text-white'>
+      <div className='max-w-[1240px] m-auto flex justify-between items-center p-2 text-white'>
         <Link href='/'>
-          <h1 style={{ color: `${textColor}` }} className='font-bold text-4xl'>
+          <h1
+            style={{ color: `${textColor}` }}
+            className='font-bold text-4xl cursor-pointer'
+          >
             PropertyVerse.
           </h1>
         </Link>
-        <ul style={{ color: `${textColor}` }} className='hidden sm:flex'>
-          <li className='p-4 hover:underline underline-offset-8 decoration-red-500 '>
+        <ul
+          style={{ color: `${textColor}` }}
+          className='hidden sm:flex items-center'
+        >
+          <li className='p-4 hover:underline underline-offset-8 decoration-red-500 cursor-pointer'>
             <Link href='/'>Home</Link>
           </li>
-          <li className='p-4 hover:underline underline-offset-8 decoration-red-500'>
+          <li className='p-4 hover:underline underline-offset-8 decoration-red-500 cursor-pointer'>
             <Link href='/blogs'>Knowledge Base</Link>
           </li>
-          {(isAuthenticated) ? <li className='p-4 hover:underline underline-offset-8 decoration-red-500'>
-            <Link href='/properties'>Properties</Link>
-          </li> : null}
+          {isAuthenticated ? (
+            <li className='p-4 hover:underline underline-offset-8 decoration-red-500 cursor-pointer'>
+              <Link href='/properties'>Properties</Link>
+            </li>
+          ) : null}
           <li className='p-4'>
-            {(isAuthenticated == false) ? <LoginButton /> :
-              <div className="flex items-center gap-4">
-                <div className="font-medium dark:text-white">
-                  <div>{user.name}</div>
-                </div>
+            {isAuthenticated == false ? (
+              <LoginButton />
+            ) : (
+              <div className='flex items-center gap-4'>
+                <Avatar
+                  src={user.picture}
+                  alt='avatar'
+                  size='sm'
+                  withBorder={true}
+                  color='white'
+                  className='p-0.5'
+                />
               </div>
-
-            }
+            )}
           </li>
-          {(isAuthenticated)
-            ?
+          {isAuthenticated ? (
             <li className='p-4'>
               <LogoutButton />
             </li>
-            :
-            undefined
-          }
+          ) : undefined}
         </ul>
 
         {/* Mobile Button */}
@@ -91,33 +102,38 @@ const Navbar = () => {
           }
         >
           <ul>
-            <li onClick={handleNav} className='p-4 text-2xl hover:text-gray-500'>
+            <li
+              onClick={handleNav}
+              className='p-4 text-2xl hover:text-gray-500'
+            >
               <Link href='/'>Home</Link>
               <hr />
             </li>
-            <li onClick={handleNav} className='p-4 text-2xl hover:text-gray-500'>
+            <li
+              onClick={handleNav}
+              className='p-4 text-2xl hover:text-gray-500'
+            >
               <Link href='/blogs'>Knowledge Base</Link>
               <hr />
             </li>
-            {(isAuthenticated) ? <li onClick={handleNav} className='p-4 text-2xl'>
-              <Link href='/properties'>Properties</Link>
-              <hr className='hover:w-full' />
-            </li> : null}
-            <li onClick={handleNav} className='p-4 text-2xl hover:text-gray-500'>
-              {(isAuthenticated === false) ? <LoginButton /> :
-                user.name
-              }
+            {isAuthenticated ? (
+              <li onClick={handleNav} className='p-4 text-2xl'>
+                <Link href='/properties'>Properties</Link>
+                <hr className='hover:w-full' />
+              </li>
+            ) : null}
+            <li
+              onClick={handleNav}
+              className='p-4 text-2xl hover:text-gray-500'
+            >
+              {isAuthenticated === false ? <LoginButton /> : user.name}
               <hr />
             </li>
-            {(isAuthenticated)
-              ?
+            {isAuthenticated ? (
               <li className='p-4 text-2xl bg-black hover:text-gray-500'>
                 <LogoutButton />
               </li>
-              :
-              undefined
-            }
-
+            ) : undefined}
           </ul>
         </div>
       </div>

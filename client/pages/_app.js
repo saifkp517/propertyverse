@@ -8,10 +8,9 @@ import { useEffect, useState } from 'react';
 import { Auth0Provider } from '@auth0/auth0-react';
 
 function MyApp({ Component, pageProps }) {
-
   useEffect(() => {
     AOS.init();
-  }, [])
+  }, []);
 
   return (
     <>
@@ -20,15 +19,14 @@ function MyApp({ Component, pageProps }) {
         clientId={process.env.NEXT_PUBLIC_CLIENT_ID}
         cacheLocation='localstorage'
         authorizationParams={{
-          redirect_uri: "https://www.propertyverse.co.in/"
+          redirect_uri: 'http://localhost:3000/',
         }}
       >
         <Navbar />
         <NextNProgress color='#000000' height={7} showOnShallow={true} />
-        
+
         <Component {...pageProps} />
       </Auth0Provider>
-
     </>
   );
 }
