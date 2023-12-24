@@ -7,7 +7,7 @@ const LoginButton = () => {
 
   return (
     <Button size='sm' color='white' onClick={() => loginWithRedirect()}>
-      <i class='fa-solid fa-right-to-bracket'></i>
+      <i className='fa-solid fa-right-to-bracket'></i>
       <span className='ml-2'>Login</span>
     </Button>
   );
