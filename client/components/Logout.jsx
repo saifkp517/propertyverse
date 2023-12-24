@@ -18,7 +18,7 @@ const LogoutButton = () => {
         color='white'
         onClick={() =>
           logout({
-            logoutParams: { returnTo: 'http://localhost:3000/' },
+            logoutParams: { returnTo: 'https://www.propertyverse.co.in/' },
           })
         }
       >
