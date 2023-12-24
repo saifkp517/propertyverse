@@ -1,38 +1,52 @@
 import React, { useEffect, useState } from 'react'
-import Footer from '../../components/Footer';
+import TenantDetails from '../../components/TenantDetails';
+import CapitalAppreciation from '../../components/CapitalAppreciation';
 import MyModal from '../../components/Dialog';
 import { Typography } from "@material-tailwind/react";
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
 import Carousel from '../../components/Carousel';
-import CapitalAppreciation from '../../components/CapitalAppreciation';
-import TenantDetails from '../../components/TenantDetails';
 import Hero2 from '../../components/Hero2';
 import Head from 'next/head';
 import Image from 'next/image';
+import Footer from '../../components/Footer'
 
 export default function Details() {
 
     const [value, setValue] = useState(1000000);
     const [loaded, setLoaded] = useState("animate-pulse");
 
-
     const images = [
-        'https://propmedia1.propertyshare.in/website/property/RXdLZ002SnEzOXhjWnpnZE9lNDdhZz09/media-v2/images/main/665x400/1578542239-the-pavilion-i-bangalore-1.jpg',
-        'https://propmedia1.propertyshare.in/website/property/RXdLZ002SnEzOXhjWnpnZE9lNDdhZz09/media-v2/images/main/1330x800/1578542243-the-pavilion-i-bangalore-2.jpg',
-        'https://propmedia1.propertyshare.in/website/property/RXdLZ002SnEzOXhjWnpnZE9lNDdhZz09/media-v2/images/main/1330x800/1578542246-the-pavilion-i-bangalore-3.jpg',
-        'https://propmedia1.propertyshare.in/website/property/RXdLZ002SnEzOXhjWnpnZE9lNDdhZz09/media-v2/images/main/1330x800/1578542249-the-pavilion-i-bangalore-4.jpg',
-        'https://propmedia1.propertyshare.in/website/property/RXdLZ002SnEzOXhjWnpnZE9lNDdhZz09/media-v2/images/main/1330x800/1578542252-the-pavilion-i-bangalore-5.jpg',
-        'https://propmedia1.propertyshare.in/website/property/RXdLZ002SnEzOXhjWnpnZE9lNDdhZz09/media-v2/images/main/1330x800/1578542255-the-pavilion-i-bangalore-6.jpg',
-        'https://propmedia2.propertyshare.in/website/property/RXdLZ002SnEzOXhjWnpnZE9lNDdhZz09/media-v2/images/main/1330x800/1578542258-the-pavilion-i-bangalore-7.jpg',
-
+        'https://propmedia2.propertyshare.in/website/property/YzVrKzZZRkkzamh1MUU1dVFnQUxWZz09/media-v2/images/main/665x400/1578665095-the-capital-mumbai-1.jpg',
+        'https://propmedia1.propertyshare.in/website/property/YzVrKzZZRkkzamh1MUU1dVFnQUxWZz09/media-v2/images/main/1330x800/1578665099-the-capital-mumbai-2.jpg',
+        'https://propmedia2.propertyshare.in/website/property/YzVrKzZZRkkzamh1MUU1dVFnQUxWZz09/media-v2/images/main/1330x800/1578665102-the-capital-mumbai-3.jpg',
+        'https://propmedia2.propertyshare.in/website/property/YzVrKzZZRkkzamh1MUU1dVFnQUxWZz09/media-v2/images/main/1330x800/1578665105-the-capital-mumbai-4.jpg',
+        'https://propmedia2.propertyshare.in/website/property/YzVrKzZZRkkzamh1MUU1dVFnQUxWZz09/media-v2/images/main/1330x800/1578665108-the-capital-mumbai-5.jpg',
+        'https://propmedia2.propertyshare.in/website/property/YzVrKzZZRkkzamh1MUU1dVFnQUxWZz09/media-v2/images/main/1330x800/1578665111-the-capital-mumbai-6.jpg',
+        'https://propmedia2.propertyshare.in/website/property/YzVrKzZZRkkzamh1MUU1dVFnQUxWZz09/media-v2/images/main/1330x800/1578665117-the-capital-mumbai-8.jpg',
+        'https://propmedia2.propertyshare.in/website/property/YzVrKzZZRkkzamh1MUU1dVFnQUxWZz09/media-v2/images/main/1330x800/1578665120-the-capital-mumbai-9.jpg',
+        'https://propmedia1.propertyshare.in/website/property/YzVrKzZZRkkzamh1MUU1dVFnQUxWZz09/media-v2/images/main/1330x800/1578665123-the-capital-mumbai-10.jpg',
+        'https://propmedia1.propertyshare.in/website/property/YzVrKzZZRkkzamh1MUU1dVFnQUxWZz09/media-v2/images/main/1330x800/1578665126-the-capital-mumbai-11.jpg',
+        'https://propmedia1.propertyshare.in/website/property/YzVrKzZZRkkzamh1MUU1dVFnQUxWZz09/media-v2/images/main/1330x800/1578665129-the-capital-mumbai-12.jpg'
     ]
 
-    const yr = ["3,41,60,800", "3,14,69,920", "3,28,37,920", "3,42,67,520", "3,57,61,600"]
-    const iod = "12,66,880";
 
-    const salevalue = "64,42,04,000"
 
-    const prprtyname = "The Pavillion I", invamt = "40,00,00,000", mr = "23,94,132", pmf = "3,33,333", tds = "2,66,015"
-        const purchasedetails = {
+    const capitalappreciation = 10;
+
+
+    const totalrent = ["1,75,045", "1,78,171", "1,87,548", "2,03,490", "2,13,664"]
+    const carparkrent = ["7,742", "7,935", "8,332", "8,535", "8,535"]
+    const bonus = ["33,000", "12,500", "", "", ""]
+    const managementfee = ["-25,000", "-25,000", "-25,000", "-25,000", "-25,000"]
+    const propertytax = ["-7,460", "-7,460", "-7,460", "-7,460", "-7,460"]
+    const surplusreserves = [""]
+
+
+    
+    const prprtyname = "Brigade Tech Park", invamt = "25,00,000", mr = "5,18,509", pmf = "84,583", iod = "9,282", salevalue = "17,75,24,135"
+
+    const purchasedetails = {
         Purchase_Price: 280202500,
         Legal_Expenses: 1500000,
         Acquisition_Fee: 9500000,
@@ -40,21 +54,22 @@ export default function Details() {
         Stamp_Duty: 18633466
     }
 
+
     const details = {
-        rentalyeild: 9.36,
-        returns: 17.80,
-        price: "12,350",
-        location: "ORR",
-        name: "Aurbis Business Parks",
-        country: "South Korea",
-        description: "Singapore-based Aurbis is a managed offices provider backed by the Avila Capital which was founded by the Chariman of Assetz Property Group Singapore.",
-        start: "01 Oct 2019",
-        lockinperiod: 5,
-        enddate: "30 Sep 2029",
-        totalarea: "29,185",
-        rentpersf: 86,
-        leaseperiod: 10,
-        escalation: 4.5
+        rentalyeild: 9,
+        returns: 16.13,
+        price: "8,675",
+        location: "ITPL",
+        name: "State Bank of Mauritius",
+        country: "Mauritius",
+        description: "% of domestic banking assets.",
+        start: "15 Jan 2019",
+        lockinperiod: 3,
+        enddate: "15 Jan 2024",
+        totalarea: "7,721",
+        rentpersf: 22,
+        leaseperiod: 5,
+        escalation: 6
     }
 
 
@@ -70,13 +85,12 @@ export default function Details() {
                 <meta name='description' content='Generated by create next app' />
                 <link rel='icon' href='/favicon.ico' />
             </Head>
-            <Hero2 heading={prprtyname} message='' imageurl={'https://propmedia1.propertyshare.in/website/property/RXdLZ002SnEzOXhjWnpnZE9lNDdhZz09/media-v2/images/banner/1440x300/1578542233-the-pavilion-i-bangalore-1.jpg'} />
+            <Hero2 heading={prprtyname} message='' imageurl={'https://propmedia1.propertyshare.in/website/property/YzVrKzZZRkkzamh1MUU1dVFnQUxWZz09/media-v2/images/banner/1440x300/1578542227-the-capital-mumbai-1.jpg'} />
             <div className='section1 text-gray-400'>
-                <div className="flex md:flex-row flex-wrap">
+                <div className="flex md:flex-row  flex-wrap">
 
-                    <div className="w-full md:3/4 lg:w-2/4 p-4 text-center">
-
-                    <Carousel images={images} />
+                    <div className="w-full md:3/4 lg:w-2/4 p-4 text-center" style={{ minHeight: "5" }}>
+                        <Carousel images={images} />
                     </div>
                     <div className="w-full lg:w-1/4 md:w-2/4  p-4 text-center rounded overflow-hidden shadow-lg shadow-gray-600 card">
                         <div className="px-6 py-4">
@@ -135,19 +149,15 @@ export default function Details() {
                             <div className="font-bold text-xl mb-2">Monthly Cash Flow</div>
                             <br />
                             <div className="overflow-hidden h-4 mb-4 text-xs flex rounded bg-emerald-200">
-                                <div style={{ width: "50%" }} className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500"></div>
+                                <div style={{ width: "60%" }} className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500"></div>
                                 <div style={{ width: "40%" }} className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-orange-500"></div>
-                                <div style={{ width: "10%" }} className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gray-500"></div>
                             </div>
                             <div className="mb-2 flex items-center justify-between gap-4 overflow-auto">
                                 <Typography>
-                                    Monthly rent:<br /> <span className='text-gray-300 font-extrabold'>₹ {mr}</span>
+                                    Monthltotalrentent:<br /> <span className='text-gray-300 font-extrabold'>₹ {mr}</span>
                                 </Typography>
                                 <Typography>
                                     Property Management Fee: <br /> <span className='text-gray-300 font-extrabold'>₹ {pmf}</span>
-                                </Typography>
-                                <Typography>
-                                    10% TDS: <br /> <span className='text-gray-300 font-extrabold'>₹ {tds}</span>
                                 </Typography>
                             </div>
 
@@ -172,7 +182,7 @@ export default function Details() {
                                             <th scope="col" className="px-6 py-3"></th>
                                             <th scope="col" className="px-6 py-3">DAY 0</th>
                                             {
-                                                yr.map((year, index) => <th key={index} scope="col" className="px-6 py-3">Year {index + 1}</th>)
+                                                totalrent.map((year, index) => <th key={index} scope="col" className="px-6 py-3">Year {index + 1}</th>)
                                             }
                                         </tr>
                                     </thead>
@@ -183,49 +193,51 @@ export default function Details() {
                                             </th>
                                             <th scope="col" className="px-6 py-4">₹ {invamt}</th>
                                             {
-                                                yr.map((year, index) => <td key={index} scope="col" className="px-6 py-4"></td>)
+                                                totalrent.map((year, index) => <td key={index} scope="col" className="px-6 py-4"></td>)
                                             }
                                         </tr>
                                         <tr className="">
                                             <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
-                                                Rents
+                                                Total Rent
                                             </th>
                                             <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
 
                                             </th>
                                             {
-                                                yr.map((amt, index) => <td key={index} scope="col" className="px-6 py-4">₹ {amt}</td>)
+                                                totalrent.map((amt, index) => <td key={index} scope="col" className="px-6 py-4">₹ {amt}</td>)
                                             }
                                         </tr>
                                         <tr className="">
                                             <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
-                                                Interest on Depost
+                                                Car Park Rent
                                             </th>
-                                            <td className="px-6 py-4">
-                                            </td>
-                                            {
-                                                yr.map((amt, index) => <td key={index} scope="col" className="px-6 py-4">₹ {iod}</td>)
-                                            }
-                                        </tr>
-                                        <tr className="">
                                             <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
-                                                Developer Fees
-                                            </th>
-                                            <td className="px-6 py-4">
-                                            </td>
-                                            {
-                                                yr.map((year, index) => <td key={index} scope="col" className="px-6 py-4">{(index == yr.length - 1) ? <>{"30,61,420"}</> : undefined}</td>)
-                                            }
 
+                                            </th>
+                                            {
+                                                carparkrent.map((amt, index) => <td key={index} scope="col" className="px-6 py-4">₹ {amt}</td>)
+                                            }
                                         </tr>
                                         <tr className="">
                                             <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
-                                                Sale Value
+                                                Bonus
+                                            </th>
+                                            <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
+
+                                            </th>
+                                            {
+                                                bonus.map((amt, index) => <td key={index} scope="col" className="px-6 py-4"> {amt}</td>)
+                                            }
+                                        </tr>
+                                       
+                                        <tr className="">
+                                            <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
+                                                Interest on Deposit
                                             </th>
                                             <td className="px-6 py-4">
                                             </td>
                                             {
-                                                yr.map((year, index) => <td key={index} scope="col" className="px-6 py-4">{(index == yr.length - 1) ? <>{salevalue}</> : undefined}</td>)
+                                                totalrent.map((year, index) => <td key={index} scope="col" className="px-6 py-4">₹ {iod}</td>)
                                             }
                                         </tr>
 
@@ -236,12 +248,8 @@ export default function Details() {
                                             <td className="px-6 py-4">
                                             </td>
                                             {
-                                                yr.map((year, index) => <td key={index} scope="col" className="px-6 py-4">₹{
-                                                    index === yr.length - 1
-                                                        ?
-                                                        Number(salevalue.replace(/\,/g, '')) + Number(year.replace(/\,/g, '')) + Number(iod.replace(/\,/g, ''))
-                                                        :
-                                                        Number(year.replace(/\,/g, '')) + Number(iod.replace(/\,/g, ''))
+                                                totalrent.map((amt, index) => <td key={index} scope="col" className="px-6 py-4">₹{
+                                                        Number(amt.replace(/\,/g, '')) + Number(carparkrent[index].replace(/\,/g, '')) + Number(bonus[index].replace(/\,/g, '')) + Number(iod.replace(/\,/g, ''))
                                                 }</td>)
                                             }
                                         </tr>
@@ -252,55 +260,9 @@ export default function Details() {
 
                         </div>
                     </div>
-
-                    {/* <div className="lg:w-3/4 text-center  p-4 rounded overflow-hidden shadow-lg shadow-gray-600 card">
-                        <div className="lg:px-6 py-4 sm:p-0">
-                            <div className="font-bold text-xl mb-2">Capital Appreciation</div>
-                            <br />
-                            <div className="my-12">
-                                <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-                                    <div className='lg:px-12 md:px-4 sm:px-0'>
-                                        <h1 className='lg:text-2xl sm:text-lg'>Property Pricing</h1>
-                                        <MyChart />
-                                    </div>
-                                    <div>
-                                        <br />
-                                        <input className="accent-red-500 w-10/12" type="range" value={value} onChange={onUpdate} min={1000000.00} max={10000000.00} />
-                                        <p className='text-center'>&nbsp;₹ {Math.round(value / 100000)} Lakhs</p>
-
-                                        <div className="grid grid-cols-2">
-                                            <h1 className=" w-9/12 text-left ">10Lakhs</h1>
-                                            <h1 className=" w-9/12 text-right ">1 CR</h1>
-                                        </div>
-                                        <div className="grid grid-cols-3 gap-4 w-full my-10">
-                                            <div className="col-span-3 text-start mx-6 my-2">
-                                                <h1><b>Assured Return Rate (P.A): </b><span className=' text-red-400'> {capitalappreciation} %</span></h1>
-                                                <h1><b>Time Period (P.A): </b><span className=' text-red-400'> {yr.length * 12} Months</span></h1>
-                                                <h1>
-                                                    <Typography variant='h4' className=' text-gray-200'>₹  {(value / 100000).toFixed(2)} Lakhs</Typography>
-                                                    <h1><b>Investment Amount</b></h1>
-                                                </h1>
-                                                <h1>
-                                                    <Typography variant='h4' className='text-gray-200'>₹ {(value / 100000 * (capitalappreciation / 100)).toFixed(2)} Lakhs</Typography>
-                                                    <h1><b>Est. Returns</b></h1>
-                                                </h1>
-                                                <h1>
-                                                    <Typography variant='h4' className='text-gray-200'>₹ {((value / 100000 + value / 100000 * (capitalappreciation / 100)) * (yr.length)).toFixed(2)} Lakhs</Typography>
-                                                    <h1><b>Total Value </b></h1>
-                                                </h1>
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div> */}
-                    <CapitalAppreciation purchasedetails={purchasedetails}  purchasedetails={purchasedetails} yr={yr} />
-                    
+                    <CapitalAppreciation purchasedetails={purchasedetails} yr={totalrent} />
                     <TenantDetails details={details} />
+
                     <div className="lg:w-3/4 rounded overflow-x-auto shadow-lg shadow-gray-600 card">
                         <div className="px-6 py-4">
                             <div className="font-bold text-xl">Location Highlights</div>
@@ -312,7 +274,6 @@ export default function Details() {
 
             </div>
             <Footer />
-
         </div>
     )
 }

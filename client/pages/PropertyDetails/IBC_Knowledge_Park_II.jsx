@@ -38,6 +38,14 @@ export default function Details() {
 
     const yr = ["2,10,56,478", "2,33,89,809", "2,38,52,568", "2,42,14,983", "2,68,98,297"]
     const prprtyname = "IBC Knowledge Park II", invamt = "27,75,00,000", mr = "16,60,929", pmf = "2,31,250", tds = "1,84,548", iod = "22,34,284"
+        const purchasedetails = {
+        Purchase_Price: 280202500,
+        Legal_Expenses: 1500000,
+        Acquisition_Fee: 9500000,
+        Reserves: 164034,
+        Stamp_Duty: 18633466
+    }
+
     const details = {
         rentalyeild: 9,
         returns: 18.2,
@@ -239,7 +247,7 @@ export default function Details() {
 
                         </div>
                     </div>
-                    <CapitalAppreciation yr={yr} />
+                    <CapitalAppreciation purchasedetails={purchasedetails}  purchasedetails={purchasedetails} yr={yr} />
                     <TenantDetails details={details} />
 
                     <div className="lg:w-3/4 rounded overflow-x-auto shadow-lg shadow-gray-600 card">

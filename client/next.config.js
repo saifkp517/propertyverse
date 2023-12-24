@@ -24,7 +24,7 @@ module.exports = {
       'media.licdn.com',
       'flowbite.com',
       'flowbite.s3.amazonaws.com',
-      'storage.googleapis.com'
+      'storage.googleapis.com',
     ]
   }
 }

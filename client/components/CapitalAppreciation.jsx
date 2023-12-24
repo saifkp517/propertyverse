@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Typography } from "@material-tailwind/react";
 import MyChart from "./MyChart";
 
-export default function CapitalAppreciation({yr}) {
+export default function CapitalAppreciation({yr, purchasedetails}) {
 
     const [value, setValue] = useState(1000000);
     const onUpdate = (e) => {
@@ -20,7 +20,7 @@ export default function CapitalAppreciation({yr}) {
                     <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                         <div className='lg:px-12 md:px-4 sm:px-0'>
                             <h1 className='lg:text-2xl sm:text-lg'>Property Pricing</h1>
-                            <MyChart />
+                            <MyChart purchasedetails={purchasedetails} />
                         </div>
                         <div>
                             <br />
