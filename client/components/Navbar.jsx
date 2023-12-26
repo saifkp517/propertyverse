@@ -68,7 +68,11 @@ const Navbar = () => {
             ) : (
               <div className='flex items-center gap-4'>
                 <Avatar
-                  src={user.picture}
+                  src={
+                    user.picture
+                      ? user.picture
+                      : 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/1200px-Default_pfp.svg.png'
+                  }
                   alt='avatar'
                   size='sm'
                   withBorder={true}
