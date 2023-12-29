@@ -5,9 +5,6 @@ import MyModal from '../../components/Dialog';
 import { Typography } from "@material-tailwind/react";
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
-// import {img1} from '../../public/brigade_tech_park/WhatsApp Image 2023-12-20 at 8.49.34 AM (1).jpeg'
-// import {img2} from '../../public/brigade_tech_park/WhatsApp Image 2023-12-20 at 8.49.35 AM (1).jpeg'
-// import {img3} from 
 import Carousel from '../../components/Carousel';
 import Hero2 from '../../components/Hero2';
 import Head from 'next/head';
