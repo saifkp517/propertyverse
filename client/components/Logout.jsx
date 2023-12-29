@@ -7,18 +7,12 @@ const LogoutButton = () => {
 
   return (
     <>
-      {/* <button
-        className=''
-        
-      >
-        Log Out
-      </button> */}
       <IconButton
         size='sm'
         color='white'
         onClick={() =>
           logout({
-            logoutParams: { returnTo: 'https://www.propertyverse.co.in/' },
+            logoutParams: { returnTo: 'http://localhost:3000' },
           })
         }
       >
