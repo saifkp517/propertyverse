@@ -38,6 +38,14 @@ export default function Details() {
 
     const yr = ["2,05,68,698", "2,15,97,186", "2,26,77,004", "2,38,10,866", "2,50,01,486"]
     const prprtyname = "The Capital", invamt = "29,50,00,000", mr = "14,81,021", pmf = "2,45,833", tds = "1,64,558", iod = "6,53,248", salevalue = "47,51,00,450", rentuptop = "14,75,000"
+        const purchasedetails = {
+        Purchase_Price: 280202500,
+        Legal_Expenses: 1500000,
+        Acquisition_Fee: 9500000,
+        Reserves: 164034,
+        Stamp_Duty: 18633466
+    }
+
     const details = {
         rentalyeild: 7.69,
         returns: 16.7,
@@ -117,7 +125,7 @@ export default function Details() {
 
                             </div>
                             <br />
-                            <MyModal />
+                            <MyModal name={prprtyname} />>
 
                         </div>
                     </div>
@@ -254,7 +262,7 @@ export default function Details() {
 
                         </div>
                     </div>
-                    <CapitalAppreciation yr={yr} />
+                    <CapitalAppreciation purchasedetails={purchasedetails}  yr={yr} />
                     <TenantDetails details={details} />
 
                     <div className="lg:w-3/4 rounded overflow-x-auto shadow-lg shadow-gray-600 card">

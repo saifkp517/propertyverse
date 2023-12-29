@@ -21,15 +21,17 @@ ChartJS.register(
     scales
 );
 
-const MyChart = () => {
+const MyChart = ({purchasedetails}) => {
+
+
     return (
         <div className="lg:p-6 md:p-0">
             <Doughnut
                 data={{
-                    labels: ['Purchase Price: ₹', 'Stamp Duty: ₹', 'Brokerage: ₹', 'Legal Fee: ₹', 'Reserves: ₹'],
+                    labels: Object.keys(purchasedetails),
                     datasets: [{
                         
-                        data: [358020000, 21481200, 10740600, 1500000, 4258200],
+                        data: Object.values(purchasedetails),
                         backgroundColor: [
                             '#f87171',
                             '#1f2937',

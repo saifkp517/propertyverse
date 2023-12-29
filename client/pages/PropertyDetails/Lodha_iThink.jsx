@@ -35,6 +35,14 @@ export default function Details() {
 
     const yr = ["3,26,58,883", "2,86,98,883", "2,86,98,883", "3,33,71,044", "3,33,71,044"]
     const prprtyname = "Lodha iThink", invamt = "39,60,00,000", mr = "22,10,818", pmf = "3,30,000", tds = "2,45,647"
+        const purchasedetails = {
+        Purchase_Price: 280202500,
+        Legal_Expenses: 1500000,
+        Acquisition_Fee: 9500000,
+        Reserves: 164034,
+        Stamp_Duty: 18633466
+    }
+
     const details = {
         name: "Tata Motors Finance",
         country: "India",
@@ -111,7 +119,7 @@ export default function Details() {
 
                             </div>
                             <br />
-                            <MyModal />
+                            <MyModal name={prprtyname} />>
 
                         </div>
                     </div>
@@ -233,7 +241,7 @@ export default function Details() {
 
                         </div>
                     </div>
-                    <CapitalAppreciation yr={yr}/>
+                    <CapitalAppreciation purchasedetails={purchasedetails} yr={yr} />
                     <TenantDetails details={details} />
                     <div className="lg:w-3/4 rounded overflow-x-auto shadow-lg shadow-gray-600 card">
                         <div className="px-6 py-4">

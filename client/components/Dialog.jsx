@@ -4,7 +4,7 @@ import { init } from 'aos';
 import { Fragment, useState } from 'react'
 import { sendContactForm } from '../lib/api';
 
-export default function MyModal() {
+export default function MyModal({name}) {
     let [isOpen, setIsOpen] = useState(false)
     let [isOpen2, setIsOpen2] = useState(false);
     let [err, setError] = useState("");
@@ -50,7 +50,7 @@ export default function MyModal() {
         setIsOpen(false)
         setIsOpen2(true)
 
-        const dataArray = [e.target[0].value, e.target[1].value]
+        const dataArray = [e.target[0].value, e.target[1].value, name]
         await sendContactForm(dataArray)
     }
 
@@ -67,7 +67,7 @@ export default function MyModal() {
             <button
                 type="button"
                 onClick={openModal}
-                className="transition ease-in w-full text-gray-200 tracking-widest font-extrabold bg-gradient-to-r from-red-500 via-red-700 to-red-900 shadow-lg shadow-gray-600/40 hover: -translate-y-0.5 hover:scale-110 hover:bg-gradient-to-bl  focus:ring-4 focus:outline-none focus:ring-transparent dark:focus:ring-red-400 rounded-lg text-xl px-5 py-4 text-center mr-2 mt-8 mb-0"
+                className="w-full text-gray-200 tracking-widest font-extrabold bg-gradient-to-r from-red-500 via-red-700 to-red-900 shadow-lg shadow-gray-600/40 hover:bg-gradient-to-bl  focus:ring-4 focus:outline-none focus:ring-transparent dark:focus:ring-red-400 rounded-lg text-xl px-5 py-4 text-center mr-2 mt-8 mb-0"
             >
                 Interested?
             </button>

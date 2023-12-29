@@ -1,50 +1,44 @@
 import React, { useEffect, useState } from 'react'
-import Footer from '../../components/Footer';
-import CapitalAppreciation from '../../components/CapitalAppreciation';
 import TenantDetails from '../../components/TenantDetails';
+import CapitalAppreciation from '../../components/CapitalAppreciation';
 import MyModal from '../../components/Dialog';
 import { Typography } from "@material-tailwind/react";
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
 import Carousel from '../../components/Carousel';
 import Hero2 from '../../components/Hero2';
-import MyChart from '../../components/MyChart';
 import Head from 'next/head';
 import Image from 'next/image';
+import Footer from '../../components/Footer'
 
 export default function Details() {
 
     const [value, setValue] = useState(1000000);
     const [loaded, setLoaded] = useState("animate-pulse");
 
-
     const images = [
-        'https://propmedia2.propertyshare.in/website/property/Tk0xN01tTytJWmYxYUp5NWhYa1VnUT09/media-v2/images/main/665x400/1598784610-mindspace-business-park-hyderabad-1.jpg',
-        'https://propmedia2.propertyshare.in/website/property/Tk0xN01tTytJWmYxYUp5NWhYa1VnUT09/media-v2/images/main/1330x800/1598784614-mindspace-business-park-hyderabad-2.jpg',
-        'https://propmedia1.propertyshare.in/website/property/Tk0xN01tTytJWmYxYUp5NWhYa1VnUT09/media-v2/images/main/1330x800/1598784617-mindspace-business-park-hyderabad-3.jpg',
-        'https://propmedia2.propertyshare.in/website/property/Tk0xN01tTytJWmYxYUp5NWhYa1VnUT09/media-v2/images/main/1330x800/1598784620-mindspace-business-park-hyderabad-4.jpg',
-        'https://propmedia2.propertyshare.in/website/property/Tk0xN01tTytJWmYxYUp5NWhYa1VnUT09/media-v2/images/main/1330x800/1598784623-mindspace-business-park-hyderabad-5.jpg',
-        'https://propmedia2.propertyshare.in/website/property/Tk0xN01tTytJWmYxYUp5NWhYa1VnUT09/media-v2/images/main/1330x800/1598784626-mindspace-business-park-hyderabad-6.jpg',
-        'https://propmedia1.propertyshare.in/website/property/Tk0xN01tTytJWmYxYUp5NWhYa1VnUT09/media-v2/images/main/1330x800/1598784629-mindspace-business-park-hyderabad-7.jpg',
-        'https://propmedia2.propertyshare.in/website/property/Tk0xN01tTytJWmYxYUp5NWhYa1VnUT09/media-v2/images/main/1330x800/1598784632-mindspace-business-park-hyderabad-8.jpg',
-        'https://propmedia2.propertyshare.in/website/property/Tk0xN01tTytJWmYxYUp5NWhYa1VnUT09/media-v2/images/main/1330x800/1598784635-mindspace-business-park-hyderabad-9.jpg',
-        'https://propmedia2.propertyshare.in/website/property/Tk0xN01tTytJWmYxYUp5NWhYa1VnUT09/media-v2/images/main/1330x800/1598784638-mindspace-business-park-hyderabad-10.jpg',
-        'https://propmedia1.propertyshare.in/website/property/Tk0xN01tTytJWmYxYUp5NWhYa1VnUT09/media-v2/images/main/1330x800/1598784641-mindspace-business-park-hyderabad-11.jpg',
-        'https://propmedia1.propertyshare.in/website/property/Tk0xN01tTytJWmYxYUp5NWhYa1VnUT09/media-v2/images/main/1330x800/1598784644-mindspace-business-park-hyderabad-12.jpg',
-        'https://propmedia2.propertyshare.in/website/property/Tk0xN01tTytJWmYxYUp5NWhYa1VnUT09/media-v2/images/main/1330x800/1598784647-mindspace-business-park-hyderabad-13.jpg',
-        'https://propmedia1.propertyshare.in/website/property/Tk0xN01tTytJWmYxYUp5NWhYa1VnUT09/media-v2/images/main/1330x800/1598784650-mindspace-business-park-hyderabad-14.jpg',
-        'https://propmedia1.propertyshare.in/website/property/Tk0xN01tTytJWmYxYUp5NWhYa1VnUT09/media-v2/images/main/1330x800/1598784653-mindspace-business-park-hyderabad-15.jpg',
-        'https://propmedia2.propertyshare.in/website/property/Tk0xN01tTytJWmYxYUp5NWhYa1VnUT09/media-v2/images/main/1330x800/1598784656-mindspace-business-park-hyderabad-16.jpg'
+        '/../public/brigade_tech_park/img1.jpeg',
+        '/../public/brigade_tech_park/img2.jpeg',
+        '/../public/brigade_tech_park/img3.jpeg'
     ]
+
+
 
     const capitalappreciation = 10;
 
 
-    const yr = ["9,22,55,784", "8,56,16,352", "8,98,97,250", "9,43,92,414", "9,91,11,894"]
-    const iod = ["32,54,994", "34,58,808", "36,72,672", "38,97,390", "41,33,364"];
+    const totalrent = ["1,75,045", "1,78,171", "1,87,548", "2,03,490", "2,13,664"]
+    const carparkrent = ["7,742", "7,935", "8,332", "8,535", "8,535"]
+    const bonus = ["33,000", "12,500", "", "", ""]
+    const managementfee = ["-25,000", "-25,000", "-25,000", "-25,000", "-25,000"]
+    const propertytax = ["-7,460", "-7,460", "-7,460", "-7,460", "-7,460"]
+    const surplusreserves = [""]
 
-    const salevalue = "1,67,97,82,326"
 
-    const prprtyname = "Mindspace Business Park", invamt = "1,00,50,00,000", mr = "64,09,559", pmf = "8,37,500", tds = "7,12,173"
-        const purchasedetails = {
+
+    const prprtyname = "Brigade Tech Park", invamt = "25,00,000", mr = "5,18,509", pmf = "84,583", iod = "9,282", salevalue = "17,75,24,135"
+
+    const purchasedetails = {
         Purchase_Price: 280202500,
         Legal_Expenses: 1500000,
         Acquisition_Fee: 9500000,
@@ -52,21 +46,22 @@ export default function Details() {
         Stamp_Duty: 18633466
     }
 
+
     const details = {
-        rentalyeild: 9.5,
-        returns: 19.26,
-        price: "9,554",
-        location: "HITEC City",
-        name: "Qualcomm",
-        country: "USA",
-        description: "US-based Qualcomm is a Fortune 150 technology major engaged in business of semiconductors, software, and services related to wireless technology",
-        start: "01 Mar 2018",
-        lockinperiod: 4,
-        enddate: "31 May 2023",
-        totalarea: "96,950",
-        rentpersf: 66,
+        rentalyeild: 9,
+        returns: 16.13,
+        price: "8,675",
+        location: "ITPL",
+        name: "Creative Synergies Consulting India Pvt Ltd",
+        country: "Michigan, United States",
+        description: "The tenant is a leading digital innovation solution provider and has a distinguished track record of collaborating with over 40 Fortune 500 companies. They specialize in the convergence of digital engineering, embedded systems, and software technologies, , consistently delivering excellence across diverse domains. This includes digital product engineering, embedded systems, application software, digital plant engineering, digital anufacturing engineering, and comprehensive product support services.",
+        start: "15 Jan 2019",
+        lockinperiod: 3,
+        enddate: "Aug 2027",
+        totalarea: "7,721",
+        rentpersf: 22,
         leaseperiod: 5,
-        escalation: 5
+        escalation: 6
     }
 
 
@@ -82,13 +77,12 @@ export default function Details() {
                 <meta name='description' content='Generated by create next app' />
                 <link rel='icon' href='/favicon.ico' />
             </Head>
-            <Hero2 heading={prprtyname} message='' imageurl={'https://propmedia1.propertyshare.in/website/property/Tk0xN01tTytJWmYxYUp5NWhYa1VnUT09/media-v2/images/banner/1440x300/1598784604-mindspace-business-park-hyderabad-1.jpg'} />
+            <Hero2 heading={prprtyname} message='' imageurl={'https://propmedia1.propertyshare.in/website/property/YzVrKzZZRkkzamh1MUU1dVFnQUxWZz09/media-v2/images/banner/1440x300/1578542227-the-capital-mumbai-1.jpg'} />
             <div className='section1 text-gray-400'>
-                <div className="flex md:flex-row flex-wrap">
+                <div className="flex md:flex-row  flex-wrap">
 
-                    <div className="w-full md:3/4 lg:w-2/4 p-4 text-center">
-
-                    <Carousel images={images} />
+                    <div className="w-full md:3/4 lg:w-2/4 p-4 text-center" style={{ minHeight: "5" }}>
+                        <Carousel images={images} />
                     </div>
                     <div className="w-full lg:w-1/4 md:w-2/4  p-4 text-center rounded overflow-hidden shadow-lg shadow-gray-600 card">
                         <div className="px-6 py-4">
@@ -127,12 +121,12 @@ export default function Details() {
                                             <path d="M13.8 12.938h-.01a7 7 0 1 0-11.465.144h-.016l.141.17c.1.128.2.252.3.372L8 20l5.13-6.248c.193-.209.373-.429.54-.66l.13-.154Z" />
                                         </g>
                                     </svg>
-                                    <h1><b className="text-gray-300" >{details.location}</b> <br />LOCATION</h1>
+                                    <h1><b className="text-gray-300" >{details.location}</b> <br />QUALITY</h1>
                                 </div>
 
                             </div>
                             <br />
-                            <MyModal name={prprtyname} />>
+                            <MyModal name={prprtyname} />
 
                         </div>
                     </div>
@@ -141,25 +135,21 @@ export default function Details() {
                 <br />
                 <div>
                     <h1 className='font-sans text-4xl mx-10 py-10'>Investment Returns</h1>
-                    <h1 className='text-2xl mx-10' >Investment Amount:  <span className='bg-gray-500 p-2 ml-2 text-gray-900'>₹ {invamt}</span></h1>
+                    <h1 className='text-2xl mx-10' >Investment Amount:  <span className='bg-gray-500 p-2 ml-2 text-gray-300'>₹ {invamt}</span></h1>
                     <div className="lg:w-3/4 my-72 p-4 rounded overflow-hidden shadow-lg shadow-gray-600 card">
                         <div className="px-0 md:px-6 py-4">
                             <div className="font-bold text-xl mb-2">Monthly Cash Flow</div>
                             <br />
                             <div className="overflow-hidden h-4 mb-4 text-xs flex rounded bg-emerald-200">
-                                <div style={{ width: "50%" }} className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500"></div>
+                                <div style={{ width: "60%" }} className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500"></div>
                                 <div style={{ width: "40%" }} className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-orange-500"></div>
-                                <div style={{ width: "10%" }} className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gray-500"></div>
                             </div>
                             <div className="mb-2 flex items-center justify-between gap-4 overflow-auto">
                                 <Typography>
-                                    Monthly rent:<br /> <span className='text-gray-300 font-extrabold'>₹ {mr}</span>
+                                    Monthltotalrentent:<br /> <span className='text-gray-300 font-extrabold'>₹ {mr}</span>
                                 </Typography>
                                 <Typography>
                                     Property Management Fee: <br /> <span className='text-gray-300 font-extrabold'>₹ {pmf}</span>
-                                </Typography>
-                                <Typography>
-                                    10% TDS: <br /> <span className='text-gray-300 font-extrabold'>₹ {tds}</span>
                                 </Typography>
                             </div>
 
@@ -184,7 +174,7 @@ export default function Details() {
                                             <th scope="col" className="px-6 py-3"></th>
                                             <th scope="col" className="px-6 py-3">DAY 0</th>
                                             {
-                                                yr.map((year, index) => <th key={index} scope="col" className="px-6 py-3">Year {index + 1}</th>)
+                                                totalrent.map((year, index) => <th key={index} scope="col" className="px-6 py-3">Year {index + 1}</th>)
                                             }
                                         </tr>
                                     </thead>
@@ -193,51 +183,53 @@ export default function Details() {
                                             <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
                                                 Investments
                                             </th>
-                                            <th scope="col" className="px-6 py-4">₹ {"1,23,30,00,000"}</th>
+                                            <th scope="col" className="px-6 py-4">₹ {invamt}</th>
                                             {
-                                                yr.map((year, index) => <td key={index} scope="col" className="px-6 py-4"></td>)
+                                                totalrent.map((year, index) => <td key={index} scope="col" className="px-6 py-4"></td>)
                                             }
                                         </tr>
                                         <tr className="">
                                             <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
-                                                Rents
+                                                Total Rent
                                             </th>
                                             <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
 
                                             </th>
                                             {
-                                                yr.map((amt, index) => <td key={index} scope="col" className="px-6 py-4">₹ {amt}</td>)
+                                                totalrent.map((amt, index) => <td key={index} scope="col" className="px-6 py-4">₹ {amt}</td>)
                                             }
                                         </tr>
                                         <tr className="">
                                             <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
-                                                Interest on Depost
+                                                Car Park Rent
                                             </th>
-                                            <td className="px-6 py-4">
-                                            </td>
-                                            {
-                                                iod.map((amt, index) => <td key={index} scope="col" className="px-6 py-4">₹ {amt}</td>)
-                                            }
-                                        </tr>
-                                        <tr className="">
                                             <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
-                                                Developer Fees
-                                            </th>
-                                            <td className="px-6 py-4">
-                                            </td>
-                                            {
-                                                yr.map((year, index) => <td key={index} scope="col" className="px-6 py-4">{(index == yr.length - 1) ? <>{"30,61,420"}</> : undefined}</td>)
-                                            }
 
+                                            </th>
+                                            {
+                                                carparkrent.map((amt, index) => <td key={index} scope="col" className="px-6 py-4">₹ {amt}</td>)
+                                            }
                                         </tr>
                                         <tr className="">
                                             <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
-                                                Sale Value
+                                                Bonus
+                                            </th>
+                                            <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
+
+                                            </th>
+                                            {
+                                                bonus.map((amt, index) => <td key={index} scope="col" className="px-6 py-4"> {amt}</td>)
+                                            }
+                                        </tr>
+
+                                        <tr className="">
+                                            <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
+                                                Interest on Deposit
                                             </th>
                                             <td className="px-6 py-4">
                                             </td>
                                             {
-                                                yr.map((year, index) => <td key={index} scope="col" className="px-6 py-4">{(index == yr.length - 1) ? <>{salevalue}</> : undefined}</td>)
+                                                totalrent.map((year, index) => <td key={index} scope="col" className="px-6 py-4">₹ {iod}</td>)
                                             }
                                         </tr>
 
@@ -248,12 +240,8 @@ export default function Details() {
                                             <td className="px-6 py-4">
                                             </td>
                                             {
-                                                yr.map((year, index) => <td key={index} scope="col" className="px-6 py-4">₹{
-                                                    index === yr.length - 1
-                                                        ?
-                                                        Number(salevalue.replace(/\,/g, '')) + Number(year.replace(/\,/g, '')) + Number(iod[index].replace(/\,/g, ''))
-                                                        :
-                                                        Number(year.replace(/\,/g, '')) + Number(iod[index].replace(/\,/g, ''))
+                                                totalrent.map((amt, index) => <td key={index} scope="col" className="px-6 py-4">₹{
+                                                    Number(amt.replace(/\,/g, '')) + Number(carparkrent[index].replace(/\,/g, '')) + Number(bonus[index].replace(/\,/g, '')) + Number(iod.replace(/\,/g, ''))
                                                 }</td>)
                                             }
                                         </tr>
@@ -264,20 +252,78 @@ export default function Details() {
 
                         </div>
                     </div>
-                    <CapitalAppreciation purchasedetails={purchasedetails}  purchasedetails={purchasedetails} yr={yr} />
+                    <CapitalAppreciation purchasedetails={purchasedetails} yr={totalrent} />
                     <TenantDetails details={details} />
-                    <div className="lg:w-3/4 rounded overflow-x-auto shadow-lg shadow-gray-600 card">
+
+                    <div className='grid mt-20 grid-cols-2 gap-10 h-screen lg:px-20 p-0 '>
+
+                        <div className='relative h-4/5'>
+
+                            <Image src={'/../public/brigade_tech_park/tenants.png'} layout="fill" />
+                        </div>
+                        <div>
+                            <div>
+                                <div className="px-4 sm:px-0">
+                                    <Typography variant='h3' className="font-semibold leading-7 text-red-500">OTHER TENANTS</Typography>
+                                </div>
+                                <div className="mt-6 border-t border-gray-100">
+                                    <dl className="divide-y divide-gray-500">
+                                        <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                                            <dt className="text-sm font-medium leading-6 text-gray-300">1<sup>st</sup> Floor</dt>
+                                            <dd className="mt-1 text-lg leading-6 text-gray-400 sm:col-span-2 sm:mt-0">Novel</dd>
+                                        </div>
+                                        <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                                            <dt className="text-sm font-medium leading-6 text-gray-300">2<sup>nd</sup> Floor</dt>
+                                            <dd className="mt-1 text-lg leading-6 text-gray-400 sm:col-span-2 sm:mt-0">Brigade Flexi Spaces</dd>
+                                        </div>
+                                        <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                                            <dt className="text-sm font-medium leading-6 text-gray-300">3<sup>rd</sup> Floor</dt>
+                                            <dd className="mt-1 text-lg leading-6 text-gray-400 sm:col-span-2 sm:mt-0">Novel</dd>
+                                        </div>
+                                        <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                                            <dt className="text-sm font-medium leading-6 text-gray-300">4<sup>th</sup> Floor</dt>
+                                            <dd className="mt-1 text-lg leading-6 text-gray-400 sm:col-span-2 sm:mt-0">Standard Chartered</dd>
+                                        </div>
+                                        <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                                            <dt className="text-sm font-medium leading-6 text-gray-300">5<sup>th</sup> Floor</dt>
+                                            <dd className="mt-1 text-lg leading-6 text-gray-400 sm:col-span-2 sm:mt-0">Creative Syngergies</dd>
+                                        </div>
+                                        <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                                            <dt className="text-sm font-medium leading-6 text-gray-300">6<sup>th</sup> Floor</dt>
+                                            <dd className="mt-1 text-lg leading-6 text-gray-400 sm:col-span-2 sm:mt-0">Creative Syngergies</dd>
+                                        </div>
+                                        <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                                            <dt className="text-sm font-medium leading-6 text-gray-300">7<sup>th</sup> Floor</dt>
+                                            <dd className="mt-1 text-lg leading-6 text-gray-400 sm:col-span-2 sm:mt-0">Lease Finalization in Process</dd>
+                                        </div>
+                                        <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                                            <dt className="text-sm font-medium leading-6 text-gray-300">8<sup>th</sup> Floor</dt>
+                                            <dd className="mt-1 text-lg leading-6 text-gray-400 sm:col-span-2 sm:mt-0">INS Zoom Technology</dd>
+                                        </div>
+                                        <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                                            <dt className="text-sm font-medium leading-6 text-gray-300">9<sup>th</sup> Floor</dt>
+                                            <dd className="mt-1 text-sm leading-6 text-gray-400 sm:col-span-2 sm:mt-0">iDrive Software India pvt.ltd.</dd>
+                                        </div>
+
+                                    </dl>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div className=" overflow-x-auto shadow-lg shadow-gray-600 card">
                         <div className="px-6 py-4">
                             <div className="font-bold text-xl">Location Highlights</div>
                         </div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13834.255347225278!2d74.79663764409774!3d13.34364319791093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1699276791486!5m2!1sen!2sin" allowFullScreen={true} width={"100%"} height={"500"} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.7764667674546!2d77.7401829!3d12.9861442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11e34ffe7d1d%3A0x4ba24b4b6ac41c1e!2sBRIGADE%20TECH%20PARK%2C%20Pattandur%20Agrahara%2C%20Whitefield%2C%20Bengaluru%2C%20Karnataka%20560066!5e0!3m2!1sen!2sin!4v1703828582624!5m2!1sen!2sin" allowFullScreen={true} width={"100%"} height={"500"} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
 
                     </div>
                 </div>
 
             </div>
             <Footer />
-
         </div>
     )
 }
