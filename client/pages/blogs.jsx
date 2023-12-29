@@ -23,7 +23,7 @@ export async function getStaticProps() {
 
 export default function Blog({ blogs }) {
 
-    console.log(blogs)
+    const {title, slug, thumbnail, content, date} = blogs[0].fields
 
     return (
         <div>
@@ -38,7 +38,8 @@ export default function Blog({ blogs }) {
                 <div className="grid">
                     {
                         blogs.map(blog => (
-                            <div key={blog.sys.id}><BlogContext heading={blog.fields.title} date={"Aug 6th, 2023"} subheading={"this is a subheading"} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed labore dignissimos ipsam, accusantium ea amet provident aperiam ipsa non illum, nobis ut cumque tenetur suscipit hic repudiandae quisquam blanditiis neque?s"} /></div>
+                            <div key={blog.sys.id}><BlogContext img={blog.fields.thumbnail} details={blog} />
+                            </div>
                         ))
                     }
 

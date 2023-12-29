@@ -4,7 +4,7 @@ export default async function handler(req, res) {
   if (req.method === 'POST') {
     console.log(req.handler);
     const data = req.body;
-    if (!data[0] || !data[1]) {
+    if (!data[0] || !data[1] ) {
       return res.status(400).json({ message: 'Bad Request' });
     }
 
@@ -12,7 +12,11 @@ export default async function handler(req, res) {
       await transporter.sendMail({
         ...mailOptions,
         subject: 'Subject',
-        html: `<h1>PropertyVerse</h1><p>A user has requested to work with you</p> <br /> <p>Phone No:${data[0]} Amount: ${data[1]}</p>`,
+        html: `<h1>PropertyVerse</h1><p>User is interested in ${data[2]}</p> <br /> 
+        <p>User Details</p> <br/>
+        <p>Phone No:${data[0]}</p><br/>
+        <p>Amount: ${data[1]}</p>
+        `,
       });
 
       return res.status(200).json({ success: true });
