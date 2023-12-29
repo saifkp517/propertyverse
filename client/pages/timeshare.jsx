@@ -13,7 +13,7 @@ export default function Home() {
 
   const properties = [
     { name: "Villa Ananyata", location: "Thane , Mumbai", area: "35,802", BUA: "4000", img: "https://storage.googleapis.com/sharenest/properties/Villa%20ANANYATA/01%20(1)-min.jpg" },
-    { name: "Oasis Deck", location: "Alibaug, Maharashtra", area: "965", BUA: "695", img: "/../public/ig-img-1.jpeg" },
+    { name: "Oasis Deck", location: "Alibaug, Maharashtra", area: "965", BUA: "695", img: "/../public/brigade_tech_park/img1.jpeg" },
   ]
 
   const [searchItem, setSearchItem] = useState('');

@@ -8,11 +8,11 @@ const Hero = ({ heading, message, imageurl }) => {
   const { loginWithRedirect, isAuthenticated } = useAuth0();
   const router = useRouter()
 
-  useEffect(() => {
-    if(!isAuthenticated) {
-      loginWithRedirect();
-    }
-  }, [])
+  // useEffect(() => {
+  //   if(!isAuthenticated) {
+  //     loginWithRedirect();
+  //   }
+  // }, [])
 
   return (
 

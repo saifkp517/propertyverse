@@ -169,7 +169,7 @@ export default function Details() {
                                 <p className='font-sans text-sm mt-2'>Curated Properties</p>
                             </div>
                         </div>
-                        <MyModal />
+                        <MyModal name={prprtyname} />>
 
 
 
