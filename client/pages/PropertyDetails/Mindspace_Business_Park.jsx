@@ -132,7 +132,7 @@ export default function Details() {
 
                             </div>
                             <br />
-                            <MyModal name={prprtyname} />>
+                           <MyModal name={prprtyname} />
 
                         </div>
                     </div>

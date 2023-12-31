@@ -94,7 +94,7 @@ export default function Details({ data }) {
 
                             </div>
                             <br />
-                            <MyModal name={prprtyname} />>
+                           <MyModal name={prprtyname} />
 
                         </div>
                     </div>
