@@ -12,9 +12,10 @@ export default function BlogContext({ img, details }) {
             <div className="grid grid-cols-3">
                 <div className="flex flex-col justify-between lg:col-span-2 col-span-3 lg:text-lg text-xs">
                     <Typography className='' variant='h2'>{details.fields.title}</Typography>
-                    <sub>{new Date(details.fields.date).toDateString()}</sub>
+                    <br />
+                    <sub className=''>{new Date(details.fields.date).toDateString()}</sub>
                     <Typography className='text-gray-400 py-3' >{details.fields.subheading}</Typography>
-                    <Link href="/blog"><p className=' text-sm text-gray-500 my-4 hover:text-blue-500'>Read More...</p></Link>
+                    <Link href={`/blog/${details.fields.slug}`}><p className=' text-sm text-gray-500 my-4 hover:text-red-500 cursor-pointer'>Read More...</p></Link>
                 </div>
                 <div className='lg:col-span-1 px-5 col-span-3'>
                     <Image

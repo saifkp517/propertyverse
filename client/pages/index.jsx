@@ -18,7 +18,6 @@ export default function Home() {
       <div
         data-aos-duration='1000'
         data-aos='fade-down'
-        data-aos-delay='300'
         className='section1'
       >
         <Section />

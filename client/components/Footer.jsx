@@ -26,19 +26,16 @@ const Footer = () => {
                             <li className="mb-4">
                                 <Link href="https://github.com/saifkp517" className="hover:underline ">Github</Link>
                             </li>
-                            <li>
-                                <Link href="https://discord.gg/unverifiedchaos#8090" className="hover:underline">Discord</Link>
-                            </li>
                         </ul>
                     </div>
                     <div>
                         <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Contact Us</h2>
                         <ul className="text-gray-300 dark:text-gray-400">
                             <li className="mb-4">
-        <p className="hover:underline"><b>Phone-</b>+91 74569 70870</p>
+        <p className="hover:underline"><b>Phone: </b>+91 74569 70870</p>
                             </li>
                             <li>
-        <p className="hover:underline"><b>Email</b>ayushbhasin@propertyverse.co.in</p>
+        <p className="hover:underline"><b>Email: </b>ayushbhasin@propertyverse.co.in</p>
                             </li>
                         </ul>
                     </div>

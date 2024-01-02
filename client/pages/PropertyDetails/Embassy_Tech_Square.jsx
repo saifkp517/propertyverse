@@ -89,7 +89,6 @@ export default function Details() {
             <div className='px-6 py-4'>
               <div className='font-bold text-xl mb-2'>
                 {prprtyname}
->>>>>>> 46276c5176b0d1a9da752d144107d5234450ca4b
                 <br />
               </div>
               <hr />
