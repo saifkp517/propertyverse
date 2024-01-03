@@ -1,5 +1,6 @@
 import { createClient } from "contentful";
 import Head from "next/head";
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { Typography } from "@material-tailwind/react";
 import Footer from "../../components/Footer";
 import Image from "next/image";
@@ -68,11 +69,11 @@ export default function Blog({ info }) {
                 </div>
                 <br />
 
-                <Typography className='lg:ml-24 md:ml-14 sm:ml-2 text-red-400' variant='h3'>Introduction</Typography>
+                <Typography className='lg:ml-24 md:ml-14 sm:ml-2 text-red-400' variant='h3'>{title}</Typography>
                 <br />
-                <Typography className='leading-loose lg:ml-24 md:ml-14 sm:ml-2 text-gray-400'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem in, nam, ratione ipsam repellat, culpa quasi incidunt perferendis corrupti autem quo! Quos autem, minima quibusdam pariatur nobis illum ea accusamus cumque! Dolorem, voluptas. Fugiat deserunt velit ducimus illum quaerat. Quam eveniet voluptatum deleniti eligendi quae delectus quas nemo dolorem, perferendis recusandae architecto consequatur commodi earum placeat dicta odio iure sint quos fugiat nulla ipsum optio molestias, numquam quod! Suscipit molestiae quaerat numquam enim deleniti asperiores voluptas nisi temporibus, ullam animi fugit iste ipsa dolores aperiam molestias. Consectetur, molestias? Libero architecto omnis suscipit repellendus saepe velit rerum totam nulla. Rem beatae recusandae culpa inventore, deleniti a repudiandae sed, nemo natus, illo voluptates tempora ratione? Sint ipsa accusantium saepe nostrum voluptates soluta, rerum ea neque tenetur reiciendis. Eaque, animi eum. Maiores quidem harum reiciendis, velit pariatur quas maxime repudiandae neque, laborum temporibus est odio. Possimus fuga sint quis, veritatis soluta dicta esse unde provident eos minus corporis beatae hic consequatur earum adipisci, necessitatibus tempore! Iusto, esse delectus et aut est laborum eveniet, quasi quis temporibus ipsam tempora, maxime ipsum praesentium. Earum odit nisi aspernatur maxime, autem voluptatem mollitia veniam dolor laboriosam optio quisquam tenetur exercitationem consectetur vero animi distinctio fugiat commodi repellendus.
-                </Typography>
+                <p className='font-sans leading-loose lg:ml-24 md:ml-14 sm:ml-2 text-gray-400'>
+                    {documentToReactComponents(content)}
+                </p>
                 <br />
             </section>
             <div className='section6'>
