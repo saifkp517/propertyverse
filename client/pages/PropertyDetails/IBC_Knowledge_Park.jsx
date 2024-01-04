@@ -259,7 +259,7 @@ export default function Details() {
 
                         </div>
                     </div>
-                    <CapitalAppreciation purchasedetails={purchasedetails}  yr={yr} />
+                    <CapitalAppreciation purchasedetails={purchasedetails} yr={yr} />
                     <TenantDetails details={details} />
                     <div className="lg:w-3/4 rounded overflow-x-auto shadow-lg shadow-gray-600 card">
                         <div className="px-6 py-4">

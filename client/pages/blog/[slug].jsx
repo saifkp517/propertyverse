@@ -1,5 +1,5 @@
 import { createClient } from "contentful";
-import Head from "next/head";
+import Head from "next/head";////''c
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { Typography } from "@material-tailwind/react";
 import Footer from "../../components/Footer";
