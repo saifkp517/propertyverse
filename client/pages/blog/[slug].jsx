@@ -35,7 +35,8 @@ export async function getStaticProps({ params }) {
     })
 
     return {
-        props: { info: items[0] }
+        props: { info: items[0] },
+        revalidate: 60
     }
 
 }
@@ -69,9 +70,9 @@ export default function Blog({ info }) {
                 </div>
                 <br />
 
-                <Typography className='lg:ml-24 md:ml-14 sm:ml-2 text-red-400' variant='h3'>{title}</Typography>
+                <Typography className='lg:ml-24 md:ml-14 sm:ml-2 text-red-400' variant='h1'>{title}</Typography>
                 <br />
-                <p className='font-sans leading-loose lg:ml-24 md:ml-14 sm:ml-2 text-gray-400'>
+                <p className='text-xl font-sans leading-loose lg:ml-24 md:ml-14 sm:ml-2 text-gray-400'>
                     {documentToReactComponents(content)}
                 </p>
                 <br />
