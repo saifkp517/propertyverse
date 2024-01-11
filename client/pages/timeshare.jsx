@@ -12,7 +12,7 @@ export default function Home() {
   const properties = [
     {
       name: 'Villa Ananyata',
-      location: 'Thane , Mumbai',
+      location: 'Mandrém, North Goa',
       area: '35,802',
       BUA: '4000',
       img: 'https://storage.googleapis.com/sharenest/properties/Villa%20ANANYATA/01%20(1)-min.jpg',
