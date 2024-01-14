@@ -255,6 +255,14 @@ export default function Details() {
                     <CapitalAppreciation purchasedetails={purchasedetails} yr={totalrent} />
                     <TenantDetails details={details} />
 
+                    
+                    <div className="lg:w-3/4 overflow-x-auto shadow-lg shadow-gray-600 card">
+                        <div className="px-6 py-4">
+                            <div className="font-bold text-xl">Location Highlights</div>
+                        </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.7764667674546!2d77.7401829!3d12.9861442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11e34ffe7d1d%3A0x4ba24b4b6ac41c1e!2sBRIGADE%20TECH%20PARK%2C%20Pattandur%20Agrahara%2C%20Whitefield%2C%20Bengaluru%2C%20Karnataka%20560066!5e0!3m2!1sen!2sin!4v1705212111335!5m2!1sen!2sin" allowFullScreen={true} width={"100%"} height={"500"} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
                     <div className='grid mt-20 grid-cols-2 gap-10 h-screen lg:px-20 p-0 '>
 
                         <div className='relative h-4/5'>
@@ -313,13 +321,6 @@ export default function Details() {
                         </div>
                     </div>
 
-                    <div className=" overflow-x-auto shadow-lg shadow-gray-600 card">
-                        <div className="px-6 py-4">
-                            <div className="font-bold text-xl">Location Highlights</div>
-                        </div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.7764667674546!2d77.7401829!3d12.9861442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11e34ffe7d1d%3A0x4ba24b4b6ac41c1e!2sBRIGADE%20TECH%20PARK%2C%20Pattandur%20Agrahara%2C%20Whitefield%2C%20Bengaluru%2C%20Karnataka%20560066!5e0!3m2!1sen!2sin!4v1703828582624!5m2!1sen!2sin" allowFullScreen={true} width={"100%"} height={"500"} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-
-                    </div>
                 </div>
 
             </div>

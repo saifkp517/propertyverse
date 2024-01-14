@@ -298,15 +298,14 @@ export default function Details() {
 
                         </div>
                     </div> */}
-                    <CapitalAppreciation purchasedetails={purchasedetails}  purchasedetails={purchasedetails} yr={yr} />
+                    <CapitalAppreciation purchasedetails={purchasedetails} yr={yr} />
                     
                     <TenantDetails details={details} />
                     <div className="lg:w-3/4 rounded overflow-x-auto shadow-lg shadow-gray-600 card">
                         <div className="px-6 py-4">
                             <div className="font-bold text-xl">Location Highlights</div>
                         </div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13834.255347225278!2d74.79663764409774!3d13.34364319791093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1699276791486!5m2!1sen!2sin" allowFullScreen={true} width={"100%"} height={"500"} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9616.426047176064!2d77.68472010327572!3d12.932112203759171!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae13ff7cdc0e95%3A0x8569b186ba338855!2sThe%20Pavilion%20by%20SJR%20PrimeCorp!5e0!3m2!1sen!2sin!4v1705213955126!5m2!1sen!2sin" allowFullScreen={true} width={"100%"} height={"500"} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
 

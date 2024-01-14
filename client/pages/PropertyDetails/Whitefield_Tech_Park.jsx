@@ -241,13 +241,13 @@ export default function Details() {
 
                         </div>
                     </div>
-                    <CapitalAppreciation purchasedetails={purchasedetails}  purchasedetails={purchasedetails} yr={yr} />
+                    <CapitalAppreciation purchasedetails={purchasedetails} yr={yr} />
                     <TenantDetails details={details} />
                     <div className="lg:w-3/4 rounded overflow-x-auto shadow-lg shadow-gray-600 card">
                         <div className="px-6 py-4">
                             <div className="font-bold text-xl">Location Highlights</div>
                         </div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13834.255347225278!2d74.79663764409774!3d13.34364319791093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1699276791486!5m2!1sen!2sin" allowFullScreen={true} width={"100%"} height={"500"} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1943.886246748671!2d77.73413353853176!3d12.986398110442225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11e5289b4e33%3A0xfe65e927b13be5ec!2sINTERNATIONAL%20TECH%20PARK%2C%20Whitefield%20Main%20Rd%2C%20Pattandur%20Agrahara%2C%20Whitefield%2C%20Bengaluru%2C%20Karnataka%20560066!5e0!3m2!1sen!2sin!4v1705213385105!5m2!1sen!2sin" allowFullScreen={true} width={"100%"} height={"500"} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
 
                     </div>
                 </div>

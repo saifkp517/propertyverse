@@ -40,12 +40,19 @@ const Navbar = () => {
     >
       <div className='max-w-[1240px] m-auto flex justify-between items-center p-2 text-white'>
         <Link href='/'>
-          <h1
-            style={{ color: `${textColor}` }}
-            className='font-bold text-4xl cursor-pointer'
+          <div
+            className='flex'
           >
-            PropertyVerse.
-          </h1>
+            {/* <div className="mx-10">
+              <Image className='rounded-2xl' src={"https://i.postimg.cc/jSZZtBM6/Whats-App-Image-2023-12-28-at-10-39-16-PM.jpg"} height={60} width={60} />
+            </div> */}
+            <h1
+              style={{ color: `${textColor}` }}
+              className='mt-2 font-bold text-4xl cursor-pointer'
+            >
+              PropertyVerse.
+            </h1>
+          </div>
         </Link>
         <ul
           style={{ color: `${textColor}` }}

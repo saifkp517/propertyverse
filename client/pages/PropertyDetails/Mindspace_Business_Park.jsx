@@ -264,14 +264,14 @@ export default function Details() {
 
                         </div>
                     </div>
-                    <CapitalAppreciation purchasedetails={purchasedetails}  purchasedetails={purchasedetails} yr={yr} />
+                    <CapitalAppreciation purchasedetails={purchasedetails} yr={yr} />
                     <TenantDetails details={details} />
                     <div className="lg:w-3/4 rounded overflow-x-auto shadow-lg shadow-gray-600 card">
                         <div className="px-6 py-4">
                             <div className="font-bold text-xl">Location Highlights</div>
                         </div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13834.255347225278!2d74.79663764409774!3d13.34364319791093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1699276791486!5m2!1sen!2sin" allowFullScreen={true} width={"100%"} height={"500"} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15225.786476794021!2d78.3847282!3d17.438325!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93e0c3619651%3A0x9965cd1406455a0f!2sMindspace%20Madhapur!5e0!3m2!1sen!2sin!4v1705214377155!5m2!1sen!2sin" allowFullScreen={true} width={"100%"} height={"500"} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                        
                     </div>
                 </div>
 

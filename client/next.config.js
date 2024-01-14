@@ -25,7 +25,8 @@ module.exports = {
       'flowbite.com',
       'flowbite.s3.amazonaws.com',
       'storage.googleapis.com',
-      'images.ctfassets.net'
+      'images.ctfassets.net',
+      'i.postimg.cc'
     ]
   }
 }

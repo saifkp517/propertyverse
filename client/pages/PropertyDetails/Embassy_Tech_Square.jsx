@@ -344,10 +344,10 @@ export default function Details() {
                           ₹
                           {index === yr.length - 1
                             ? Number('1,69,30,69,151'.replace(/\,/g, '')) +
-                              Number(year.replace(/\,/g, '')) +
-                              Number('27,71,994'.replace(/\,/g, ''))
+                            Number(year.replace(/\,/g, '')) +
+                            Number('27,71,994'.replace(/\,/g, ''))
                             : Number(year.replace(/\,/g, '')) +
-                              Number('27,71,994'.replace(/\,/g, ''))}
+                            Number('27,71,994'.replace(/\,/g, ''))}
                         </td>
                       ))}
                     </tr>
@@ -362,14 +362,12 @@ export default function Details() {
             <div className='px-6 py-4'>
               <div className='font-bold text-xl'>Location Highlights</div>
             </div>
-            <iframe
-              src='https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13834.255347225278!2d74.79663764409774!3d13.34364319791093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1699276791486!5m2!1sen!2sin'
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.558545110295!2d77.69099137507584!3d12.936070387376034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae13ae77e4c055%3A0xa4c4103567754afc!2sEmbassy%20Tech%20Square%2C%20Kaverappa%20Layout%2C%20Kadubeesanahalli%2C%20Kadabeesanahalli%2C%20Bengaluru%2C%20Karnataka%20560103!5e0!3m2!1sen!2sin!4v1705212350861!5m2!1sen!2sin"
               allowFullScreen={true}
               width={'100%'}
               height={'500'}
               loading='lazy'
-              referrerPolicy='no-referrer-when-downgrade'
-            ></iframe>
+              referrerPolicy='no-referrer-when-downgrade'></iframe>
           </div>
         </div>
       </div>

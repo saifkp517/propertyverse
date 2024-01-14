@@ -16,16 +16,16 @@ export default function Details() {
     const [loaded, setLoaded] = useState("animate-pulse");
 
     const images = [
-        'https://propmedia2.propertyshare.in/website/property/YnlWOFlqaU1EbmRNayswTkR3SWY4dz09/media-v2/images/main/665x400/1622016033-whitefield-tech-park-bangalore-1.jpg',
-        'https://propmedia2.propertyshare.in/website/property/YnlWOFlqaU1EbmRNayswTkR3SWY4dz09/media-v2/images/main/665x400/1622016036-whitefield-tech-park-bangalore-2.jpg',
-        'https://propmedia2.propertyshare.in/website/property/YnlWOFlqaU1EbmRNayswTkR3SWY4dz09/media-v2/images/main/1330x800/1622016040-whitefield-tech-park-bangalore-3.jpg',
-        'https://propmedia2.propertyshare.in/website/property/YnlWOFlqaU1EbmRNayswTkR3SWY4dz09/media-v2/images/main/1330x800/1622016043-whitefield-tech-park-bangalore-4.jpg',
-        'https://propmedia2.propertyshare.in/website/property/YnlWOFlqaU1EbmRNayswTkR3SWY4dz09/media-v2/images/main/1330x800/1622016046-whitefield-tech-park-bangalore-5.jpg',
-        'https://propmedia1.propertyshare.in/website/property/YnlWOFlqaU1EbmRNayswTkR3SWY4dz09/media-v2/images/main/1330x800/1622016049-whitefield-tech-park-bangalore-6.jpg',
-        'https://propmedia2.propertyshare.in/website/property/YnlWOFlqaU1EbmRNayswTkR3SWY4dz09/media-v2/images/main/1330x800/1622016052-whitefield-tech-park-bangalore-7.jpg',
-        'https://propmedia1.propertyshare.in/website/property/YnlWOFlqaU1EbmRNayswTkR3SWY4dz09/media-v2/images/main/1330x800/1622016055-whitefield-tech-park-bangalore-8.jpg',
-        'https://propmedia2.propertyshare.in/website/property/YnlWOFlqaU1EbmRNayswTkR3SWY4dz09/media-v2/images/main/1330x800/1622016058-whitefield-tech-park-bangalore-9.jpg',
-        'https://propmedia2.propertyshare.in/website/property/YnlWOFlqaU1EbmRNayswTkR3SWY4dz09/media-v2/images/main/1330x800/1622016061-whitefield-tech-park-bangalore-10.jpg'
+        'https://propmedia2.propertyshare.in/website/property/YXgrbVI5NXJabk9IbFNHbkIzRmlqQT09/media-v2/images/main/1330x800/1601270016-the-pavilion-iii-bangalore-1.jpg',
+        'https://propmedia2.propertyshare.in/website/property/YXgrbVI5NXJabk9IbFNHbkIzRmlqQT09/media-v2/images/main/1330x800/1601270019-the-pavilion-iii-bangalore-2.jpg',
+        'https://propmedia2.propertyshare.in/website/property/YXgrbVI5NXJabk9IbFNHbkIzRmlqQT09/media-v2/images/main/1330x800/1601270022-the-pavilion-iii-bangalore-3.jpg',
+        'https://propmedia2.propertyshare.in/website/property/YXgrbVI5NXJabk9IbFNHbkIzRmlqQT09/media-v2/images/main/1330x800/1601270025-the-pavilion-iii-bangalore-4.jpg',
+        'https://propmedia2.propertyshare.in/website/property/YXgrbVI5NXJabk9IbFNHbkIzRmlqQT09/media-v2/images/main/1330x800/1601270028-the-pavilion-iii-bangalore-5.jpg',
+        'https://propmedia1.propertyshare.in/website/property/YXgrbVI5NXJabk9IbFNHbkIzRmlqQT09/media-v2/images/main/1330x800/1601270031-the-pavilion-iii-bangalore-6.jpg',
+        'https://propmedia2.propertyshare.in/website/property/YXgrbVI5NXJabk9IbFNHbkIzRmlqQT09/media-v2/images/main/1330x800/1601270034-the-pavilion-iii-bangalore-7.jpg',
+        'https://propmedia2.propertyshare.in/website/property/YXgrbVI5NXJabk9IbFNHbkIzRmlqQT09/media-v2/images/main/1330x800/1601270037-the-pavilion-iii-bangalore-8.jpg',
+        'https://propmedia1.propertyshare.in/website/property/YXgrbVI5NXJabk9IbFNHbkIzRmlqQT09/media-v2/images/main/1330x800/1601270049-the-pavilion-iii-bangalore-12.jpg',
+        'https://propmedia1.propertyshare.in/website/property/YXgrbVI5NXJabk9IbFNHbkIzRmlqQT09/media-v2/images/main/1330x800/1601270052-the-pavilion-iii-bangalore-13.jpg',
     ]
 
     const capitalappreciation = 10;
@@ -242,15 +242,14 @@ export default function Details() {
 
                         </div>
                     </div>
-                    <CapitalAppreciation purchasedetails={purchasedetails}  purchasedetails={purchasedetails} yr={yr} />
+                    <CapitalAppreciation purchasedetails={purchasedetails}       yr={yr} />
                     <TenantDetails details={details} />
 
                     <div className="lg:w-3/4 rounded overflow-x-auto shadow-lg shadow-gray-600 card">
                         <div className="px-6 py-4">
                             <div className="font-bold text-xl">Location Highlights</div>
                         </div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13834.255347225278!2d74.79663764409774!3d13.34364319791093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1699276791486!5m2!1sen!2sin" allowFullScreen={true} width={"100%"} height={"500"} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9616.426047176064!2d77.68472010327572!3d12.932112203759171!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae13ff7cdc0e95%3A0x8569b186ba338855!2sThe%20Pavilion%20by%20SJR%20PrimeCorp!5e0!3m2!1sen!2sin!4v1705213955126!5m2!1sen!2sin" allowFullScreen={true} width={"100%"} height={"500"} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
 
