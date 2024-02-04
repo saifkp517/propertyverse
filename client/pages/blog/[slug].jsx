@@ -46,6 +46,7 @@ export default function Blog({ info }) {
     console.log(info)
 
     const { title, subheading, thumbnail, content, date } = info.fields
+    console.log(info.fields)
 
     return (
         <div>
