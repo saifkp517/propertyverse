@@ -6,7 +6,12 @@ const pass = process.env.NEXT_PUBLIC_PASS;
 console.log(email, pass)
 
 export const transporter = nodemailer.createTransport({
-    service: "gmail",
+    host: "smtp.gmail.com",
+    port: 587,
+    secure: false,
+    requireTLS: true,
+    logger: true,
+    debug: true,
     auth: {
         user: email,
         pass: pass,
